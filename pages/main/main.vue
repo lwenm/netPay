@@ -282,36 +282,36 @@
 				this.swiperList = this.swiperList;
 			}
 		},
-		onLoad() {
-			this.TowerSwiper('swiperList');
-			// 初始化towerSwiper 传已有的数组名即可
-			if (!this.hasLogin) {
-				uni.showModal({
-					title: '未登录',
-					content: '您未登录，需要登录后才能继续',
-					/**
-					 * 如果需要强制登录，不显示取消按钮
-					 */
-					showCancel: !this.forcedLogin,
-					success: res => {
-						if (res.confirm) {
-							/**
-							 * 如果需要强制登录，使用reLaunch方式
-							 */
-							if (this.forcedLogin) {
-								uni.reLaunch({
-									url: '../login/login'
-								});
-							} else {
-								uni.navigateTo({
-									url: '../login/login'
-								});
-							}
-						}
-					}
-				});
-			}
-		}
+		// onLoad() {
+		// 	this.TowerSwiper('swiperList');
+		// 	// 初始化towerSwiper 传已有的数组名即可
+		// 	if (!this.hasLogin) {
+		// 		uni.showModal({
+		// 			title: '未登录',
+		// 			content: '您未登录，需要登录后才能继续',
+		// 			/**
+		// 			 * 如果需要强制登录，不显示取消按钮
+		// 			 */
+		// 			showCancel: !this.forcedLogin,
+		// 			success: res => {
+		// 				if (res.confirm) {
+		// 					/**
+		// 					 * 如果需要强制登录，使用reLaunch方式
+		// 					 */
+		// 					if (this.forcedLogin) {
+		// 						uni.reLaunch({
+		// 							url: '../login/login'
+		// 						});
+		// 					} else {
+		// 						uni.navigateTo({
+		// 							url: '../login/login'
+		// 						});
+		// 					}
+		// 				}
+		// 			}
+		// 		});
+			// }
+		// }
 	};
 </script>
 

@@ -173,6 +173,13 @@
         color: #007aff;
         padding: 0 20upx;
     }
+	
+	    page {
+		background-color: #F4F5F6;
+		height: 100%;
+		font-size: 28upx;
+		line-height: 1.8;
+	}
 
     .oauth-row {
         display: flex;
