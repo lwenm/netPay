@@ -21,14 +21,14 @@
 			            <button class="comment-button touch-active" formType="submit" bindtap = "sendcm">发送</button>
 			            <view class="cmview" bindtap="zanstart">
 			                <image :src="zanimg" class="img-plus" mode="scaleToFill"></image>
-			                <text class="cmicontext ">{{item.likes}}赞</text>
+			                <text class="cmicontext ">赞</text>
 			            </view>
 			            <button class="cmview" open-type="share" plain='true' type="primary"  style="border:none; margin-top:5rpx; margin-left:15rpx; padding:0px; width:auto; ">
-			                <image src='../../images/resend.png' class="img-plus" mode="scaleToFill"></image>
+			                <image src='../../static/img/resend.png' class="img-plus" mode="scaleToFill"></image>
 			                <text class="cmicontext" style='margin-top:-12rpx;'>转发</text>
 			            </button>
 			            <view class="cmview" bindtap="share" >
-			                <image src="../../images/share.png" class="img-plus" mode="scaleToFill"></image>
+			                <image src="../../static/img/share.png" class="img-plus" mode="scaleToFill"></image>
 			                <text class="cmicontext">分享</text>
 			            </view>
 			        </view>
@@ -54,7 +54,7 @@ export default {
 			thispath: 'pages/detail/detail',
 			cid: 0,
 			hiddenmodalput: true,
-			zanimg: '../../images/zanoff.png',
+			zanimg: '../../static/img/zanoff.png',
 			replaycoid: '',
 			replaycontent: '',
 			likelist: [],
@@ -65,26 +65,8 @@ export default {
 			cmtext: '',
 			replyauthor: true,
 			qrcode_temp: '',
-			painting: {},
-			cmbtnclick: false,
-			related_post: [],
-			display_related: 'none',
-			"current_position":0,
-			cardCur: 0,
-			dotStyle: true,
-			towerStart: 0,
-			direction: '',
-			modalName: null,
-			gridCol: 5,
-			gridBorder: false,
-			menuBorder: false,
-			menuArrow: false,
-			menuCard: false,
-			skin: false,
-			listTouchStart: 0,
-			listTouchDirection: null,
 			posttime:'2019-06-07 08:18',
-								cid: '119',
+			cid: '119',
 			title: '冰点还原精灵永久激活版(支持WIN10) 免费版冰点还原精灵永久激活版(支持WIN10) 免费版冰点还原精灵永久激活版(支持WIN10) 免费版冰点还原精灵永久激活版(支持WIN10) 免费版',
 			created: '1559817180',
 			commentsNum: '2',
@@ -94,170 +76,9 @@ export default {
 				{
 					str_value: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big39000.jpg'
 				}
-			],
-			allcatslist: [
-				{
-					name: '最近发布',
-					slug: '最近发布',
-					type: 'category',
-					description: '为梦想而战斗',
-					mid: '99999999',
-					active:true
-				},
-				{
-					name: '源码下载',
-					slug: 'xia',
-					type: 'category',
-					description: '为梦想而战斗',
-					mid: '2'
-				},
-				{
-					name: '资源分享',
-					slug: 'share',
-					type: 'category',
-					description: '分享是一种快乐',
-					mid: '1'
-				},
-				{
-					name: '毕业设计',
-					slug: 'bysj',
-					type: 'category',
-					description: '分享一些毕业设计源码',
-					mid: '14'
-				}
-			],
-			allcatpostlist: [
-				{
-					cid: '119',
-					title: '冰点还原精灵永久激活版(支持WIN10) 免费版',
-					created: '1559817180',
-					commentsNum: '2',
-					views: '151',
-					likes: '1',
-					thumb: [
-						{
-							str_value: 'https://www.hiai.top/usr/themes/HIAI/img/thumb/5.jpg'
-						}
-					]
-				},
-				{
-					cid: '117',
-					title: '基于B2C的网上拍卖系统_秒杀与竞价源码及论文',
-					created: '1559739858',
-					commentsNum: '0',
-					views: '54',
-					likes: '0',
-					thumb: [
-						{
-							str_value: 'https://www.hiai.top/usr/themes/HIAI/img/thumb/6.jpg'
-						}
-					]
-				},
-				{
-					cid: '107',
-					title: '收集几个开源的微信小程序开发框架',
-					created: '1558959702',
-					commentsNum: '1',
-					views: '172',
-					likes: '1',
-					thumb: [
-						{
-							str_value: 'https://www.hiai.top/usr/uploads/2019/05/670737958.jpg'
-						}
-					]
-				},
-				{
-					cid: '101',
-					title: 'HiTypecho小程序历史更新和更新说明',
-					created: '1558790520',
-					commentsNum: '5',
-					views: '467',
-					likes: '5',
-					thumb: [
-						{
-							str_value: 'https://www.hiai.top/usr/uploads/2019/05/1863065894.png'
-						}
-					]
-				},
-				{
-					cid: '99',
-					title: '小程序不能正常加载缩略图解决办法',
-					created: '1558486920',
-					commentsNum: '1',
-					views: '224',
-					likes: '0',
-					thumb: [
-						{
-							str_value: 'https://www.hiai.top/usr/uploads/2019/05/1977961682.png'
-						}
-					]
-				},
-				{
-					cid: '86',
-					title: 'jsp物流信息网的设计与实现（纯jsp）',
-					created: '1557665700',
-					commentsNum: '0',
-					views: '203',
-					likes: '1',
-					thumb: [
-						{
-							str_value: 'https://www.hiai.top/usr/themes/HIAI/img/thumb/3.jpg'
-						}
-					]
-				},
-				{
-					cid: '82',
-					title: '关于下载本站资源的免责申明',
-					created: '1557660033',
-					commentsNum: '0',
-					views: '186',
-					likes: '1',
-					thumb: [
-						{
-							str_value: 'https://www.hiai.top/usr/themes/HIAI/img/thumb/4.jpg'
-						}
-					]
-				},
-				{
-					cid: '81',
-					title: 'Java新闻发布系统新闻发布及管理系统源码及论文',
-					created: '1557651060',
-					commentsNum: '0',
-					views: '490',
-					likes: '0',
-					thumb: [
-						{
-							str_value: 'https://www.hiai.top/usr/themes/HIAI/img/thumb/7.jpg'
-						}
-					]
-				},
-				{
-					cid: '66',
-					title: 'PHP实现发送邮箱功能，用户注册时用邮箱激活功能',
-					created: '1557325320',
-					commentsNum: '1',
-					views: '304',
-					likes: '1',
-					thumb: [
-						{
-							str_value: 'https://www.hiai.top/usr/themes/HIAI/img/thumb/1.jpg'
-						}
-					]
-				},
-				{
-					cid: '61',
-					title: 'JSP个人日记本程序源码分享',
-					created: '1557130740',
-					commentsNum: '0',
-					views: '333',
-					likes: '1',
-					thumb: [
-						{
-							str_value: 'https://www.hiai.top/usr/themes/HIAI/img/thumb/1.jpg'
-						}
-					]
-				}
 			]
+			
+			 
 		};
 	},
 	computed: mapState(['forcedLogin', 'hasLogin', 'userName']),
@@ -291,32 +112,7 @@ export default {
 			this.direction = e.touches[0].pageX - this.towerStart > 0 ? 'right' : 'left';
 		},
 
-		// towerSwiper计算滚动
-		TowerEnd(e) {
-			let direction = this.direction;
-			let list = this.swiperList;
-			if (direction == 'right') {
-				let mLeft = list[0].mLeft;
-				let zIndex = list[0].zIndex;
-				for (let i = 1; i < this.swiperList.length; i++) {
-					this.swiperList[i - 1].mLeft = this.swiperList[i].mLeft;
-					this.swiperList[i - 1].zIndex = this.swiperList[i].zIndex;
-				}
-				this.swiperList[list.length - 1].mLeft = mLeft;
-				this.swiperList[list.length - 1].zIndex = zIndex;
-			} else {
-				let mLeft = list[list.length - 1].mLeft;
-				let zIndex = list[list.length - 1].zIndex;
-				for (let i = this.swiperList.length - 1; i > 0; i--) {
-					this.swiperList[i].mLeft = this.swiperList[i - 1].mLeft;
-					this.swiperList[i].zIndex = this.swiperList[i - 1].zIndex;
-				}
-				this.swiperList[0].mLeft = mLeft;
-				this.swiperList[0].zIndex = zIndex;
-			}
-			this.direction = '';
-			this.swiperList = this.swiperList;
-		}
+ 
 	}
 	 
 };

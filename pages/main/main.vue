@@ -166,32 +166,32 @@
 					cuIcon: 'cardboardfill',
 					color: 'red',
 					badge: 120,
-					name: 'VR'
+					name: '最新'
 				}, {
-					cuIcon: 'recordfill',
+					cuIcon: 'hotfill',
 					color: 'orange',
 					badge: 1,
-					name: '录像'
+					name: '最热'
 				}, {
 					cuIcon: 'picfill',
 					color: 'yellow',
 					badge: 0,
-					name: '图像'
+					name: '安卓区'
 				}, {
 					cuIcon: 'noticefill',
 					color: 'olive',
 					badge: 22,
-					name: '通知'
+					name: '苹果区'
 				}, {
 					cuIcon: 'upstagefill',
 					color: 'cyan',
 					badge: 0,
 					name: '排行榜'
 				}, {
-					cuIcon: 'clothesfill',
+					cuIcon: 'circlefill',
 					color: 'blue',
 					badge: 0,
-					name: '皮肤'
+					name: '综合区'
 				}, {
 					cuIcon: 'discoverfill',
 					color: 'purple',
@@ -208,10 +208,10 @@
 					badge: 0,
 					name: '问答'
 				}, {
-					cuIcon: 'brandfill',
+					cuIcon: 'servicefill',
 					color: 'mauve',
 					badge: 0,
-					name: '版权'
+					name: '客服'
 				}],
 				modalName: null,
 				gridCol: 5,
