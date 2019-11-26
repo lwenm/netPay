@@ -24,7 +24,7 @@
 				<view class="text-gray text-sm text-right padding">
 					<text class="cuIcon-attentionfill margin-lr-xs"></text> 10
 					<text class="cuIcon-appreciatefill margin-lr-xs"></text> 20
-					<text class="cuIcon-messagefill margin-lr-xs"></text> 30
+					<text class="cuIcon-messagefill margin-lr-xs"></text> 31
 				</view>
 		
 				<view class="cu-list menu-avatar comment solids-top">

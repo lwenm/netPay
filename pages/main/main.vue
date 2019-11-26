@@ -2,7 +2,6 @@
 	<view class="content">
 		<view>
 			<cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/wdh2236.jpg">
-
 			</cu-custom>
 		</view>
 			<view class="cu-bar search bg-white">
@@ -35,8 +34,8 @@
 				<text>{{item.name}}</text>
 			</view>
 		</view>
-		
-					<view class="cu-bar bg-white solid-bottom margin-top">
+
+		<view class="cu-bar bg-white solid-bottom margin-top">
 			<view class="action">
 				<text class="cuIcon-title text-orange "></text> 消息列表
 			</view>
@@ -50,7 +49,8 @@
 						<view class="text-cut">
 							<text class="cuIcon-infofill text-red  margin-right-xs"></text>
 							我已天理为凭，踏入这片荒芜，不再受凡人的枷锁遏制。我已天理为凭，踏入这片荒芜，不再受凡人的枷锁遏制。
-						</view> </view>
+						</view>
+					</view>
 				</view>
 				<view class="action">
 					<view class="text-grey text-xs">22:20</view>
@@ -80,8 +80,12 @@
 			<view class="cu-item ">
 				<view class="cu-avatar radius lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/img/champion/Morgana.png);"></view>
 				<view class="content">
-					<view class="text-pink"><view class="text-cut">莫甘娜</view></view>
-					<view class="text-gray text-sm flex"> <view class="text-cut">凯尔，你被自己的光芒变的盲目！</view></view>
+					<view class="text-pink">
+						<view class="text-cut">莫甘娜</view>
+					</view>
+					<view class="text-gray text-sm flex">
+						<view class="text-cut">凯尔，你被自己的光芒变的盲目！</view>
+					</view>
 				</view>
 				<view class="action">
 					<view class="text-grey text-xs">22:20</view>
@@ -91,10 +95,13 @@
 			<view class="cu-item grayscale">
 				<view class="cu-avatar radius lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big81007.jpg);"></view>
 				<view class="content">
-					<view><view class="text-cut">伊泽瑞尔</view>
+					<view>
+						<view class="text-cut">伊泽瑞尔</view>
 						<view class="cu-tag round bg-orange sm">断开连接...</view>
 					</view>
-					<view class="text-gray text-sm flex"> <view class="text-cut"> 等我回来一个打十个</view></view>
+					<view class="text-gray text-sm flex">
+						<view class="text-cut"> 等我回来一个打十个</view>
+					</view>
 				</view>
 				<view class="action">
 					<view class="text-grey text-xs">22:20</view>
@@ -111,7 +118,8 @@
 						<view class="cu-tag round bg-orange sm">6人</view>
 					</view>
 					<view class="text-gray text-sm flex">
-						<view class="text-cut"> 伊泽瑞尔：<text class="cuIcon-locationfill text-orange margin-right-xs"></text> 传送中...</view></view>
+						<view class="text-cut"> 伊泽瑞尔：<text class="cuIcon-locationfill text-orange margin-right-xs"></text> 传送中...</view>
+					</view>
 				</view>
 				<view class="action">
 					<view class="text-grey text-xs">22:20</view>
@@ -318,7 +326,7 @@
 		// 				}
 		// 			}
 		// 		});
-			// }
+		// }
 		// }
 	};
 </script>
