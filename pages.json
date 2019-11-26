@@ -33,6 +33,10 @@
 		        "navigationBarTitleText": "分类"
 		    }
 		}
+        ,{
+            "path" : "pages/blog/detail/detail",
+            "style" : { "navigationBarTitleText": "详情"}
+        }
     ],
     "tabBar": {
         "borderStyle": "black",
@@ -55,7 +59,7 @@
             "iconPath": "static/img/tabbar/mine0.png",
             "selectedIconPath": "static/img/tabbar/mine1.png"
         }, { 
-            "pagePath": "pages/user/user",
+            "pagePath": "pages/blog/detail/detail",
             "text": "关于",
             "iconPath": "static/img/tabbar/about0.png",
             "selectedIconPath": "static/img/tabbar/about1.png"
