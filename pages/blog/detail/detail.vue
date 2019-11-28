@@ -1,5 +1,6 @@
 <template>
 	<view>
+		
 		<view class="cu-card dynamic" :class="isCard?'no-card':''">
 			<view class="cu-item shadow">
 				<view class="cu-list menu-avatar">

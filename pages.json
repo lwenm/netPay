@@ -37,6 +37,10 @@
             "path" : "pages/blog/detail/detail",
             "style" : { "navigationBarTitleText": "详情"}
         }
+        ,{
+            "path" : "pages/blog/list/list",
+            "style" : {}
+        }
     ],
     "tabBar": {
         "borderStyle": "black",

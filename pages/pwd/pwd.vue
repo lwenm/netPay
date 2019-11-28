@@ -1,5 +1,9 @@
 <template>
     <view class="content">
+		<view>
+			<cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/wdh2236.jpg">
+			</cu-custom>
+		</view>
         <view class="input-group">
             <view class="input-row">
                 <text class="title">邮箱：</text>
