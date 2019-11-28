@@ -24,22 +24,31 @@
         }, {
             "path": "pages/user/user",
             "style": {
+				"navigationStyle": "custom",
                 "navigationBarTitleText": "我的"
             }
         },
 		{
 		    "path": "pages/category/category",
 		    "style": {
+				"navigationStyle": "custom",
 		        "navigationBarTitleText": "分类"
 		    }
 		}
         ,{
             "path" : "pages/blog/detail/detail",
-            "style" : { "navigationBarTitleText": "详情"}
+			"navigationStyle": "custom",
+            "style" : {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "详情"
+				}
         }
         ,{
             "path" : "pages/blog/list/list",
-            "style" : {}
+			
+            "style" : {
+				"navigationStyle": "custom"
+			}
         }
     ],
     "tabBar": {

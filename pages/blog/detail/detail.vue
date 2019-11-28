@@ -1,6 +1,9 @@
 <template>
 	<view>
-		
+		<view>
+			<cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/wdh2236.jpg">
+			</cu-custom>
+		</view>
 		<view class="cu-card dynamic" :class="isCard?'no-card':''">
 			<view class="cu-item shadow">
 				<view class="cu-list menu-avatar">
