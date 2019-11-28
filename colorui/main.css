@@ -2180,7 +2180,7 @@ button.cuIcon.lg {
 
 .cu-card {
 	display: block;
-	overflow: hidden;
+	/* overflow: hidden; */
 }
 
 .cu-card>.cu-item {
@@ -2590,14 +2590,14 @@ swiper.round-dot .uni-swiper-dot.uni-swiper-dot-active {
 }
 
 .card-swiper {
-	height: 320upx !important;
+	height: 420upx !important;
 }
 
 .card-swiper swiper-item {
 	width: 610upx !important;
 	left: 70upx;
 	box-sizing: border-box;
-	padding: 8rpx 0rpx 40rpx;
+	padding: 40upx 0upx 70upx;
 	overflow: initial;
 }
 

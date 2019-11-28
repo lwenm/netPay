@@ -4,15 +4,17 @@
 			<cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/wdh2236.jpg">
 			</cu-custom>
 		</view>
-			<view class="cu-bar search bg-white">
-				<view class="search-form round">
-					<text class="cuIcon-search"></text>
-					<input @focus="InputFocus" @blur="InputBlur" :adjust-position="false" type="text" placeholder="搜索图片、文章、视频" confirm-type="search"></input>
-				</view>
-				<view class="action">
-					<button class="cu-btn bg-green shadow-blur round">搜索</button>
-				</view>
+				<share />
+		<view class="cu-bar search bg-white">
+			<view class="search-form round">
+				<text class="cuIcon-search"></text>
+				<input @focus="InputFocus" @blur="InputBlur" :adjust-position="false" type="text" placeholder="搜索图片、文章、视频"
+				 confirm-type="search"></input>
 			</view>
+			<view class="action">
+				<button class="cu-btn bg-green shadow-blur round">搜索</button>
+			</view>
+		</view>
 		<swiper class="card-swiper" :class="dotStyle ? 'square-dot' : 'round-dot'" :indicator-dots="true" :circular="true"
 		 :autoplay="true" interval="5000" duration="500" @change="cardSwiper" indicator-color="#8799a3"
 		 indicator-active-color="#0081ff">
@@ -127,6 +129,7 @@
 				</view>
 			</view>
 		</view>
+
 	</view>
 </template>
 
@@ -135,7 +138,23 @@
 		mapState
 	} from 'vuex';
 
+	import uniNoticeBar from "../../components/uni-notice-bar/uni-notice-bar.vue"
+	import uniIcon from "../../components/uni-icon/uni-icon.vue"
+	import uniPopup from "@/components/uni-popup/uni-popup.vue"
+	import share from "@/components/share.vue"
+	const recorderManager = uni.getRecorderManager();
+	const innerAudioContext = uni.createInnerAudioContext();
+
+	innerAudioContext.autoplay = true;
+
 	export default {
+		components: {
+			uniNoticeBar,
+			uniIcon,
+			uniPopup,
+			share
+		},
+
 		data() {
 			return {
 				cardCur: 0,

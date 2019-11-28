@@ -4,7 +4,7 @@
 			<cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/wdh2236.jpg">
 			</cu-custom>
 		</view>
-			<view class="view_postlist_item"  style="height: 170rpx">
+			<view class="view_postlist_item" @click="toList" style="height: 170rpx">
 			    <view class="view_catpost" >
 			          <image class="image_cat_thumb"  mode="aspectFit" :src="[thumb[0].str_value]"/>
 			        <text class="image_cat_item_title" >{{title}}</text>
@@ -87,33 +87,43 @@ export default {
 	computed: mapState(['forcedLogin', 'hasLogin', 'userName']),
 
 	methods: {
-		DotStyle(e) {
-			this.dotStyle = e.detail.value;
-		},
-		// cardSwiper
-		cardSwiper(e) {
-			this.cardCur = e.detail.current;
-		},
-		// towerSwiper
-		// 初始化towerSwiper
-		TowerSwiper(name) {
-			let list = this[name];
-			for (let i = 0; i < list.length; i++) {
-				list[i].zIndex = parseInt(list.length / 2) + 1 - Math.abs(i - parseInt(list.length / 2));
-				list[i].mLeft = i - parseInt(list.length / 2);
-			}
-			this.swiperList = list;
-		},
+		toList: function(e){
+			
+			uni.navigateTo({
+				url: '../blog/list/list',
+				success: res => {},
+				fail: () => {},
+				complete: () => {}
+			});
+			
+		}
+/* 		// DotStyle(e) {
+		// 	this.dotStyle = e.detail.value;
+		// },
+		// // cardSwiper
+		// cardSwiper(e) {
+		// 	this.cardCur = e.detail.current;
+		// },
+		// // towerSwiper
+		// // 初始化towerSwiper
+		// TowerSwiper(name) {
+		// 	let list = this[name];
+		// 	for (let i = 0; i < list.length; i++) {
+		// 		list[i].zIndex = parseInt(list.length / 2) + 1 - Math.abs(i - parseInt(list.length / 2));
+		// 		list[i].mLeft = i - parseInt(list.length / 2);
+		// 	}
+		// 	this.swiperList = list;
+		// },
 
-		// towerSwiper触摸开始
-		TowerStart(e) {
-			this.towerStart = e.touches[0].pageX;
-		},
+		// // towerSwiper触摸开始
+		// TowerStart(e) {
+		// 	this.towerStart = e.touches[0].pageX;
+		// },
 
-		// towerSwiper计算方向
-		TowerMove(e) {
-			this.direction = e.touches[0].pageX - this.towerStart > 0 ? 'right' : 'left';
-		},
+		// // towerSwiper计算方向
+		// TowerMove(e) {
+		// 	this.direction = e.touches[0].pageX - this.towerStart > 0 ? 'right' : 'left';
+		// }, */
 
  
 	}

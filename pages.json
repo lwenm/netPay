@@ -44,12 +44,13 @@
 				}
         }
         ,{
-            "path" : "pages/blog/list/list",
+            "path" : "pages/blog/list/list", 
 			
             "style" : {
 				"navigationStyle": "custom"
 			}
         }
+
     ],
     "tabBar": {
         "borderStyle": "black",
