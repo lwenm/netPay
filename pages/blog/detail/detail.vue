@@ -16,9 +16,10 @@
 				<view class="text-content">
 					折磨生出苦难，苦难又会加剧折磨，凡间这无穷的循环，将有我来终结！
 				</view>
-				<view class="grid flex-sub padding-lr" :class="isCard?'col-3 grid-square':'col-1'">
-					<view class="bg-img" :class="isCard?'':'only-img'" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg);"
-					 v-for="(item,index) in isCard?7:1" :key="index">
+				<view class="grid flex-sub padding-lr" :class="isCard?'col-1':'col-20 grid-square'">
+					<view class="bg-img" :class="isCard?'':'only-img'"  
+					 v-for="(item,index) in isCard?1:7" :key="index">
+					 <image src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg" mode="aspectFill"></image>
 					</view>
 				</view>
 				<view class="text-gray text-sm text-right padding">
@@ -83,7 +84,7 @@
 	export default {
 	data() {
 		return {
-			isCard: true
+			isCard: false
 		};
 	},
 		methods: {
