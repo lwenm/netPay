@@ -3,7 +3,7 @@
 		<view>
 			<cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/wdh2236.jpg" :isBack="true">
 				<block slot="backText">返回</block>
-				<block slot="content">操作条</block>
+				<block slot="content"></block>
 			</cu-custom>
 		</view>
 		<view class="cu-card dynamic" v-for="(item,index) in isCard?7:7" :key="index" @click="getDetail" :class="isCard?'':''">
