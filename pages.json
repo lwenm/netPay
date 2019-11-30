@@ -48,8 +48,13 @@
 				"navigationStyle": "custom"
 			}
         }
-
-     
+        ,{
+            "path" : "pages/user/about/about",
+            "style" : {
+				 
+				"navigationBarTitleText": "个人中心"
+				}
+        }
     ],
     "tabBar": {
         "borderStyle": "black",
@@ -72,15 +77,15 @@
             "iconPath": "static/img/tabbar/mine0.png",
             "selectedIconPath": "static/img/tabbar/mine1.png"
         }, { 
-            "pagePath": "pages/blog/list/list",
+            "pagePath": "pages/user/about/about",
             "text": "关于",
             "iconPath": "static/img/tabbar/about0.png",
             "selectedIconPath": "static/img/tabbar/about1.png"
         }]
     },
     "globalStyle": {
-        "navigationBarTextStyle": "white", 
-        "navigationBarBackgroundColor": "#0faeff",
+        "navigationBarTextStyle": "black", 
+        "navigationBarBackgroundColor": "#F0F0F0",
         "backgroundColor": "#fbf9fe"
     }
 }

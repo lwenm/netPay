@@ -4,7 +4,7 @@
 			<cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/wdh2236.jpg">
 			</cu-custom>
 		</view>
-				<share />
+		<share />
 		<view class="cu-bar search bg-white">
 			<view class="search-form round">
 				<text class="cuIcon-search"></text>
@@ -26,18 +26,19 @@
 			</swiper-item>
 		</swiper>
 
-		<view class="cu-list grid" :class="['col-' + gridCol,gridBorder?'':'no-border']" >
+		<view class="cu-list grid radius shadow shadow-lg" :class="['col-' + gridCol,gridBorder?'':'no-border']">
 			<view class="cu-item" v-for="(item,index) in cuIconList" :key="index" v-if="index<gridCol*2">
 				<view :class="['cuIcon-' + item.cuIcon,'text-' + item.color]" style="line-height: 1;">
-					<view class="cu-tag badge" v-if="item.badge!=0"  >
-						
+					<view class="cu-tag badge" v-if="item.badge!=0">
+
 					</view>
 				</view>
 				<text>{{item.name}}</text>
 			</view>
 		</view>
 
-		<view class="cu-card dynamic shadow shadow-lg" v-for="(item,index) in isCard?7:7" :key="index" @click="getDetail" :class="isCard?'':''">
+		<view class="cu-card dynamic shadow shadow-lg" v-for="(item,index) in isCard?7:7" :key="index" @click="getDetail"
+		 :class="isCard?'':''">
 			<view class="cu-item shadow">
 				<view class="cu-list menu-avatar">
 					<view class="cu-item">
@@ -54,8 +55,8 @@
 				<view class="text-content text-df text-black">
 					想做兼职的看过来，宝妈、学生、待业、上班
 					、老板、微商朋友都可以，手机兼职时间自由，
-					多劳多得，日赚30--300💰 
-					                            
+					多劳多得，日赚30--300💰
+
 				</view>
 				<view class="grid flex-sub padding-lr" :class="isCard?'col-4 grid-square':'col-20 grid-square'">
 					<view class="bg-img" :class="isCard?'':''" v-for="(item,index) in isCard?4:4" :key="index">
@@ -76,7 +77,7 @@
 						<view class="">
 							<text class="  text-mauve   margin-lr-xs" @click="navTo">详情>></text>
 						</view>
-		
+
 					</view>
 				</view>
 			</view>
@@ -228,8 +229,8 @@
 			cardSwiper(e) {
 				this.cardCur = e.detail.current;
 			},
-	 
-			
+
+
 			IsCard(e) {
 				this.isCard = e.detail.value
 			},
@@ -241,11 +242,11 @@
 					urls: this.arrImg // 需要预览的图片http链接列表 Array
 				})
 			},
-			
+
 			getDetail: function(e) {
-			
+
 			},
-			
+
 			navTo: function(e) {
 				console.log("------------------")
 				uni.navigateTo({
@@ -254,10 +255,10 @@
 					fail: () => {},
 					complete: () => {}
 				});
-			
+
 			},
 			toDetail: function() {
-			
+
 			}
 		},
 		// onLoad() {
@@ -324,5 +325,12 @@
 
 	.ul>view {
 		line-height: 50upx;
+	}
+
+	/* 隐藏滚动条 */
+	::-webkit-scrollbar {
+		width: 0;
+		height: 0;
+		color: transparent;
 	}
 </style>
