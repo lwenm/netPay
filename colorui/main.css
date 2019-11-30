@@ -2590,14 +2590,14 @@ swiper.round-dot .uni-swiper-dot.uni-swiper-dot-active {
 }
 
 .card-swiper {
-	height: 420upx !important;
+	height: 300upx !important;
 }
 
 .card-swiper swiper-item {
-	width: 610upx !important;
+	width: 600upx !important;
 	left: 70upx;
 	box-sizing: border-box;
-	padding: 40upx 0upx 70upx;
+	padding: 10upx 0upx 35upx;
 	overflow: initial;
 }
 

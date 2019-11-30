@@ -1,9 +1,7 @@
 <template>
 	<view>
 		<view>
-			<cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/wdh2236.jpg" :isBack="true">
-				<block slot="backText">返回</block>
-				<block slot="content"></block>
+			<cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/wdh2236.jpg"  >
 			</cu-custom>
 		</view>
 		<view class="cu-card dynamic" v-for="(item,index) in isCard?7:7" :key="index" @click="getDetail" :class="isCard?'':''">
@@ -14,8 +12,8 @@
 						<view class="content flex-sub">
 							<view class="text-shadow text-mauve">凯尔-艾欧尼亚</view>
 							<view class="text-white   text-sm   ">
-								 <view class='cu-tag radius bg-gradual-green'>置顶</view>
-								 <view class='cu-tag radius bg-brown' >大宝剑专区</view>
+								<view class='cu-tag radius light bg-orange'>置顶</view>
+								<view class='cu-tag radius  light bg-cyan'>大宝剑专区</view>
 							</view>
 						</view>
 					</view>
@@ -32,15 +30,15 @@
 				<view class="text-gray padding-lr  ">
 					2019-12-23 11:18发布
 				</view>
-				<view class="padding-sm"  >
+				<view class="padding-sm">
 					<view class="text-gray radius light  bg-grey flex solid-bottom  justify-between" style="padding:2px;">
 						<view class=" ">
-							<text class="cuIcon-attentionfill   margin-lr-xs">浏览</text>1249
+							<text class="cuIcon-attentionfill   margin-lr-xs">看</text>1249
 							<text class="cuIcon-appreciatefill margin-lr-xs">赞</text>398
-							<text class="cuIcon-messagefill margin-lr-xs">评论</text>301
+							<text class="cuIcon-messagefill margin-lr-xs">评</text>301
 						</view>
 						<view class="">
-							<text class="  text-mauve   margin-lr-xs">查看详情>> </text>
+							<text class="  text-mauve   margin-lr-xs" @click="navTo">详情>> </text>
 						</view>
 
 					</view>
@@ -78,9 +76,26 @@
 
 			getDetail: function(e) {
 
-				console.log("--------------------------");
+
+
 
 			},
+
+
+			navTo: function(e) {
+				console.log("------------------")
+				uni.navigateTo({
+					url: '../detail/detail',
+					success: res => {},
+					fail: () => {},
+					complete: () => {}
+				});
+
+			},
+			toDetail: function() {
+
+			}
+
 		}
 	}
 </script>

@@ -1,5 +1,5 @@
 <template>
-	<view class="content">
+	<view class="">
 		<view>
 			<cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/wdh2236.jpg">
 			</cu-custom>
@@ -16,7 +16,7 @@
 			</view>
 		</view>
 		<swiper class="card-swiper" :class="dotStyle ? 'square-dot' : 'round-dot'" :indicator-dots="true" :circular="true"
-		 :autoplay="true" interval="5000" duration="500" @change="cardSwiper" indicator-color="#8799a3"
+		 :autoplay="true" interval="6000" duration="500" @change="cardSwiper" indicator-color="#8799a3"
 		 indicator-active-color="#0081ff">
 			<swiper-item v-for="(item, index) in swiperList" :key="index" :class="cardCur == index ? 'cur' : ''">
 				<view class="swiper-item">
@@ -26,106 +26,58 @@
 			</swiper-item>
 		</swiper>
 
-		<view class="cu-list grid" :class="['col-' + gridCol,gridBorder?'':'no-border']">
+		<view class="cu-list grid" :class="['col-' + gridCol,gridBorder?'':'no-border']" >
 			<view class="cu-item" v-for="(item,index) in cuIconList" :key="index" v-if="index<gridCol*2">
-				<view :class="['cuIcon-' + item.cuIcon,'text-' + item.color]">
-					<view class="cu-tag badge" v-if="item.badge!=0">
-						<block v-if="item.badge!=1">{{item.badge>99?'99+':item.badge}}</block>
+				<view :class="['cuIcon-' + item.cuIcon,'text-' + item.color]" style="line-height: 1;">
+					<view class="cu-tag badge" v-if="item.badge!=0"  >
+						
 					</view>
 				</view>
 				<text>{{item.name}}</text>
 			</view>
 		</view>
 
-		<view class="cu-bar bg-white solid-bottom margin-top">
-			<view class="action">
-				<text class="cuIcon-title text-orange "></text> 消息列表
-			</view>
-		</view>
-		<view class="cu-list menu-avatar">
-			<view class="cu-item">
-				<view class="cu-avatar round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg);"></view>
-				<view class="content">
-					<view class="text-grey">凯尔</view>
-					<view class="text-gray text-sm flex">
-						<view class="text-cut">
-							<text class="cuIcon-infofill text-red  margin-right-xs"></text>
-							我已天理为凭，踏入这片荒芜，不再受凡人的枷锁遏制。我已天理为凭，踏入这片荒芜，不再受凡人的枷锁遏制。
+		<view class="cu-card dynamic shadow shadow-lg" v-for="(item,index) in isCard?7:7" :key="index" @click="getDetail" :class="isCard?'':''">
+			<view class="cu-item shadow">
+				<view class="cu-list menu-avatar">
+					<view class="cu-item">
+						<view class="cu-avatar round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg);"></view>
+						<view class="content flex-sub">
+							<view class="text-shadow text-mauve">凯尔-艾欧尼亚</view>
+							<view class="text-white   text-sm   ">
+								<view class='cu-tag radius light sm bg-orange'>置顶</view>
+								<view class='cu-tag radius  light sm bg-cyan'>大宝剑专区</view>
+							</view>
 						</view>
 					</view>
 				</view>
-				<view class="action">
-					<view class="text-grey text-xs">22:20</view>
-					<view class="cu-tag round bg-grey sm">5</view>
+				<view class="text-content text-df text-black">
+					想做兼职的看过来，宝妈、学生、待业、上班
+					、老板、微商朋友都可以，手机兼职时间自由，
+					多劳多得，日赚30--300💰 
+					                            
 				</view>
-			</view>
-			<view class="cu-item">
-				<view class="cu-avatar round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/img/champion/Taric.png);">
-					<view class="cu-tag badge">99+</view>
-				</view>
-				<view class="content">
-					<view class="text-grey">
-						<view class="text-cut">瓦洛兰之盾-塔里克</view>
-						<view class="cu-tag round bg-orange sm">战士</view>
+				<view class="grid flex-sub padding-lr" :class="isCard?'col-4 grid-square':'col-20 grid-square'">
+					<view class="bg-img" :class="isCard?'':''" v-for="(item,index) in isCard?4:4" :key="index">
+						<image src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg" @click='previewimgs' data-img="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg"
+						 mode="aspectFill"></image>
 					</view>
-					<view class="text-gray text-sm flex">
-						<view class="text-cut">
-							塔里克是保护者星灵，用超乎寻常的力量守护着符文之地的生命、仁爱以及万物之美。塔里克由于渎职而被放逐，离开了祖国德玛西亚，前去攀登巨神峰寻找救赎，但他找到的却是来自星界的更高层的召唤。现在的塔里克与古代巨神族的神力相融合，以瓦洛兰之盾的身份，永不疲倦地警惕着阴险狡诈的虚空腐化之力。
+				</view>
+				<view class="text-gray padding-lr  " style="margin-top: 20rpx;font-size: 14px;">
+					2019-12-23 11:18
+				</view>
+				<view class="padding-sm  solid-top">
+					<view class="text-gray radius light flex     justify-between" style="  color: #A3A3A3;">
+						<view class=" ">
+							<text class="cuIcon-attentionfill   margin-lr-xs"></text>1249
+							<text class="cuIcon-appreciatefill margin-lr-xs"></text>398
+							<text class="cuIcon-messagefill margin-lr-xs"></text>301
 						</view>
+						<view class="">
+							<text class="  text-mauve   margin-lr-xs" @click="navTo">详情>></text>
+						</view>
+		
 					</view>
-				</view>
-				<view class="action">
-					<view class="text-grey text-xs">22:20</view>
-					<view class="cuIcon-notice_forbid_fill text-gray"></view>
-				</view>
-			</view>
-			<view class="cu-item ">
-				<view class="cu-avatar radius lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/img/champion/Morgana.png);"></view>
-				<view class="content">
-					<view class="text-pink">
-						<view class="text-cut">莫甘娜</view>
-					</view>
-					<view class="text-gray text-sm flex">
-						<view class="text-cut">凯尔，你被自己的光芒变的盲目！</view>
-					</view>
-				</view>
-				<view class="action">
-					<view class="text-grey text-xs">22:20</view>
-					<view class="cu-tag round bg-red sm">5</view>
-				</view>
-			</view>
-			<view class="cu-item grayscale">
-				<view class="cu-avatar radius lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big81007.jpg);"></view>
-				<view class="content">
-					<view>
-						<view class="text-cut">伊泽瑞尔</view>
-						<view class="cu-tag round bg-orange sm">断开连接...</view>
-					</view>
-					<view class="text-gray text-sm flex">
-						<view class="text-cut"> 等我回来一个打十个</view>
-					</view>
-				</view>
-				<view class="action">
-					<view class="text-grey text-xs">22:20</view>
-					<view class="cu-tag round bg-red sm">5</view>
-				</view>
-			</view>
-			<view class="cu-item cur">
-				<view class="cu-avatar radius lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big81020.jpg);">
-					<view class="cu-tag badge"></view>
-				</view>
-				<view class="content">
-					<view>
-						<view class="text-cut">瓦罗兰大陆-睡衣守护者-新手保护营</view>
-						<view class="cu-tag round bg-orange sm">6人</view>
-					</view>
-					<view class="text-gray text-sm flex">
-						<view class="text-cut"> 伊泽瑞尔：<text class="cuIcon-locationfill text-orange margin-right-xs"></text> 传送中...</view>
-					</view>
-				</view>
-				<view class="action">
-					<view class="text-grey text-xs">22:20</view>
-					<view class="cuIcon-notice_forbid_fill text-gray"></view>
 				</view>
 			</view>
 		</view>
@@ -257,6 +209,13 @@
 				skin: false,
 				listTouchStart: 0,
 				listTouchDirection: null,
+				isCard: true,
+				arrImg: [
+					'https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1574944734&di=968165d2137e21d5fd73145689cef219&src=http://desk-fd.zol-img.com.cn/t_s960x600c5/g4/M04/04/03/Cg-4WVQSY5GIXCJfAAgcMfHEIBEAARXwQHY7j8ACBxJ524.jpg',
+					'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=4029513770,137662880&fm=26&gp=0.jpg',
+					'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=287899671,3092315054&fm=26&gp=0.jpg',
+					'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3087859370,4025215728&fm=26&gp=0.jpg'
+				]
 			};
 		},
 		computed: mapState(['forcedLogin', 'hasLogin', 'userName']),
@@ -269,52 +228,36 @@
 			cardSwiper(e) {
 				this.cardCur = e.detail.current;
 			},
-			// towerSwiper
-			// 初始化towerSwiper
-			TowerSwiper(name) {
-				let list = this[name];
-				for (let i = 0; i < list.length; i++) {
-					list[i].zIndex = parseInt(list.length / 2) + 1 - Math.abs(i - parseInt(list.length / 2));
-					list[i].mLeft = i - parseInt(list.length / 2);
-				}
-				this.swiperList = list;
+	 
+			
+			IsCard(e) {
+				this.isCard = e.detail.value
 			},
-
-			// towerSwiper触摸开始
-			TowerStart(e) {
-				this.towerStart = e.touches[0].pageX;
+			previewimgs: function(e) {
+				var currentImg = e.currentTarget.dataset.img;
+				console.log(currentImg);
+				wx.previewImage({
+					current: currentImg, // 当前显示图片的http链接 String
+					urls: this.arrImg // 需要预览的图片http链接列表 Array
+				})
 			},
-
-			// towerSwiper计算方向
-			TowerMove(e) {
-				this.direction = e.touches[0].pageX - this.towerStart > 0 ? 'right' : 'left';
+			
+			getDetail: function(e) {
+			
 			},
-
-			// towerSwiper计算滚动
-			TowerEnd(e) {
-				let direction = this.direction;
-				let list = this.swiperList;
-				if (direction == 'right') {
-					let mLeft = list[0].mLeft;
-					let zIndex = list[0].zIndex;
-					for (let i = 1; i < this.swiperList.length; i++) {
-						this.swiperList[i - 1].mLeft = this.swiperList[i].mLeft;
-						this.swiperList[i - 1].zIndex = this.swiperList[i].zIndex;
-					}
-					this.swiperList[list.length - 1].mLeft = mLeft;
-					this.swiperList[list.length - 1].zIndex = zIndex;
-				} else {
-					let mLeft = list[list.length - 1].mLeft;
-					let zIndex = list[list.length - 1].zIndex;
-					for (let i = this.swiperList.length - 1; i > 0; i--) {
-						this.swiperList[i].mLeft = this.swiperList[i - 1].mLeft;
-						this.swiperList[i].zIndex = this.swiperList[i - 1].zIndex;
-					}
-					this.swiperList[0].mLeft = mLeft;
-					this.swiperList[0].zIndex = zIndex;
-				}
-				this.direction = '';
-				this.swiperList = this.swiperList;
+			
+			navTo: function(e) {
+				console.log("------------------")
+				uni.navigateTo({
+					url: '../blog/detail/detail',
+					success: res => {},
+					fail: () => {},
+					complete: () => {}
+				});
+			
+			},
+			toDetail: function() {
+			
 			}
 		},
 		// onLoad() {

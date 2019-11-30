@@ -1,7 +1,9 @@
 <template>
 	<view>
 		<view>
-			<cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/wdh2236.jpg">
+			<cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/wdh2236.jpg" :isBack="true">
+				<block slot="backText">返回</block>
+				<block slot="content"></block>
 			</cu-custom>
 		</view>
 		<view class="cu-card dynamic" :class="isCard?'no-card':''">

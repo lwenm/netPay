@@ -7,13 +7,13 @@
 				<button class="text-img" open-type="share">
 					<view class="buttom-view">
 						<image class="share-img" src="../static/icos/share.png" mode="" style="box-sizing: initial;"></image>
-						<view class="text">分享</view>
+						<view class="text"> </view>
 					</view>
 				</button>
 				<button class="text-img" open-type="contact">
 					<view class="buttom-view">
 						<image class="share-img" src="../static/icos/service.png" mode="" style="box-sizing: initial;"></image>
-						<view class="text">客服</view>
+						<view class="text"></view>
 					</view>
 				</button>
 			</view>

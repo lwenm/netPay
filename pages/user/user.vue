@@ -25,7 +25,7 @@
 			            <view class="cmview" bindtap="zanstart">
 			                <image :src="zanimg" class="img-plus" mode="scaleToFill"></image>
 			                <text class="cmicontext ">赞</text>
-			            </view>
+			            </view> 
 			            <button class="cmview" open-type="share" plain='true' type="primary"  style="border:none; margin-top:5rpx; margin-left:15rpx; padding:0px; width:auto; ">
 			                <image src='../../static/img/resend.png' class="img-plus" mode="scaleToFill"></image>
 			                <text class="cmicontext" style='margin-top:-12rpx;'>转发</text>
@@ -96,7 +96,8 @@ export default {
 				complete: () => {}
 			});
 			
-		}
+		},
+		
 /* 		// DotStyle(e) {
 		// 	this.dotStyle = e.detail.value;
 		// },

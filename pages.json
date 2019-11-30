@@ -37,7 +37,6 @@
 		}
         ,{
             "path" : "pages/blog/detail/detail",
-			"navigationStyle": "custom",
             "style" : {
 				"navigationStyle": "custom",
 				"navigationBarTitleText": "详情"
@@ -45,12 +44,12 @@
         }
         ,{
             "path" : "pages/blog/list/list", 
-			
             "style" : {
 				"navigationStyle": "custom"
 			}
         }
 
+     
     ],
     "tabBar": {
         "borderStyle": "black",
@@ -73,7 +72,7 @@
             "iconPath": "static/img/tabbar/mine0.png",
             "selectedIconPath": "static/img/tabbar/mine1.png"
         }, { 
-            "pagePath": "pages/blog/detail/detail",
+            "pagePath": "pages/blog/list/list",
             "text": "关于",
             "iconPath": "static/img/tabbar/about0.png",
             "selectedIconPath": "static/img/tabbar/about1.png"
