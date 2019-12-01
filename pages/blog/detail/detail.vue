@@ -6,15 +6,16 @@
 				<block slot="content"></block>
 			</cu-custom>
 		</view>
-		<view class="cu-card dynamic" :class="isCard?'no-card':''">
+		<view class="cu-card dynamic" :class="isCard?'no-card':'no-card'">
 			<view class="cu-item shadow">
 				<view class="cu-list menu-avatar">
 					<view class="cu-item">
 						<view class="cu-avatar round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg);"></view>
 						<view class="content flex-sub">
-							<view>凯尔</view>
-							<view class="text-gray text-sm flex justify-between">
-								2019年12月3日
+							<view class="text-shadow text-mauve">凯尔-艾欧尼亚</view>
+							<view class="text-white   text-sm   ">
+								<view class='cu-tag radius light bg-orange'>置顶</view>
+								<view class='cu-tag radius  light bg-cyan'>大宝剑专区</view>
 							</view>
 						</view>
 					</view>
@@ -28,10 +29,16 @@
 					 <image src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg" mode="aspectFill"></image>
 					</view>
 				</view>
-				<view class="text-gray text-sm text-right padding">
-					<text class="cuIcon-attentionfill margin-lr-xs"></text> 10
-					<text class="cuIcon-appreciatefill margin-lr-xs"></text> 20
-					<text class="cuIcon-messagefill margin-lr-xs"></text> 31
+				<view class="padding-sm">
+				</view>
+				<view class="padding-sm  solid-top">
+					<view class="text-gray radius light flex     justify-start" style="  color: #A3A3A3;">
+						 
+							<text class="cuIcon-attentionfill   margin-lr-xs">1249</text>
+							<text class="cuIcon-appreciatefill margin-lr-xs">398</text>
+							<text class="cuIcon-messagefill margin-lr-xs">301</text>
+						 
+					</view>
 				</view>
 		
 				<view class="cu-list menu-avatar comment solids-top">
