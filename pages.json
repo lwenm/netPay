@@ -3,8 +3,7 @@
         {
             "path": "pages/main/main",
             "style": {
-				"navigationStyle": "custom",
-                "navigationBarTitleText": "登录模板"
+                "navigationBarTitleText": "boss社区"
             }
         }, {
             "path": "pages/login/login",
@@ -24,34 +23,30 @@
         }, {
             "path": "pages/user/user",
             "style": {
-				"navigationStyle": "custom",
                 "navigationBarTitleText": "我的"
             }
         },
 		{
 		    "path": "pages/category/category",
 		    "style": {
-				"navigationStyle": "custom",
 		        "navigationBarTitleText": "分类"
 		    }
 		}
         ,{
             "path" : "pages/blog/detail/detail",
             "style" : {
-				"navigationStyle": "custom",
-				"navigationBarTitleText": "详情"
+				
 				}
         }
         ,{
             "path" : "pages/blog/list/list", 
             "style" : {
-				"navigationStyle": "custom"
+				"navigationBarTitleText": "详情"
 			}
         }
         ,{
             "path" : "pages/user/about/about",
             "style" : {
-				 
 				"navigationBarTitleText": "个人中心"
 				}
         }

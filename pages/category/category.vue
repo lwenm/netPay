@@ -1,9 +1,9 @@
 <template>
 	<view class="uni-tab-bar">
-		<view>
+<!-- 		<view>
 			<cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/wdh2236.jpg">
 			</cu-custom>
-		</view>
+		</view> -->
 		<scroll-view id="tab-bar" class="uni-swiper-tab" scroll-x :scroll-left="scrollLeft">
 			<view
 				v-for="(tab, index) in tabBars"

@@ -1,9 +1,9 @@
 <template>
 	<view>
-		<view>
+<!-- 		<view>
 			<cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/wdh2236.jpg"  >
 			</cu-custom>
-		</view>
+		</view> -->
 		<view class="cu-card dynamic" v-for="(item,index) in isCard?7:7" :key="index" @click="getDetail" :class="isCard?'':''">
 			<view class="cu-item shadow">
 				<view class="cu-list menu-avatar">

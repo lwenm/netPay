@@ -1,88 +1,94 @@
 <template>
-	<view class="">
+	<scroll-view scroll-y="" >
 		<view>
-			<cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/wdh2236.jpg">
-			</cu-custom>
-		</view>
-		<share />
-		<view class="cu-bar search bg-white">
-			<view class="search-form round">
-				<text class="cuIcon-search"></text>
-				<input @focus="InputFocus" @blur="InputBlur" :adjust-position="false" type="text" placeholder="搜索图片、文章、视频"
-				 confirm-type="search"></input>
-			</view>
-			<view class="action">
-				<button class="cu-btn bg-green shadow-blur round">搜索</button>
-			</view>
-		</view>
-		<swiper class="card-swiper" :class="dotStyle ? 'square-dot' : 'round-dot'" :indicator-dots="true" :circular="true"
-		 :autoplay="true" interval="6000" duration="500" @change="cardSwiper" indicator-color="#8799a3"
-		 indicator-active-color="#0081ff">
-			<swiper-item v-for="(item, index) in swiperList" :key="index" :class="cardCur == index ? 'cur' : ''">
-				<view class="swiper-item">
-					<image :src="item.url" mode="aspectFill" v-if="item.type == 'image'"></image>
-					<video :src="item.url" autoplay loop muted :show-play-btn="false" :controls="false" objectFit="cover" v-if="item.type == 'video'"></video>
-				</view>
-			</swiper-item>
-		</swiper>
-
-		<view class="cu-list grid radius shadow shadow-lg" :class="['col-' + gridCol,gridBorder?'':'no-border']">
-			<view class="cu-item" v-for="(item,index) in cuIconList" :key="index" v-if="index<gridCol*2">
-				<view :class="['cuIcon-' + item.cuIcon,'text-' + item.color]" style="line-height: 1;">
-					<view class="cu-tag badge" v-if="item.badge!=0">
-
+			<view class="">
+			<!-- 		<view>
+						<cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/wdh2236.jpg">
+						</cu-custom>
+					</view> -->
+					<share />
+					<view class="cu-bar search bg-white">
+						<view class="search-form round">
+							<text class="cuIcon-search"></text>
+							<input @focus="InputFocus" @blur="InputBlur" :adjust-position="false" type="text" placeholder="搜索图片、文章、视频"
+							 confirm-type="search"></input>
+						</view>
+						<view class="action">
+							<button class="cu-btn bg-green shadow-blur round">搜索</button>
+						</view>
 					</view>
-				</view>
-				<text>{{item.name}}</text>
-			</view>
-		</view>
-
-		<view class="cu-card dynamic shadow shadow-lg" v-for="(item,index) in isCard?7:7" :key="index" @click="getDetail"
-		 :class="isCard?'':''">
-			<view class="cu-item shadow">
-				<view class="cu-list menu-avatar">
-					<view class="cu-item">
-						<view class="cu-avatar round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg);"></view>
-						<view class="content flex-sub">
-							<view class="text-shadow text-mauve">凯尔-艾欧尼亚</view>
-							<view class="text-white   text-sm   ">
-								<view class='cu-tag radius light sm bg-orange ' style="margin-left: 0px;">置顶</view>
-								<view class='cu-tag radius  light sm bg-cyan'>大宝剑专区</view>
+					<swiper class="card-swiper" :class="dotStyle ? 'square-dot' : 'round-dot'" :indicator-dots="true" :circular="true"
+					 :autoplay="true" interval="6000" duration="500" @change="cardSwiper" indicator-color="#8799a3"
+					 indicator-active-color="#0081ff">
+						<swiper-item v-for="(item, index) in swiperList" :key="index" :class="cardCur == index ? 'cur' : ''">
+							<view class="swiper-item">
+								<image :src="item.url" mode="aspectFill" v-if="item.type == 'image'"></image>
+								<video :src="item.url" autoplay loop muted :show-play-btn="false" :controls="false" objectFit="cover" v-if="item.type == 'video'"></video>
+							</view>
+						</swiper-item>
+					</swiper>
+			
+					<view class="cu-list grid radius shadow shadow-lg" :class="['col-' + gridCol,gridBorder?'':'no-border']">
+						<view class="cu-item" v-for="(item,index) in cuIconList" :key="index" v-if="index<gridCol*2">
+							<view :class="['cuIcon-' + item.cuIcon,'text-' + item.color]" style="line-height: 1;">
+								<view class="cu-tag badge" v-if="item.badge!=0">
+			
+								</view>
+							</view>
+							<text>{{item.name}}</text>
+						</view>
+					</view>
+			
+					<view class="cu-card dynamic shadow shadow-lg" v-for="(item,index) in isCard?7:7" :key="index" @click="getDetail"
+					 :class="isCard?'':''">
+						<view class="cu-item shadow">
+							<view class="cu-list menu-avatar">
+								<view class="cu-item">
+									<view class="cu-avatar round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg);"></view>
+									<view class="content flex-sub">
+										<view class="text-shadow text-mauve">凯尔-艾欧尼亚</view>
+										<view class="text-white   text-sm   ">
+											<view class='cu-tag radius light sm bg-orange ' style="margin-left: 0px;">置顶</view>
+											<view class='cu-tag radius  light sm bg-cyan'>大宝剑专区</view>
+										</view>
+									</view>
+								</view>
+							</view>
+							<view class="text-content text-df text-black">
+								想做兼职的看过来，宝妈、学生、待业、上班
+								、老板、微商朋友都可以，手机兼职时间自由，
+								多劳多得，日赚30--300💰
+			
+							</view>
+							<view class="grid flex-sub padding-lr" :class="isCard?'col-4 grid-square':'col-20 grid-square'">
+								<view class="bg-img" :class="isCard?'':''" v-for="(item,index) in isCard?4:4" :key="index">
+									<image src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg" @click='previewimgs' data-img="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg"
+									 mode="aspectFill"></image>
+								</view>
+							</view>
+							<view class="text-gray padding-lr  " style="margin-top: 20rpx;font-size: 14px;">
+								2019-12-23 11:18
+							</view>
+							<view class="padding-sm  solid-top">
+								<view class="text-gray radius light flex     justify-between" style="  color: #A3A3A3;">
+									<view class=" ">
+										<text class="cuIcon-attentionfill   margin-lr-xs"></text>1249
+										<text class="cuIcon-appreciatefill margin-lr-xs"></text>398
+										<text class="cuIcon-messagefill margin-lr-xs"></text>301
+									</view>
+									<view class="">
+										<text class="  text-mauve   margin-lr-xs" @click="navTo">详情>></text>
+									</view>
+								</view>
 							</view>
 						</view>
 					</view>
+			
 				</view>
-				<view class="text-content text-df text-black">
-					想做兼职的看过来，宝妈、学生、待业、上班
-					、老板、微商朋友都可以，手机兼职时间自由，
-					多劳多得，日赚30--300💰
-
-				</view>
-				<view class="grid flex-sub padding-lr" :class="isCard?'col-4 grid-square':'col-20 grid-square'">
-					<view class="bg-img" :class="isCard?'':''" v-for="(item,index) in isCard?4:4" :key="index">
-						<image src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg" @click='previewimgs' data-img="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg"
-						 mode="aspectFill"></image>
-					</view>
-				</view>
-				<view class="text-gray padding-lr  " style="margin-top: 20rpx;font-size: 14px;">
-					2019-12-23 11:18
-				</view>
-				<view class="padding-sm  solid-top">
-					<view class="text-gray radius light flex     justify-between" style="  color: #A3A3A3;">
-						<view class=" ">
-							<text class="cuIcon-attentionfill   margin-lr-xs"></text>1249
-							<text class="cuIcon-appreciatefill margin-lr-xs"></text>398
-							<text class="cuIcon-messagefill margin-lr-xs"></text>301
-						</view>
-						<view class="">
-							<text class="  text-mauve   margin-lr-xs" @click="navTo">详情>></text>
-						</view>
-					</view>
-				</view>
-			</view>
+			
 		</view>
-
-	</view>
+	</scroll-view>
+	
 </template>
 
 <script>
@@ -332,4 +338,6 @@
 		height: 0;
 		color: transparent;
 	}
+	
+
 </style>

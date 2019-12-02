@@ -277,4 +277,18 @@
 	button.primary {
 		background-color: #0faeff;
 	}
+	
+	::-webkit-scrollbar {
+	    display: none;  
+	    width: 0 !important;  
+	    height: 0 !important;  
+	    -webkit-appearance: none;  
+	    background: transparent;  
+	}
+	
+/* 	::-webkit-scrollbar{
+	width: 0;
+	height: 0;
+	color: transparent;
+	} */
 </style>
