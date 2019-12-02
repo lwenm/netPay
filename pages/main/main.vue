@@ -46,7 +46,7 @@
 						<view class="content flex-sub">
 							<view class="text-shadow text-mauve">凯尔-艾欧尼亚</view>
 							<view class="text-white   text-sm   ">
-								<view class='cu-tag radius light sm bg-orange'>置顶</view>
+								<view class='cu-tag radius light sm bg-orange ' style="margin-left: 0px;">置顶</view>
 								<view class='cu-tag radius  light sm bg-cyan'>大宝剑专区</view>
 							</view>
 						</view>
@@ -77,7 +77,6 @@
 						<view class="">
 							<text class="  text-mauve   margin-lr-xs" @click="navTo">详情>></text>
 						</view>
-
 					</view>
 				</view>
 			</view>

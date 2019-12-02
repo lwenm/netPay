@@ -49,7 +49,7 @@
 			}
         }
         ,{
-            "path" : "pages/user/about/about",
+            "path" : "pages/pwd/pwd",
             "style" : {
 				 
 				"navigationBarTitleText": "个人中心"

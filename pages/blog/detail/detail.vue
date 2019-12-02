@@ -13,9 +13,9 @@
 						<view class="cu-avatar round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg);"></view>
 						<view class="content flex-sub">
 							<view class="text-shadow text-mauve">凯尔-艾欧尼亚</view>
-							<view class="text-white   text-sm   ">
-								<view class='cu-tag radius light bg-orange'>置顶</view>
-								<view class='cu-tag radius  light bg-cyan'>大宝剑专区</view>
+							<view class="text-white  ">
+								<view class='cu-tag radius sm light bg-orange' style="margin-left: 0px;">置顶</view>
+								<view class='cu-tag radius sm light bg-cyan'>大宝剑专区</view>
 							</view>
 						</view>
 					</view>
@@ -23,24 +23,25 @@
 				<view class="text-content">
 					折磨生出苦难，苦难又会加剧折磨，凡间这无穷的循环，将有我来终结！
 				</view>
-				<view class="grid flex-sub padding-lr" :class="isCard?'col-1':'col-20 grid-square'">
-					<view class="bg-img" :class="isCard?'':'only-img'"  
-					 v-for="(item,index) in isCard?1:7" :key="index">
-					 <image src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg" mode="aspectFill"></image>
+				<view class="grid flex-sub justify-center radius" :class="isCard?'col-1':'col-20  '">
+					<view v-for="(item,index) in isCard?1:7" :key="index">
+						<image class="radius" src="https://ss1.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=7ecc7f20ae0f4bfb93d09854334e788f/10dfa9ec8a1363279e1ed28c9b8fa0ec09fac79a.jpg"
+						 mode="widthFix"></image>
 					</view>
 				</view>
 				<view class="padding-sm">
 				</view>
-				<view class="padding-sm  solid-top">
+				<view class="padding-sm flex justify-between solid-top">
 					<view class="text-gray radius light flex     justify-start" style="  color: #A3A3A3;">
-						 
-							<text class="cuIcon-attentionfill   margin-lr-xs">1249</text>
-							<text class="cuIcon-appreciatefill margin-lr-xs">398</text>
-							<text class="cuIcon-messagefill margin-lr-xs">301</text>
-						 
+						<text class="cuIcon-attentionfill   margin-lr-xs">1249</text>
+						<text class="cuIcon-appreciatefill margin-lr-xs">398</text>
+						<text class="cuIcon-messagefill margin-lr-xs">301</text>
+					</view>
+					<view class="">
+						<text class="cuIcon-message  text-mauve   margin-lr-xs" @click="navTo">评论</text>
 					</view>
 				</view>
-		
+
 				<view class="cu-list menu-avatar comment solids-top">
 					<view class="cu-item">
 						<view class="cu-avatar round" style="background-image:url(https://ossweb-img.qq.com/images/lol/img/champion/Morgana.png);"></view>
@@ -64,7 +65,7 @@
 							</view>
 						</view>
 					</view>
-		
+
 					<view class="cu-item">
 						<view class="cu-avatar round" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg);"></view>
 						<view class="content">
@@ -95,17 +96,19 @@
 
 <script>
 	export default {
-	data() {
-		return {
-			isCard: false
-		};
-	},
+		data() {
+			return {
+				isCard: false
+			};
+		},
 		methods: {
-			
+
 		}
 	}
 </script>
 
 <style>
-
+	.img {
+		width: 100%;
+	}
 </style>
