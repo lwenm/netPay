@@ -23,10 +23,9 @@
 				<view class="text-content">
 					折磨生出苦难，苦难又会加剧折磨，凡间这无穷的循环，将有我来终结！
 				</view>
-				<view class="grid flex-sub justify-center radius" :class="isCard?'col-1':'col-20  '">
+				<view class="grid flex-sub justify-center radius">
 					<view v-for="(item,index) in isCard?1:7" :key="index">
-						<image class="radius" src="https://ss1.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=7ecc7f20ae0f4bfb93d09854334e788f/10dfa9ec8a1363279e1ed28c9b8fa0ec09fac79a.jpg"
-						 mode="widthFix"></image>
+						<image class="radius" style="width: 360px;" src="http://img5.imgtn.bdimg.com/it/u=2440548410,4261041145&fm=26&gp=0.jpg"	 mode="widthFix"></image>
 					</view>
 				</view>
 				<view class="padding-sm">
@@ -110,5 +109,10 @@
 <style>
 	.img {
 		width: 100%;
+	}
+	
+	.uni-image{
+		
+		width: 350;
 	}
 </style>
