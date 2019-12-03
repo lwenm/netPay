@@ -489,10 +489,10 @@
 
 		 
 },
-		onPageScroll: function (e) {
-		    console.log(e)
+		// onPageScroll: function (e) {
+		//     console.log(e)
 		     
-		  }
+		//   }
 		// onLoad() {
 		// 	this.TowerSwiper('swiperList');
 		// 	// 初始化towerSwiper 传已有的数组名即可
@@ -565,4 +565,6 @@
 		height: 0;
 		color: transparent;
 	}
+	
+	
 </style>

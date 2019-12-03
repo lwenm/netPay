@@ -10,12 +10,18 @@
 						<view class="text"> </view>
 					</view>
 				</button>
-				<button class="text-img" open-type="contact">
+				<button class="text-img" @click="goTop" >
+					<view class="buttom-view" >
+						<image class="share-img" src="../static/icos/top.png" mode="" style="box-sizing: initial;"></image>
+						<view class="text"></view>
+					</view>
+				</button>
+<!-- 				<button class="text-img" open-type="contact">
 					<view class="buttom-view">
 						<image class="share-img" src="../static/icos/service.png" mode="" style="box-sizing: initial;"></image>
 						<view class="text"></view>
 					</view>
-				</button>
+				</button> -->
 			</view>
 		</view>
 	</view>
@@ -28,6 +34,13 @@
 			return {
 
 			};
+		},
+		methods:{
+			goTop(){
+				     uni.pageScrollTo({
+				        scrollTop: 0
+				      })
+			}
 		}
 	}
 </script>
@@ -36,7 +49,7 @@
 	.button-view{
 		position: fixed;
 		z-index: 999;
-		bottom: 20upx;
+		bottom: 30upx;
 		right: 10upx;
 	}
 	.share-popup {
@@ -50,10 +63,10 @@
 		height: 60upx;
 		background-color: #fff;
 		font-size: 28upx;
-		margin-bottom: 20upx;
+		margin-bottom: 30upx;
 		box-shadow: 0upx 0upx 6upx #E0E0E0;
-		padding-left: 10upx;
-		padding-right: 10upx;
+		padding-left: 0upx;
+		padding-right: 0upx;
 
 	}
 
@@ -65,13 +78,13 @@
 	}
 
 	.share-img {
-		width: 40upx;
-		height: 40upx;
-		padding: 10upx;
+		width: 50upx;
+		height: 50upx;
+		padding: 7upx;
 	}
 
 	.text {
 		height: 60upx;
-		line-height: 60upx;
+		line-height: 30upx;
 	}
 </style>
