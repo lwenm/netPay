@@ -2579,7 +2579,7 @@ swiper.round-dot .uni-swiper-dot.uni-swiper-dot-active {
 }
 
 .screen-swiper {
-	min-height: 375upx;
+	min-height: 360upx;
 }
 
 .screen-swiper image,
@@ -2599,9 +2599,9 @@ swiper.round-dot .uni-swiper-dot.uni-swiper-dot-active {
 
 .card-swiper swiper-item {
 	width: 600upx !important;
-	left: 70upx;
+	left: 75upx;
 	box-sizing: border-box;
-	padding: 10upx 0upx 35upx;
+	padding: 10upx 0upx 10upx;
 	overflow: initial;
 }
 
