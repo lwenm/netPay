@@ -30,12 +30,12 @@
 
 				<view class="cu-list grid radius shadow shadow-lg" :class="['col-' + gridCol,gridBorder?'':'no-border']">
 					<view class="cu-item" v-for="(item,index) in cuIconList" :key="index" v-if="index<gridCol*2">
-						<view :class="['cuIcon-' + item.cuIcon,'text-' + item.color]" style="line-height: 1;">
+						<view :class="['cuIcon-' + item.cuIcon,'text-' + item.color]" style="line-height: 0.8; ">
 							<view class="cu-tag badge" v-if="item.badge!=0">
 
 							</view>
 						</view>
-						<text>{{item.name}}</text>
+						<text style=" font-size: 12px;">{{item.name}}</text>
 					</view>
 				</view>
 
@@ -46,7 +46,7 @@
 							<view class="cu-item">
 								<view class="cu-avatar round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg);"></view>
 								<view class="content flex-sub">
-									<view class="text-shadow text-mauve">{{item.nickName}}</view>
+									<view class="text-shadow text-bold text-mauve">{{item.nickName}}</view>
 									<view class="text-white   text-sm   ">
 										<view class='cu-tag radius light sm bg-orange ' style="margin-left: 0px;">{{item.isTop==1?"置顶":"普通"}}</view>
 										<view class='cu-tag radius  light sm bg-cyan'>大宝剑专区</view>
@@ -376,42 +376,42 @@
 					cuIcon: 'picfill',
 					color: 'yellow',
 					badge: 0,
-					name: '安卓区'
+					name: '外卖红包'
 				}, {
 					cuIcon: 'noticefill',
 					color: 'olive',
 					badge: 22,
-					name: '苹果区'
+					name: '助力群'
 				}, {
 					cuIcon: 'upstagefill',
 					color: 'cyan',
 					badge: 0,
-					name: '排行榜'
+					name: '优惠券'
 				}, {
 					cuIcon: 'circlefill',
 					color: 'blue',
 					badge: 0,
-					name: '综合区'
+					name: '微商发布'
 				}, {
 					cuIcon: 'discoverfill',
 					color: 'purple',
 					badge: 0,
-					name: '发现'
+					name: '行业群'
 				}, {
 					cuIcon: 'questionfill',
 					color: 'mauve',
 					badge: 0,
-					name: '帮助'
+					name: '营销推广'
 				}, {
 					cuIcon: 'commandfill',
 					color: 'purple',
 					badge: 0,
-					name: '问答'
+					name: '爱好群'
 				}, {
 					cuIcon: 'servicefill',
 					color: 'mauve',
 					badge: 0,
-					name: '客服'
+					name: '交友圈'
 				}],
 				modalName: null,
 				gridCol: 5,

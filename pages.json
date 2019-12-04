@@ -68,14 +68,14 @@
             "selectedIconPath": "static/img/tabbar/cate1.png"  
         }, {
             "pagePath": "pages/user/user",
-            "text": "我的",
-            "iconPath": "static/img/tabbar/mine0.png",
-            "selectedIconPath": "static/img/tabbar/mine1.png"
-        }, { 
-            "pagePath": "pages/user/about/about",
-            "text": "关于",
+            "text": "发布",
             "iconPath": "static/img/tabbar/about0.png",
             "selectedIconPath": "static/img/tabbar/about1.png"
+        }, { 
+            "pagePath": "pages/user/about/about",
+            "text": "我的",
+			"iconPath": "static/img/tabbar/mine0.png",
+			"selectedIconPath": "static/img/tabbar/mine1.png"
         }]
     },
     "globalStyle": {

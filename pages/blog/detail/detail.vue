@@ -1,31 +1,37 @@
 <template>
 	<view>
-<!-- 		<view>
+		<!-- 		<view>
 			<cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/wdh2236.jpg" :isBack="true">
 				<block slot="backText">返回</block>
 				<block slot="content"></block>
 			</cu-custom>
 		</view> -->
-		<view class="cu-card dynamic" :class="isCard?'no-card':'no-card'">
-			<view class="cu-item shadow">
-				<view class="cu-list menu-avatar">
-					<view class="cu-item">
+		<view class="cu-card dynamic" :class="'no-card'">
+			<view class="cu-item shadow  ">
+				<view class="cu-list menu-avatar    ">
+					<view class="cu-item ">
 						<view class="cu-avatar round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg);"></view>
 						<view class="content flex-sub">
-							<view class="text-shadow text-mauve">凯尔-艾欧尼亚</view>
+							<view class="text-shadow text-bold text-mauve">凯尔-艾欧尼亚</view>
 							<view class="text-white  ">
 								<view class='cu-tag radius sm light bg-orange' style="margin-left: 0px;">置顶</view>
 								<view class='cu-tag radius sm light bg-cyan'>大宝剑专区</view>
 							</view>
 						</view>
+						<view class="cu-btn cuIcon-favorfill round bg-blue  light   bottom-border sm">
+							已关注
+						</view>
 					</view>
+
 				</view>
+
 				<view class="text-content">
 					折磨生出苦难，苦难又会加剧折磨，凡间这无穷的循环，将有我来终结！
 				</view>
 				<view class="grid flex-sub justify-center radius">
 					<view v-for="(item,index) in isCard?1:7" :key="index">
-						<image class="radius" style="width: 360px;" src="http://img5.imgtn.bdimg.com/it/u=2440548410,4261041145&fm=26&gp=0.jpg"	 mode="widthFix"></image>
+						<image class="radius" style="width: 360px;" src="http://img5.imgtn.bdimg.com/it/u=2440548410,4261041145&fm=26&gp=0.jpg"
+						 mode="widthFix"></image>
 					</view>
 				</view>
 				<view class="padding-sm">
@@ -41,7 +47,7 @@
 					</view>
 				</view>
 
-				<view class="cu-list menu-avatar comment solids-top">
+				<view class="cu-list menu-avatar radius comment solids-top">
 					<view class="cu-item">
 						<view class="cu-avatar round" style="background-image:url(https://ossweb-img.qq.com/images/lol/img/champion/Morgana.png);"></view>
 						<view class="content">
@@ -90,6 +96,47 @@
 				</view>
 			</view>
 		</view>
+		<view class="cu-bar foot input">
+			<view class="flex justify-between">
+				<view class="action  ">
+					<text class="cuIcon-message text-grey "    @click="showModal()" style="font-size: 30rpx;">评论</text>
+				</view>
+				<view class="solid-left">
+
+				</view>
+				<view class="action  ">
+					<text class="cuIcon-favor text-grey " style="font-size: 30rpx;margin-right: 10rpx;">收藏</text>
+				</view>
+				<view class="solid-left margin-0">
+
+				</view>
+				<view class="  action margin-0 ">
+					<text class="cuIcon-appreciate text-grey " style="font-size: 30rpx; ">赞</text>
+				</view>
+			</view>
+			<view class="">
+				<text class="cuIcon-forward  text-grey   ">分享</text>
+			</view>
+		</view>
+
+		<view class="cu-modal" :class="modalName=='Modal'?'show':''">
+			<view class="cu-dialog">
+				<view class="cu-bar  justify-end " style="min-height: 25px;" >
+					<view class="content" >评论</view>
+					<view class="action" @tap="hideModal">
+						<text class="cuIcon-close text-red"></text>
+					</view>
+				</view>
+				<view class="cu-form-group ">
+					<textarea style=" text-align: left;" class="" maxlength="-1" :disabled="modalName!=null" @input="textareaAInput" placeholder="请输入评论内容..."></textarea>
+				</view>
+				<view class="cu-bar  " style="min-height: 35px;">
+					<view class="action margin-0 flex-sub text-green  " @tap="hideModal">取消</view>
+					<view class="action margin-0 flex-sub  solid-left" @tap="hideModal">发表</view>
+				</view>
+			</view>
+		</view>
+
 	</view>
 </template>
 
@@ -97,11 +144,17 @@
 	export default {
 		data() {
 			return {
-				isCard: false
+				isCard: false,
+				modalName:null
 			};
 		},
 		methods: {
-
+		showModal(e) {
+			this.modalName = 'Modal'
+		},
+		hideModal(e) {
+			this.modalName = null
+		},
 		}
 	}
 </script>
@@ -110,9 +163,9 @@
 	.img {
 		width: 100%;
 	}
-	
-	.uni-image{
-		
+
+	.uni-image {
+
 		width: 350;
 	}
 </style>
