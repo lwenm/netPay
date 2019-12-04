@@ -46,7 +46,7 @@
 							<view class="cu-item">
 								<view class="cu-avatar round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg);"></view>
 								<view class="content flex-sub">
-									<view class="text-shadow text-bold text-mauve">{{item.nickName}}</view>
+									<view class="text-shadow  text-mauve">{{item.nickName}}</view>
 									<view class="text-white   text-sm   ">
 										<view class='cu-tag radius light sm bg-orange ' style="margin-left: 0px;">{{item.isTop==1?"置顶":"普通"}}</view>
 										<view class='cu-tag radius  light sm bg-cyan'>大宝剑专区</view>

@@ -98,37 +98,37 @@
 		</view>
 		<view class="cu-bar foot input">
 			<view class="flex justify-between">
-				<view class="action  ">
-					<text class="cuIcon-message text-grey "    @click="showModal()" style="font-size: 30rpx;">评论</text>
+				<view class="action  myheight">
+					<text class="cuIcon-forward text-grey " style="font-size: 33rpx;">分享</text>
 				</view>
 				<view class="solid-left">
 
 				</view>
-				<view class="action  ">
-					<text class="cuIcon-favor text-grey " style="font-size: 30rpx;margin-right: 10rpx;">收藏</text>
+				<view class="action  myheight">
+					<text class="cuIcon-favor text-grey " style="font-size: 33rpx;margin-right: 10rpx;">收藏</text>
 				</view>
 				<view class="solid-left margin-0">
-
 				</view>
-				<view class="  action margin-0 ">
-					<text class="cuIcon-appreciate text-grey " style="font-size: 30rpx; ">赞</text>
+				<view class="myheight  action margin-0 ">
+					<text class="cuIcon-appreciate text-grey " style="font-size: 33rpx; ">赞</text>
 				</view>
 			</view>
-			<view class="">
-				<text class="cuIcon-forward  text-grey   ">分享</text>
+			<view class="myheight" @click="showModal()">
+				<text class=" cuIcon-message  text-grey   " style="font-size: 33rpx; " >评论</text>
 			</view>
 		</view>
 
-		<view class="cu-modal" :class="modalName=='Modal'?'show':''">
-			<view class="cu-dialog">
-				<view class="cu-bar  justify-end " style="min-height: 25px;" >
-					<view class="content" >评论</view>
+		<view catchtouchmove="return" class="cu-modal" :class="modalName=='Modal'?'show':''" :style="[{bottom:InputBottom+'px'}]">
+			<view class="cu-dialog" catchtouchmove="return" >
+				<view class="cu-bar  justify-end " style="min-height: 20px;">
+					<view class="content">评论</view>
 					<view class="action" @tap="hideModal">
 						<text class="cuIcon-close text-red"></text>
 					</view>
 				</view>
-				<view class="cu-form-group ">
-					<textarea style=" text-align: left;" class="" maxlength="-1" :disabled="modalName!=null" @input="textareaAInput" placeholder="请输入评论内容..."></textarea>
+				<view class="cu-form-group " catchtouchmove="return"  >
+					<textarea style=" text-align: left;" class="" maxlength="-1"   @input="InputFocus"
+					 placeholder="请输入评论内容..."></textarea>
 				</view>
 				<view class="cu-bar  " style="min-height: 35px;">
 					<view class="action margin-0 flex-sub text-green  " @tap="hideModal">取消</view>
@@ -140,21 +140,30 @@
 	</view>
 </template>
 
+
 <script>
 	export default {
 		data() {
 			return {
 				isCard: false,
-				modalName:null
+				modalName: null,
+				InputBottom: 0
 			};
 		},
 		methods: {
-		showModal(e) {
-			this.modalName = 'Modal'
-		},
-		hideModal(e) {
-			this.modalName = null
-		},
+			showModal(e) {
+				this.modalName = 'Modal'
+			},
+			hideModal(e) {
+				this.modalName = null
+			},
+			InputFocus(e) {
+				this.InputBottom = e.detail.height + 120
+				console.log(e.detail.height)
+			},
+			InputBlur(e) {
+				this.InputBottom = 0
+			}
 		}
 	}
 </script>
@@ -167,5 +176,10 @@
 	.uni-image {
 
 		width: 350;
+	}
+
+	.myheight {
+
+		height: 54rpx;
 	}
 </style>
