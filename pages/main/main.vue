@@ -65,15 +65,15 @@
 						<view class="text-gray padding-lr  " style="margin-top: 20rpx;font-size: 14px;">
 							{{item.datetime}}
 						</view>
-						<view class="padding-sm  solid-top">
-							<view class="text-gray radius light flex     justify-between" style="  color: #A3A3A3;">
-								<view class=" ">
+						<view class="   solid-top">
+							<view class="text-gray radius light flex     justify-between" style="  color: #A3A3A3;height: 45px;">
+								<view class="flex align-center   ">
 									<text class="cuIcon-attentionfill   margin-lr-xs"></text>{{item.browsingTimes}}
 									<text class="cuIcon-appreciatefill margin-lr-xs"></text>{{item.thumbsUp}}
 									<text class="cuIcon-messagefill margin-lr-xs"></text>{{item.comment_count}}
 								</view>
-								<view class="">
-									<text class="  text-mauve   margin-lr-xs" @click="navTo">详情>></text>
+								<view class="flex align-center justify-end" style="height: 100% ;width: 80px;" @click="navTo">
+									<text class="  text-mauve   margin-lr-xs" >详情>></text>
 								</view>
 							</view>
 						</view>
@@ -160,9 +160,9 @@
 						thumbsUp: "312",
 						browsingTimes: "2345",
 						imgs: [
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
+							"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
+							"https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg",
+							"https://ossweb-img.qq.com/images/lol/web201310/skin/big39000.jpg",
 							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
 							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
 						]
@@ -178,26 +178,9 @@
 						thumbsUp: "312",
 						browsingTimes: "2345",
 						imgs: [
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-						]
-					}, {
-						datetime: "2019-12-23 11:18",
-						article_type: "1",
-						isTop: 1,
-						nickName: "凯尔-艾欧尼亚",
-						title: "想做兼职的看过来，宝妈、学生、待业、上班、老板、微商朋友都可以，手机兼职时间自由，多劳多得，日赚30--300💰",
-						headImg: "https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-						comment_count: "639",
-						thumbsUp: "312",
-						browsingTimes: "2345",
-						imgs: [
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
+							"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
+							"https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg",
+							"https://ossweb-img.qq.com/images/lol/web201310/skin/big39000.jpg",
 							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
 							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
 						]
@@ -212,27 +195,10 @@
 						thumbsUp: "312",
 						browsingTimes: "2345",
 						imgs: [
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-						]
-					}, {
-						datetime: "2019-12-23 11:18",
-						article_type: "1",
-						isTop: 1,
-						nickName: "凯尔-艾欧尼亚",
-						title: "想做兼职的看过来，宝妈、学生、待业、上班、老板、微商朋友都可以，手机兼职时间自由，多劳多得，日赚30--300💰",
-						headImg: "https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-						comment_count: "639",
-						thumbsUp: "312",
-						browsingTimes: "2345",
-						imgs: [
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
+							"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
+							"https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg",
+							"https://ossweb-img.qq.com/images/lol/web201310/skin/big39000.jpg",
+							"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
 							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
 						]
 					}, {
@@ -246,27 +212,10 @@
 						thumbsUp: "312",
 						browsingTimes: "2345",
 						imgs: [
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-						]
-					}, {
-						datetime: "2019-12-23 11:18",
-						article_type: "1",
-						isTop: 1,
-						nickName: "凯尔-艾欧尼亚",
-						title: "想做兼职的看过来，宝妈、学生、待业、上班、老板、微商朋友都可以，手机兼职时间自由，多劳多得，日赚30--300💰",
-						headImg: "https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-						comment_count: "639",
-						thumbsUp: "312",
-						browsingTimes: "2345",
-						imgs: [
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
+							"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
+							"https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg",
+							"https://ossweb-img.qq.com/images/lol/web201310/skin/big39000.jpg",
+							"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
 							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
 						]
 					}, {
@@ -280,10 +229,10 @@
 						thumbsUp: "312",
 						browsingTimes: "2345",
 						imgs: [
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
+							"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
+							"https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg",
+							"https://ossweb-img.qq.com/images/lol/web201310/skin/big39000.jpg",
+							"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
 							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
 						]
 					}, {
@@ -297,11 +246,62 @@
 						thumbsUp: "312",
 						browsingTimes: "2345",
 						imgs: [
+							"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
+							"https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg",
+							"https://ossweb-img.qq.com/images/lol/web201310/skin/big39000.jpg",
+							"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
 							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
+						]
+					}, {
+						datetime: "2019-12-23 11:18",
+						article_type: "1",
+						isTop: 1,
+						nickName: "凯尔-艾欧尼亚",
+						title: "想做兼职的看过来，宝妈、学生、待业、上班、老板、微商朋友都可以，手机兼职时间自由，多劳多得，日赚30--300💰",
+						headImg: "https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
+						comment_count: "639",
+						thumbsUp: "312",
+						browsingTimes: "2345",
+						imgs: [
+							"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
+							"https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg",
+							"https://ossweb-img.qq.com/images/lol/web201310/skin/big39000.jpg",
+							"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
 							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
+						]
+					}, {
+						datetime: "2019-12-23 11:18",
+						article_type: "1",
+						isTop: 1,
+						nickName: "凯尔-艾欧尼亚",
+						title: "想做兼职的看过来，宝妈、学生、待业、上班、老板、微商朋友都可以，手机兼职时间自由，多劳多得，日赚30--300💰",
+						headImg: "https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
+						comment_count: "639",
+						thumbsUp: "312",
+						browsingTimes: "2345",
+						imgs: [
+							"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
+							"https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg",
+							"https://ossweb-img.qq.com/images/lol/web201310/skin/big39000.jpg",
+							"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
 							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
+						]
+					}, {
+						datetime: "2019-12-23 11:18",
+						article_type: "1",
+						isTop: 1,
+						nickName: "凯尔-艾欧尼亚",
+						title: "想做兼职的看过来，宝妈、学生、待业、上班、老板、微商朋友都可以，手机兼职时间自由，多劳多得，日赚30--300💰",
+						headImg: "https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
+						comment_count: "639",
+						thumbsUp: "312",
+						browsingTimes: "2345",
+						imgs: [
+							"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
+							"https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg",
+							"https://ossweb-img.qq.com/images/lol/web201310/skin/big39000.jpg",
+							"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
+							"https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg",
 						]
 					},
 
@@ -317,10 +317,10 @@
 						thumbsUp: "312",
 						browsingTimes: "2345",
 						imgs: [
+							"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
+							"https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg",
 							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
+							"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
 							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
 						]
 					},{
@@ -334,10 +334,10 @@
 						thumbsUp: "312",
 						browsingTimes: "2345",
 						imgs: [
+							"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
 							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
 							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
+							"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
 							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
 						]
 					}, {
@@ -351,10 +351,10 @@
 						thumbsUp: "312",
 						browsingTimes: "2345",
 						imgs: [
+							"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
 							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
 							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
+							"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
 							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
 						]
 					}
@@ -373,45 +373,47 @@
 					badge: 1,
 					name: '最热'
 				}, {
-					cuIcon: 'picfill',
+					cuIcon: 'shopfill',
 					color: 'yellow',
-					badge: 0,
-					name: '外卖红包'
-				}, {
-					cuIcon: 'noticefill',
-					color: 'olive',
-					badge: 22,
-					name: '助力群'
-				}, {
-					cuIcon: 'upstagefill',
-					color: 'cyan',
-					badge: 0,
-					name: '优惠券'
-				}, {
-					cuIcon: 'circlefill',
-					color: 'blue',
 					badge: 0,
 					name: '微商发布'
 				}, {
+					cuIcon: 'commandfill',
+					color: 'olive',
+					badge: 22,
+					name: '营销推广'
+				},  {
+					cuIcon: 'sponsorfill',
+					color: 'blue',
+					badge: 0,
+					name: '优惠福利'
+				}, {
+					cuIcon: 'group_fill',
+					color: 'purple',
+					badge: 0,
+					name: '兼职招聘'
+				},
+				
+				{
 					cuIcon: 'discoverfill',
 					color: 'purple',
 					badge: 0,
-					name: '行业群'
+					name: '交友旅游'
 				}, {
-					cuIcon: 'questionfill',
+					cuIcon: 'emojiflashfill',
 					color: 'mauve',
 					badge: 0,
-					name: '营销推广'
+					name: '美食分享'
 				}, {
-					cuIcon: 'commandfill',
+					cuIcon: 'homefill',
 					color: 'purple',
 					badge: 0,
-					name: '爱好群'
+					name: '房产信息'
 				}, {
 					cuIcon: 'servicefill',
 					color: 'mauve',
 					badge: 0,
-					name: '交友圈'
+					name: '商业交流'
 				}],
 				modalName: null,
 				gridCol: 5,

@@ -3,7 +3,7 @@
         {
             "path": "pages/main/main",
             "style": {
-                "navigationBarTitleText": "boss社区"
+                "navigationBarTitleText": "boss星球"
             }
         }, {
             "path": "pages/login/login",
@@ -23,13 +23,13 @@
         }, {
             "path": "pages/user/user",
             "style": {
-                "navigationBarTitleText": "我的"
+                "navigationBarTitleText": "微圈"
             }
         },
 		{
 		    "path": "pages/category/category",
 		    "style": {
-		        "navigationBarTitleText": "分类"
+		        "navigationBarTitleText": "微群"
 		    }
 		}
         ,{
@@ -50,6 +50,10 @@
 				"navigationBarTitleText": "个人中心"
 				}
         }
+        ,{
+            "path" : "pages/blog/publish/publish",
+            "style" : {}
+        }
     ],
     "tabBar": {
         "borderStyle": "black",
@@ -58,12 +62,12 @@
         "backgroundColor": "#ffffff",
         "list": [{
             "pagePath": "pages/main/main",
-            "text": "首页",
+            "text": "微圈",
             "iconPath": "static/img/tabbar/main0.png",
             "selectedIconPath": "static/img/tabbar/main1.png"
         },{
             "pagePath": "pages/category/category",
-            "text": "分类",
+            "text": "微群",
             "iconPath": "static/img/tabbar/cate0.png",
             "selectedIconPath": "static/img/tabbar/cate1.png"  
         }, {

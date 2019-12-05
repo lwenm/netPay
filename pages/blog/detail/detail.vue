@@ -18,7 +18,7 @@
 								<view class='cu-tag radius sm light bg-cyan'>大宝剑专区</view>
 							</view>
 						</view>
-						<view class="cu-btn cuIcon-favorfill round bg-blue  light   bottom-border sm">
+						<view class="cu-btn cuIcon-favorfill round bg-blue  light   bottom-border sm margin-right">
 							已关注
 						</view>
 					</view>
@@ -42,7 +42,7 @@
 						<text class="cuIcon-appreciatefill margin-lr-xs">398</text>
 						<text class="cuIcon-messagefill margin-lr-xs">301</text>
 					</view>
-					<view class="">
+					<view class="" >
 						<text class="cuIcon-message  text-mauve   margin-lr-xs" @click="navTo">评论</text>
 					</view>
 				</view>
@@ -96,26 +96,29 @@
 				</view>
 			</view>
 		</view>
-		<view class="cu-bar foot input">
-			<view class="flex justify-between">
-				<view class="action  myheight">
-					<text class="cuIcon-forward text-grey " style="font-size: 33rpx;">分享</text>
+		<view class="cu-bar foot input " style="width: 100%; padding-right: 0px; ">
+			<view class="flex justify-between" style="width: 100%; ">
+				<view class="flex justify-between text-center">
+					<view class="  btn-wid myheight flex align-center justify-center noMargin">
+						<text class="cuIcon-forward text-blue " style="font-size: 33rpx;">分享</text>
+					</view>
+					<view class="solid-left">
+				
+					</view>
+					<view class="   btn-wid myheight  flex align-center justify-center  noMargin">
+						<text class="cuIcon-favor text-blue  " style="font-size: 33rpx;">收藏</text>
+					</view>
+					<view class="solid-left ">
+					</view>
+					<view class="myheight btn-wid   flex align-center justify-center   ">
+						<text class="cuIcon-appreciate text-blue " style="font-size: 33rpx; "><text class="">赞</text></text>
+					</view>
 				</view>
-				<view class="solid-left">
-
-				</view>
-				<view class="action  myheight">
-					<text class="cuIcon-favor text-grey " style="font-size: 33rpx;margin-right: 10rpx;">收藏</text>
-				</view>
-				<view class="solid-left margin-0">
-				</view>
-				<view class="myheight  action margin-0 ">
-					<text class="cuIcon-appreciate text-grey " style="font-size: 33rpx; ">赞</text>
+				<view class="myheight   flex align-center  justify-center    text-center  light bg-orange" style="width: 180px;   " @click="showModal()">
+					<text class=" cuIcon-message  text-blue    " style="font-size: 33rpx; " >评论</text>
 				</view>
 			</view>
-			<view class="myheight" @click="showModal()">
-				<text class=" cuIcon-message  text-grey   " style="font-size: 33rpx; " >评论</text>
-			</view>
+			
 		</view>
 
 		<view catchtouchmove="return" class="cu-modal" :class="modalName=='Modal'?'show':''" :style="[{bottom:InputBottom+'px'}]">
@@ -128,7 +131,7 @@
 				</view>
 				<view class="cu-form-group " catchtouchmove="return"  >
 					<textarea style=" text-align: left;" class="" maxlength="-1"   @input="InputFocus"
-					 placeholder="请输入评论内容..."></textarea>
+					 placeholder="说点什么吧..."></textarea>
 				</view>
 				<view class="cu-bar  " style="min-height: 35px;">
 					<view class="action margin-0 flex-sub text-green  " @tap="hideModal">取消</view>
@@ -180,6 +183,15 @@
 
 	.myheight {
 
-		height: 54rpx;
+		height: 54px;
+		
+	}
+	.btn-wid{
+		width: 65px;
+	}
+	
+	.noMargin {
+	    margin-left: 0px;
+		margin-right: 0px;
 	}
 </style>

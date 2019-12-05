@@ -1,9 +1,5 @@
 <template>
 	<view class="content">
-<!-- 		<view>
-			<cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/wdh2236.jpg">
-			</cu-custom>
-		</view> -->
 			<view class="view_postlist_item" @click="toList" style="height: 170rpx">
 			    <view class="view_catpost" >
 			          <image class="image_cat_thumb"  mode="aspectFit" :src="[thumb[0].str_value]"/>

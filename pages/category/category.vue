@@ -21,16 +21,21 @@
 			<swiper-item v-for="(tab, index1) in newsitems" :key="index1">
 				<scroll-view class="list" scroll-y @scrolltolower="loadMore(index1)">
 					<block v-for="(newsitem, index2) in tab.data" :key="index2">
-						<view class="view_postlist_item" style="height: 170rpx">
-							<view class="view_catpost">
-								<image class="image_cat_thumb" mode="aspectFit" :src="[newsitem.image_url]" />
-								<text class="image_cat_item_title">{{ newsitem.title }}</text>
-								<view style="margin-top: 10rpx;">
-									<text class="list_text_view cuIcon-time margin-lr-xs ">{{ newsitem.datetime }}</text>
-									<text class="list_text_view cuIcon-messagefill margin-lr-xs">{{ newsitem.comment_count }}</text>
-									<text class="list_text_view cuIcon-attentionfill margin-lr-xs">{{ newsitem.article_type }}</text>
-									<text class="list_text_view cuIcon-appreciatefill margin-lr-xs">{{ newsitem.comment_count }}</text>
-								</view>
+						<view class="cu-card dynamic    " style="height: 170rpx" :class="1==1?'no-card':''">
+							<view class="  cu-item shadow   ">
+								 
+								 <view class=" margin-top-sm margin-left-sm ">
+								 	<image class="image_cat_thumb" mode="aspectFit" :src="[newsitem.image_url]" />
+								 </view>
+								 <view class=" ">
+								 	<text class="  ">{{ newsitem.title }}</text>
+								 	<view class="padding-tb-sm">
+								 		<text class="list_text_view cuIcon-time margin-lr-xs ">{{ newsitem.datetime }}</text>
+								 		<text class="list_text_view cuIcon-messagefill margin-lr-xs">{{ newsitem.comment_count }}</text>
+								 		<text class="list_text_view cuIcon-attentionfill margin-lr-xs">{{ newsitem.article_type }}</text>
+								 		<text class="list_text_view cuIcon-appreciatefill margin-lr-xs">{{ newsitem.comment_count }}</text>
+								 	</view>
+								 </view>
 							</view>
 						</view>
 					</block>
@@ -117,23 +122,47 @@ export default {
 					id: 'guanzhu'
 				},
 				{
-					name: '最热',
+					name: '福利优惠',
 					id: 'tuijian'
 				},
 				{
-					name: '安卓区',
+					name: '微商群',
 					id: 'tiyu'
 				},
 				{
-					name: '苹果区',
+					name: '兼职群',
 					id: 'redian'
 				},
 				{
-					name: '综合区',
+					name: '美食群',
 					id: 'caijing'
 				},
 				{
-					name: '问答区',
+					name: '交友群',
+					id: 'yule'
+				},
+				{
+					name: '互助群',
+					id: 'yule'
+				},
+				{
+					name: '投票群',
+					id: 'yule'
+				},
+				{
+					name: '游戏群',
+					id: 'yule'
+				},
+				{
+					name: '旅游群',
+					id: 'yule'
+				},
+				{
+					name: '红包群',
+					id: 'yule'
+				},
+				{
+					name: '其他',
 					id: 'yule'
 				}
 			]
