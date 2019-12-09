@@ -47,17 +47,17 @@
 					</view>
 				</view>
 
-				<view class="cu-list menu-avatar radius comment solids-top">
+				<view class="cu-list menu-avatar radius comment solids-top " style="margin-bottom:60px ;">
 					<view class="cu-item">
 						<view class="cu-avatar round" style="background-image:url(https://ossweb-img.qq.com/images/lol/img/champion/Morgana.png);"></view>
 						<view class="content">
-							<view class="text-grey">莫甘娜</view>
+							<view class="text-blue ">莫甘娜</view>
 							<view class="text-gray text-content text-df">
 								凯尔，你被自己的光芒变的盲目。
 							</view>
-							<view class="bg-grey padding-sm radius margin-top-sm  text-sm">
+							<view class="bg-grey light padding-sm radius margin-top-sm  text-sm">
 								<view class="flex">
-									<view>凯尔：</view>
+									<view class="text-blue ">凯尔：</view>
 									<view class="flex-sub">妹妹，你在帮他们给黑暗找借口吗?</view>
 								</view>
 							</view>
@@ -74,13 +74,13 @@
 					<view class="cu-item">
 						<view class="cu-avatar round" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg);"></view>
 						<view class="content">
-							<view class="text-grey">凯尔</view>
+							<view class="text-blue ">凯尔</view>
 							<view class="text-gray text-content text-df">
 								妹妹，如果不是为了飞翔，我们要这翅膀有什么用?
 							</view>
-							<view class="bg-grey padding-sm radius margin-top-sm  text-sm">
+							<view class="bg-grey light padding-sm radius margin-top-sm  text-sm">
 								<view class="flex">
-									<view>莫甘娜：</view>
+									<view class="text-blue ">莫甘娜：</view>
 									<view class="flex-sub">如果不能立足于大地，要这双脚又有何用?</view>
 								</view>
 							</view>
@@ -96,26 +96,26 @@
 				</view>
 			</view>
 		</view>
-		<view class="cu-bar foot input " style="width: 100%; padding-right: 0px; ">
+		<view class="cu-bar foot input " style="width: 100%;height: 50px; padding-right: 0px; ">
 			<view class="flex justify-between" style="width: 100%; ">
 				<view class="flex justify-between text-center">
 					<view class="  btn-wid myheight flex align-center justify-center noMargin">
-						<text class="cuIcon-forward text-blue " style="font-size: 33rpx;">分享</text>
+						<text class="cuIcon-forward text-blue " style="font-size: 33rpx;"><text class="" style="font-size: 30rpx; ">分享</text></text>
 					</view>
 					<view class="solid-left">
 				
 					</view>
 					<view class="   btn-wid myheight  flex align-center justify-center  noMargin">
-						<text class="cuIcon-favor text-blue  " style="font-size: 33rpx;">收藏</text>
+						<text class="cuIcon-favor text-blue  " style="font-size: 33rpx;"><text class="" style="font-size: 30rpx; ">收藏</text></text>
 					</view>
 					<view class="solid-left ">
 					</view>
 					<view class="myheight btn-wid   flex align-center justify-center   ">
-						<text class="cuIcon-appreciate text-blue " style="font-size: 33rpx; "><text class="">赞</text></text>
+						<text class="cuIcon-appreciate text-blue " style="font-size: 33rpx; "><text class="" style="font-size: 30rpx; ">赞</text></text>
 					</view>
 				</view>
-				<view class="myheight   flex align-center  justify-center    text-center  light bg-orange" style="width: 180px;   " @click="showModal()">
-					<text class=" cuIcon-message  text-blue    " style="font-size: 33rpx; " >评论</text>
+				<view class="myheight   flex align-center  justify-center    text-center  light bg-blue" style="width: 180px;   " @click="showModal()">
+					<text class=" cuIcon-message  text-blue    " style="font-size: 33rpx; " ><text class="" style="font-size: 30rpx; ">评论</text></text>
 				</view>
 			</view>
 			
@@ -183,7 +183,7 @@
 
 	.myheight {
 
-		height: 54px;
+		height: 50px;
 		
 	}
 	.btn-wid{
