@@ -2,11 +2,11 @@
 	<view class="">
 		<form>
 			<view class="  padding-lr bg-white   ">
-				<view class="cu-form-group   ">
+				<view class="cu-form-group  solids-bottom  ">
 					<input placeholder="请输入标题..." name="input"></input>
 				</view>
 				<view class="cu-form-group     " style="font-size: 12px;">
-					<textarea class="margin-top" style="height: 130px;font-size: 13px;" placeholder="要发布的内容..." name="content"></textarea>
+					<textarea class="margin-top" style="height: 80px;font-size: 13px;" placeholder="要发布的内容..." name="content"></textarea>
 				</view>
 				<view class="cu-form-group   ">
 					<view class="title "><text class="cuIcon-phone text-orange " style="font-size: 16px;"></text>联系</view>
@@ -20,12 +20,12 @@
 						</view>
 					</view>
 				</view>
-				<view class="solid-top  " style="height: 3px;">
+<!-- 				<view class="solid-top  " style="height: 3px;">
 
-				</view>
+				</view> -->
 			</view>
 
-			<view class="cu-bar bg-white    ">
+			<view class="cu-bar bg-white   solids-top ">
 				<view class="action text-sm text-gray">
 					图片
 				</view>
@@ -46,7 +46,7 @@
 					</view>
 				</view>
 			</view>
-			<view class="cu-bar bg-white    ">
+			<view class="cu-bar bg-white solids-top    ">
 				<view class="action text-sm text-gray">
 					选择分类
 				</view>
@@ -73,7 +73,7 @@
 			</view>
 
 		</form>
-		<view class="cu-bar bg-white padding-lr">
+		<view class="cu-bar bg-white padding-lr" style=" padding-bottom: 20px;">
 			<button class="cu-btn bg-blue lg" style="width: 100%;">立即提交</button>
 		</view>
 	</view>
