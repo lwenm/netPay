@@ -1,7 +1,81 @@
 <script>
 	import Vue from 'vue'
 	export default {
+		
 	onLaunch: function() {
+		Vue.prototype.ColorList = [ 
+			{
+				title: '不选择分类',
+				name: 'orange',
+				color: '#f37b1d'
+			},
+			{
+				title: '微商发布',
+				name: 'yellow',
+				color: '#fbbd08'
+			},
+			{
+				title: '运营推广',
+				name: 'olive',
+				color: '#8dc63f'
+			},
+			{
+				title: '优惠福利',
+				name: 'green',
+				color: '#39b54a'
+			},
+			{
+				title: '兼职招聘',
+				name: 'cyan',
+				color: '#1cbbb4'
+			},
+			{
+				title: '交友旅游',
+				name: 'blue',
+				color: '#0081ff'
+			},
+			{
+				title: '美食分享',
+				name: 'purple',
+				color: '#6739b6'
+			},
+			{
+				title: '房产信息',
+				name: 'mauve',
+				color: '#9c26b0'
+			},
+			{
+				title: '商业交流',
+				name: 'pink',
+				color: '#e03997'
+			},
+			{
+				title: '点赞互助',
+				name: 'brown',
+				color: '#a5673f'
+			}
+			// {
+			// 	title: '玄灰',
+			// 	name: 'grey',
+			// 	color: '#8799a3'
+			// },
+			// {
+			// 	title: '草灰',
+			// 	name: 'gray',
+			// 	color: '#aaaaaa'
+			// },
+			// {
+			// 	title: '墨黑',
+			// 	name: 'black',
+			// 	color: '#333333'
+			// },
+			// {
+			// 	title: '雅白',
+			// 	name: 'white',
+			// 	color: '#ffffff'
+			// },
+		]
+		,
 	uni.getSystemInfo({
 		success: function(e) {
 			// #ifndef MP
