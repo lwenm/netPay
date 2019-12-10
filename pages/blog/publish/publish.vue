@@ -33,8 +33,8 @@
 					{{imgList.length}}/8
 				</view>
 			</view>
-			<view class="cu-form-group solid-bottom">
-				<view class="grid col-4 grid-square flex-sub">
+			<view class="cu-form-group solid-bottom "  >
+				<view class="grid col-4 grid-square flex-sub" >
 					<view class="bg-img" v-for="(item,index) in imgList" :key="index" @tap="ViewImage" :data-url="imgList[index]">
 						<image :src="imgList[index]" mode="aspectFill"></image>
 						<view class="cu-tag bg-red" @tap.stop="DelImg" :data-index="index">
@@ -118,7 +118,7 @@
 
 			ChooseImage() {
 				uni.chooseImage({
-					count: 4, //默认9
+					count: 8, //默认9
 					sizeType: ['original', 'compressed'], //可以指定是原图还是压缩图，默认二者都有
 					sourceType: ['album'], //从相册选择
 					success: (res) => {

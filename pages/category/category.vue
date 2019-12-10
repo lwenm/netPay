@@ -16,7 +16,7 @@
 									<image class="image_ca" mode="" :src="[newsitem.image_url]" />
 								</view>
 								<view class="" style="height: 100%;">
-									<view class="text-cut   text-bold   " style="width:250px;font-size: 14px;">
+									<view class="text-cut     " style="width:250px;font-size: 14px;">
 										{{ newsitem.title }}</view>
 									<view class="   textbox  ">
 										<view class="text-gray  " style="  line-height: 1.4; font-size: 10px;">

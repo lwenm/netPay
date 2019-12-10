@@ -56,6 +56,10 @@
 				"navigationBarTitleText": "发布"
 			}
         }
+        ,{
+            "path" : "pages/category/publish/publish",
+            "style" : {}
+        }
     ],
     "tabBar": {
         "borderStyle": "black",
