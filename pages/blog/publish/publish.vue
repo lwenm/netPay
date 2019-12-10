@@ -1,8 +1,8 @@
 <template>
 	<view class="">
 		<form>
-			<view class="  padding-lr bg-white   ">
-				<view class="cu-form-group  solids-bottom  ">
+			<view class="   bg-white   ">
+				<view class="cu-form-group  solids-bottom margin-top ">
 					<input placeholder="请输入标题..." name="input"></input>
 				</view>
 				<view class="cu-form-group     " style="font-size: 12px;">
@@ -10,7 +10,7 @@
 				</view>
 				<view class="cu-form-group   ">
 					<view class="title "><text class="cuIcon-phone text-orange " style="font-size: 16px;"></text>联系</view>
-					<input style="font-size: 14px;" placeholder="手机号码..." name="input"></input>
+					<input style="font-size: 14px;" placeholder="+86" name="input"></input>
 					<view class="cu-capsule radius ">
 						<view class='cu-tag bg-blue '>
 							+86
@@ -20,7 +20,7 @@
 						</view>
 					</view>
 				</view>
-<!-- 				<view class="solid-top  " style="height: 3px;">
+				<!-- 				<view class="solid-top  " style="height: 3px;">
 
 				</view> -->
 			</view>
@@ -33,8 +33,8 @@
 					{{imgList.length}}/8
 				</view>
 			</view>
-			<view class="cu-form-group solid-bottom "  >
-				<view class="grid col-4 grid-square flex-sub" >
+			<view class="cu-form-group solid-bottom ">
+				<view class="grid col-4 grid-square flex-sub">
 					<view class="bg-img" v-for="(item,index) in imgList" :key="index" @tap="ViewImage" :data-url="imgList[index]">
 						<image :src="imgList[index]" mode="aspectFill"></image>
 						<view class="cu-tag bg-red" @tap.stop="DelImg" :data-index="index">
@@ -64,14 +64,12 @@
 				<view class="" style="height: 2px;">
 					<checkbox-group class=" " @change="CheckboxChange">
 						<view class="">
-							<checkbox class="round cb"   :class="checkbox[0].checked?'checked':'' " :checked="checkbox[0].checked?true:false"
+							<checkbox class="round cb" :class="checkbox[0].checked?'checked':'' " :checked="checkbox[0].checked?true:false"
 							 value="A"></checkbox>
 						</view>
 					</checkbox-group>
 				</view>
-
 			</view>
-
 		</form>
 		<view class="cu-bar bg-white padding-lr" style=" padding-bottom: 20px;">
 			<button class="cu-btn bg-blue lg" style="width: 100%;">立即提交</button>
@@ -157,8 +155,8 @@
 	.cu-form-group .title {
 		min-width: calc(4em + 15px);
 	}
-	
-	.cb{
-	  transform: scale(0.6,0.6);
+
+	.cb {
+		transform: scale(0.6, 0.6);
 	}
 </style>

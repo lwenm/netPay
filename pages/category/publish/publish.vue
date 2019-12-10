@@ -1,7 +1,7 @@
 <template>
 	<view class="">
 		<form>
-			<view class="  padding-lr bg-white   ">
+			<view class="   bg-white   ">
 				<view class="cu-form-group  solids-bottom  ">
 					<input placeholder="请输入群名称/标题..." name="input"></input>
 				</view>
@@ -19,13 +19,13 @@
 					图片
 				</view>
 				<view class="action">
-					{{imgList.length}}/3
+					 
 				</view>
 			</view>
 			<view class="bg-white      flex justify-around">
 
 		 
-				<view class="    " style="width:110px;">
+				<view class="    " style="width:80px;">
 					<view class="grid col-1 grid-square flex-sub" >
 						<view class="bg-img"  v-if="mainPic!=null"  >
 							<image :src="mainPic" mode="aspectFill"></image>
@@ -38,7 +38,7 @@
 						</view>
 					</view>
 				</view>
-				<view class="    " style="width:110px;">
+				<view class="    " style="width:80px;">
 					<view class="grid col-1 grid-square flex-sub" >
 						<view class="bg-img"  v-if="wxGroup!=null"  >
 							<image :src="wxGroup" mode="aspectFill"></image>
@@ -51,7 +51,7 @@
 						</view>
 					</view>
 				</view>
-				<view class="   " style="width:110px;">
+				<view class="   " style="width:80px;">
 					<view class="grid col-1 grid-square flex-sub" >
 						<view class="bg-img"  v-if="wxUser!=null"  >
 							<image :src="wxUser" mode="aspectFill"></image>
@@ -66,7 +66,7 @@
 				</view>
 				 
 			</view>
-			<view class="bg-white padding-bottom solid-bottom flex justify-around  align-center">
+			<view class="bg-white padding-bottom-sm solid-bottom flex justify-around  align-center">
 
 				<view class="text-center" style="width: 78px; ">
 					主图

@@ -1,5 +1,5 @@
 <template>
-	<view class="uni-tab-bar">
+	<view class="uni-tab-bar bg-white">
 		<scroll-view id="tab-bar" class="uni-swiper-tab" scroll-x :scroll-left="scrollLeft">
 			<view v-for="(tab, index) in tabBars" :key="tab.id" class="swiper-tab-list swiper-tab-list1" :class="tabIndex == index ? 'active' : ''"
 			 :id="tab.id" :data-current="index" @click="tapTab">
@@ -10,29 +10,30 @@
 			<swiper-item v-for="(tab, index1) in newsitems" :key="index1">
 				<scroll-view class="list " scroll-y @scrolltolower="loadMore(index1)">
 					<block v-for="(newsitem, index2) in tab.data" :key="index2">
-						<view class=" " style="height: 160rpx">
+						<view class=" " style="height: 165rpx">
 							<view class="    ">
 								<view class=" margin-top-sm margin-left-sm ">
 									<image class="image_ca" mode="" :src="[newsitem.image_url]" />
 								</view>
 								<view class="" style="height: 100%;">
-									<view class="text-cut     " style="width:250px;font-size: 14px;">
+									<view class="text-cut   text-black  " style="width:250px;font-size: 14px;">
 										{{ newsitem.title }}</view>
 									<view class="   textbox  ">
-										<view class="text-gray  " style="  line-height: 1.4; font-size: 10px;">
+										<view class="text-gray  " style="  line-height: 1.4; font-size: 12px;">
 											{{ newsitem.title }}
 										</view>
 									</view>
 									<view class="" style="width:100%; margin-top: 2px;">
-										<view class="flex  justify-between">
-											<text class="list_text_view cuIcon-time   ">{{ newsitem.datetime }}</text>
-											<text class="list_text_view cuIcon-attentionfill  ">{{ newsitem.comment_count }}</text>
-											<text class="list_text_view cuIcon-appreciatefill margin-lr-xl">{{ newsitem.comment_count }}</text>
+										<view class="flex  justify-between ">
+											<text class="list_text_view cuIcon-time   " style=" font-size: 13px;">{{ newsitem.datetime }}</text>
+											<text class="list_text_view cuIcon-attentionfill  " style=" font-size: 13px;">{{ newsitem.comment_count }}</text>
+											<text class="list_text_view cuIcon-appreciatefill margin-lr-xl" style=" font-size: 13px;">{{ newsitem.comment_count }}</text>
 										</view>
 
 									</view>
 								</view>
 							</view>
+							<view class="solid-bottom  margin-bottom-sm margin-top-sm margin-lr-xl"></view>
 						</view>
 					</block>
 					<view class="uni-tab-bar-loading">{{ tab.loadingText }}</view>
