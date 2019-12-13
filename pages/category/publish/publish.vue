@@ -15,7 +15,7 @@
 			</view>
 
 			<view class="cu-bar bg-white   solids-top ">
-				<view class="action text-sm text-gray">
+				<view class="action text-sm  ">
 					图片
 				</view>
 				<view class="action">
@@ -66,21 +66,21 @@
 				</view>
 				 
 			</view>
-			<view class="bg-white padding-bottom-sm solid-bottom flex justify-around  align-center">
+			<view class="bg-white padding-bottom-sm  text-gray solid-bottom flex justify-around  align-center">
 
-				<view class="text-center" style="width: 78px; ">
-					主图
+				<view class="text-center  " style="width: 78px; ">
+					<text class="text-sm">主图</text>
 				</view>
-				<view class="text-center" style="width: 78px; ">
-					群二维码
+				<view class="text-center  " style="width: 78px; ">
+					<text class="text-sm">群二维码</text>
 				</view>
-				<view class="text-center" style="width: 78px; ">
-					群主二维码
+				<view class="text-center " style="width: 78px; ">
+					<text class="text-sm">群主二维码</text>
 				</view>
 			</view>
 			<view class="cu-bar bg-white solids-top    ">
-				<view class="action text-sm text-gray">
-					选择分类
+				<view class="action    ">
+					选择分类 
 				</view>
 			</view>
 			<view class="cu-bar  bg-white   ">

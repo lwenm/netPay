@@ -108,13 +108,15 @@
 					<view class="   btn-wid myheight  flex align-center justify-center  noMargin">
 						<text class="cuIcon-favor text-blue  " style="font-size: 33rpx;"><text class="" style="font-size: 30rpx; ">收藏</text></text>
 					</view>
-					<view class="solid-left ">
+					<view class="solid-left padding-tb-sm">
 					</view>
 					<view class="myheight btn-wid   flex align-center justify-center   ">
 						<text class="cuIcon-appreciate text-blue " style="font-size: 33rpx; "><text class="" style="font-size: 30rpx; ">赞</text></text>
 					</view>
 				</view>
-				<view class="myheight   flex align-center  justify-center    text-center  light bg-blue" style="width: 180px;   " @click="showModal()">
+				<view class="solid-left padding-tb-sm">
+				</view>
+				<view class="myheight   flex align-center  justify-center    text-center  light  " style="width: 180px;   " @click="showModal()">
 					<text class=" cuIcon-message  text-blue    " style="font-size: 33rpx; " ><text class="" style="font-size: 30rpx; ">评论</text></text>
 				</view>
 			</view>
