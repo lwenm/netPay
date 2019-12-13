@@ -12,12 +12,13 @@
 							<view class="  text-mauve">凯尔-艾欧尼亚</view>
 							<view class="text-white   text-sm   ">
 								<!-- <view class='m-icon-person cu-tag radius light bg-orange'>未认证</view> -->
-								<view class='cu-tag radius sm light bg-cyan'>未认证</view>
+								<view class='cu-tag radius   light bg-cyan' @click="toLogin" >未认证</view>
 							</view>
 						</view>
 					</view>
-					<view class="cuIcon-discoverfill lg text-orange"></view>
-					 
+					<view class="  text-lg lg  margin-right-xs">
+						<text class="cuIcon-settingsfill text-lg lg text-orange  "></text>
+					</view>
 				</view>
 			</view>
 		</view>
@@ -177,8 +178,14 @@
 				});
 
 			},
-			toDetail: function() {
-
+			
+			toLogin: function() {
+				uni.navigateTo({
+					url: '../login/login',
+					success: res => {},
+					fail: () => {},
+					complete: () => {}
+				});
 			}
 
 		}

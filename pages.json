@@ -5,27 +5,12 @@
             "style": {
                 "navigationBarTitleText": "boss星球"
             }
-        }, {
-            "path": "pages/login/login",
-            "style": {
-                "navigationBarTitleText": "登录"
-            }
-        }, {
-            "path": "pages/reg/reg",
-            "style": {
-                "navigationBarTitleText": "注册"
-            }
-        }, {
+        },{
             "path": "pages/pwd/pwd",
             "style": {
                 "navigationBarTitleText": "找回密码"
             }
-        }, {
-            "path": "pages/user/user",
-            "style": {
-                "navigationBarTitleText": "微圈"
-            }
-        },
+        }, 
 		{
 		    "path": "pages/category/category",
 		    "style": {
@@ -67,6 +52,14 @@
             "style" : {
 				"navigationBarTitleText": "发布"
 			}
+        }
+        ,{
+            "path" : "pages/category/detail/detail",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/user/login/login",
+            "style" : {}
         }
     ],
     "tabBar": {

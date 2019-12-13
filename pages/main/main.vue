@@ -52,7 +52,7 @@
 										<view class='cu-tag radius  light sm bg-cyan'>大宝剑专区</view>
 									</view>
 								</view>
-							</view>
+							</view>      
 						</view>
 						<view class="text-content text-df text-black">{{item.title}}</view>
 						<view class="grid flex-sub padding-lr" :class="isCard?'col-4 grid-square':'col-20 grid-square'">

@@ -35,7 +35,7 @@
 		methods: {
 				
 				toPuhlishWxBlog(){
-				console.log("------------------")
+				// console.log("------------------")
 				uni.navigateTo({
 					url: '../../blog/publish/publish',
 					success: res => {},
@@ -46,7 +46,7 @@
 			},
 
 				toPuhlishWxGroup(){
-				console.log("------------------")
+				// console.log("------------------")
 				uni.navigateTo({
 					url: '../../category/publish/publish',
 					success: res => {},
