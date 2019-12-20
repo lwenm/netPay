@@ -1,2 +1,2 @@
 # netPay
-基于uni-app  羊毛微信小程序
+基于uni-app 社区羊毛微信小程序
