@@ -13,23 +13,20 @@
 					<input style="font-size: 14px;" placeholder="手机号码/微信..." name="input"></input>
 				</view>
 			</view>
-
 			<view class="cu-bar bg-white   solids-top ">
-				<view class="action text-sm  ">
+				<view class="action text-sm text-gray">
 					图片
 				</view>
 				<view class="action">
-					 
+
 				</view>
 			</view>
-			<view class="bg-white      flex justify-around">
-
-		 
+			<view class="bg-white  flex justify-around">
 				<view class="    " style="width:80px;">
-					<view class="grid col-1 grid-square flex-sub" >
-						<view class="bg-img"  v-if="mainPic!=null"  >
+					<view class="grid col-1 grid-square flex-sub">
+						<view class="bg-img" v-if="mainPic!=null">
 							<image :src="mainPic" mode="aspectFill"></image>
-							<view class="cu-tag bg-red"  data-pid="mainPic"  @tap.stop="DelImg"  >
+							<view class="cu-tag bg-red" data-pid="mainPic" @tap.stop="DelImg">
 								<text class='cuIcon-close'></text>
 							</view>
 						</view>
@@ -38,11 +35,11 @@
 						</view>
 					</view>
 				</view>
-				<view class="    " style="width:80px;">
-					<view class="grid col-1 grid-square flex-sub" >
-						<view class="bg-img"  v-if="wxGroup!=null"  >
+				<view class="" style="width:80px;">
+					<view class="grid col-1 grid-square flex-sub">
+						<view class="bg-img" v-if="wxGroup!=null">
 							<image :src="wxGroup" mode="aspectFill"></image>
-							<view class="cu-tag bg-red" data-pid="wxGroup" @tap.stop="DelImg"  >
+							<view class="cu-tag bg-red" data-pid="wxGroup" @tap.stop="DelImg">
 								<text class='cuIcon-close'></text>
 							</view>
 						</view>
@@ -51,11 +48,11 @@
 						</view>
 					</view>
 				</view>
-				<view class="   " style="width:80px;">
-					<view class="grid col-1 grid-square flex-sub" >
-						<view class="bg-img"  v-if="wxUser!=null"  >
+				<view class="" style="width:80px;">
+					<view class="grid col-1 grid-square flex-sub">
+						<view class="bg-img" v-if="wxUser!=null">
 							<image :src="wxUser" mode="aspectFill"></image>
-							<view class="cu-tag bg-red" data-pid="wxUser"  @tap.stop="DelImg"  >
+							<view class="cu-tag bg-red" data-pid="wxUser" @tap.stop="DelImg">
 								<text class='cuIcon-close'></text>
 							</view>
 						</view>
@@ -64,23 +61,21 @@
 						</view>
 					</view>
 				</view>
-				 
 			</view>
-			<view class="bg-white padding-bottom-sm  text-gray solid-bottom flex justify-around  align-center">
-
-				<view class="text-center  " style="width: 78px; ">
-					<text class="text-sm">主图</text>
+			<view class="bg-white padding-bottom-sm solid-bottom flex justify-around  align-center">
+				<view class="text-center" style="width: 78px; ">
+					主图
 				</view>
-				<view class="text-center  " style="width: 78px; ">
-					<text class="text-sm">群二维码</text>
+				<view class="text-center" style="width: 78px; ">
+					群二维码
 				</view>
-				<view class="text-center " style="width: 78px; ">
-					<text class="text-sm">群主二维码</text>
+				<view class="text-center" style="width: 78px; ">
+					群主二维码
 				</view>
 			</view>
 			<view class="cu-bar bg-white solids-top    ">
-				<view class="action    ">
-					选择分类 
+				<view class="action text-sm text-gray">
+					选择分类
 				</view>
 			</view>
 			<view class="cu-bar  bg-white   ">
@@ -101,9 +96,7 @@
 						</view>
 					</checkbox-group>
 				</view>
-
 			</view>
-
 		</form>
 		<view class="cu-bar bg-white padding-lr" style=" padding-bottom: 20px;">
 			<button class="cu-btn bg-blue lg" style="width: 100%;">立即提交</button>
@@ -181,7 +174,7 @@
 			},
 			DelImg(e) {
 				var picId = e.currentTarget.dataset.pid;
-				console.log(picId )
+				console.log(picId)
 				uni.showModal({
 					title: '提醒',
 					content: '确定要删除这张图片吗？',
@@ -199,8 +192,8 @@
 						}
 					}
 				})
-				
-				console.log(this.mainPic )
+
+				console.log(this.mainPic)
 			}
 		}
 	}
@@ -216,8 +209,7 @@
 	}
 
 	.imgWH {
-
-	/* 	width: 85px;
+		/* 	width: 85px;
 		height: 85px; */
 	}
 </style>
