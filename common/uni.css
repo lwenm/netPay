@@ -854,8 +854,8 @@ radio-group label, checkbox-group label{
 	white-space: nowrap;
 /* 	line-height: 100upx;
 	height: 100upx; */
-	line-height: 70rpx;
-	height: 70rpx;
+	line-height: 85rpx;
+	height: 85rpx;
 	border-bottom: 1px solid #c8c7cc;
 }
 

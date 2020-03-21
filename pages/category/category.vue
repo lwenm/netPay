@@ -1,39 +1,46 @@
 <template>
-	<view class="uni-tab-bar bg-white">
-		<scroll-view id="tab-bar" class="uni-swiper-tab" scroll-x :scroll-left="scrollLeft">
-			<view v-for="(tab, index) in tabBars" :key="tab.id" class="swiper-tab-list swiper-tab-list1" :class="tabIndex == index ? 'active' : ''"
+	<view class="uni-tab-bar">
+		<scroll-view id="tab-bar" class="uni-swiper-tab     " scroll-x :scroll-left="scrollLeft">
+			<text v-for="(tab, index) in tabBars" :key="tab.id" class="swiper-tab-list swiper-tab-list1  " :class="tabIndex == index ? 'active' : ''"
 			 :id="tab.id" :data-current="index" @click="tapTab">
-				{{ tab.name }}
-			</view>
+				<text class="cuIcon-clothesfill text-shadow ">{{ tab.name }} </text>
+			</text>
 		</scroll-view>
+
 		<swiper :current="tabIndex" class="swiper-box" :duration="300" @change="changeTab">
 			<swiper-item v-for="(tab, index1) in newsitems" :key="index1">
 				<scroll-view class="list " scroll-y @scrolltolower="loadMore(index1)">
 					<block v-for="(newsitem, index2) in tab.data" :key="index2">
-						<view class=" " style="height: 165rpx">
-							<view class="    ">
-								<view class=" margin-top-sm margin-left-sm ">
-									<image class="image_ca" mode="" :src="[newsitem.image_url]" />
+						<view class="cu-card article" :class="isCard?'no-card':''">
+							<view class="cu-item shadow">
+								<view class="title margin-top">
+									<view class="text-cut">无意者 烈火焚身;以正义的烈火拔出黑暗。我有自己的正义，见证至高的烈火吧。</view>
 								</view>
-								<view class="" style="height: 100%;">
-									<view class="text-cut   text-black  " style="width:250px;font-size: 14px;">
-										{{ newsitem.title }}</view>
-									<view class="   textbox  ">
-										<view class="text-gray  " style="  line-height: 1.4; font-size: 12px;">
-											{{ newsitem.title }}
+								
+								<view class="content">
+									<image src="https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg" mode="aspectFill"></image>
+									<view class="desc">
+										<view class="text-content"> 折磨生出苦难，苦难又会加剧折磨，凡间这无穷的循环，将有我来终结！真正的恩典因不完整而美丽，因情感而真诚，因脆弱而自由！</view>
+										<view>
+											<view class="cu-tag bg-red light sm round">正义天使</view>
+											<view class="cu-tag bg-green light sm round">史诗</view>
 										</view>
 									</view>
-									<view class="" style="width:100%; margin-top: 2px;">
-										<view class="flex  justify-between ">
-											<text class="list_text_view cuIcon-time   " style=" font-size: 13px;">{{ newsitem.datetime }}</text>
-											<text class="list_text_view cuIcon-attentionfill  " style=" font-size: 13px;">{{ newsitem.comment_count }}</text>
-											<text class="list_text_view cuIcon-appreciatefill margin-lr-xl" style=" font-size: 13px;">{{ newsitem.comment_count }}</text>
+								</view>
+								
+								<view class="   solid-top margin-lr-xs  " style="margin-bottom: -25rpx;">
+									<view class="text-gray radius light flex     justify-between" style="  color: #A3A3A3;height: 35px;">
+										<view class="flex align-center   ">
+											<text class="cuIcon-attentionfill  text-orange text-content   margin-left-sm margin-lr-xs"></text>23
+											<text class="cuIcon-likefill text-red   text-content margin-left-sm margin-lr-xs"></text>32
+											<!-- <text class="cuIcon-favorfill  text-olive text-content margin-lr-xs margin-left-sm"></text>12 -->
 										</view>
-
+										<view class="flex align-center justify-end" style="height: 100% ; " @click="navTo">
+											<text class="    round   text-sm  text-blue  light   margin-lr-xs">申请加入</text>
+										</view>
 									</view>
 								</view>
 							</view>
-							<view class="solid-bottom  margin-bottom-sm margin-top-sm margin-lr-xl"></view>
 						</view>
 					</block>
 					<view class="uni-tab-bar-loading">{{ tab.loadingText }}</view>
@@ -110,6 +117,9 @@
 		},
 		data() {
 			return {
+				isCard: false,
+				TabCur: 0,
+				scrollLeft: 0,
 				scrollLeft: 0,
 				isClickChange: false,
 				tabIndex: 0,
@@ -119,7 +129,7 @@
 						id: 'guanzhu'
 					},
 					{
-						name: '福利优惠',
+						name: '福利群',
 						id: 'tuijian'
 					},
 					{
@@ -169,6 +179,10 @@
 			this.newsitems = this.randomfn();
 		},
 		methods: {
+			tabSelect(e) {
+				this.TabCur = e.currentTarget.dataset.id;
+				this.scrollLeft = (e.currentTarget.dataset.id - 1) * 60
+			},
 			goDetail(e) {
 				uni.navigateTo({
 					url: '/pages/template/tabbar/detail/detail?title=' + e.title
@@ -227,6 +241,7 @@
 				}
 				this.isClickChange = false;
 				this.tabIndex = index; //一旦访问data就会出问题
+				this.TabCur = index;
 			},
 			getElSize(id) {
 				//得到元素的size
@@ -310,6 +325,8 @@
 	}
 
 
+
+
 	.detail_info {
 		padding: 20rpx;
 		padding-bottom: 5rpx;
@@ -322,7 +339,7 @@
 
 
 	.textbox {
-		width:250px; 
+		width: 250px;
 		height: 34px;
 		overflow: hidden; //一定要写
 		text-overflow: ellipsis; //超出省略号
@@ -364,7 +381,7 @@
 		text-align: center;
 	}
 
- 
+
 
 	.swiper-tab-list1 {
 		font-size: 14px;

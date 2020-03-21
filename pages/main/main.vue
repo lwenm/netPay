@@ -62,18 +62,43 @@
 								 mode="aspectFill"> </image>
 							</view>
 						</view>
-						<view class="text-gray padding-lr  " style="margin-top: 20rpx;font-size: 14px;">
-							{{item.datetime}}
+						<view class="text-gray padding-lr  text-sm" style="margin-top: 20rpx; ">
+							{{item.datetime}} 发布
 						</view>
 						<view class="   solid-top">
 							<view class="text-gray radius light flex     justify-between" style="  color: #A3A3A3;height: 45px;">
 								<view class="flex align-center   ">
-									<text class="cuIcon-attentionfill   margin-lr-xs"></text>{{item.browsingTimes}}
-									<text class="cuIcon-appreciatefill margin-lr-xs"></text>{{item.thumbsUp}}
-									<text class="cuIcon-messagefill margin-lr-xs"></text>{{item.comment_count}}
+									<text class="cuIcon-attentionfill  text-orange text-content   margin-left-sm margin-lr-xs"></text>{{item.browsingTimes}} 
+									<text class="cuIcon-likefill text-red   text-content margin-left-sm margin-lr-xs"></text>{{item.thumbsUp}}
+									<text class="cuIcon-favorfill  text-olive text-content margin-lr-xs margin-left-sm"></text>{{item.comment_count}}
+									
+									<!-- <view class="cu-capsule round margin-lr-xs">
+										<view class='cu-tag bg-olive sm'>
+											<text class='cuIcon-attentionfill '></text>
+										</view>
+										<view class="cu-tag line-olive sm">
+											{{item.browsingTimes}} 
+										</view>
+									</view>
+									<view class="cu-capsule round margin-lr-xs">
+										<view class='cu-tag bg-red sm'>
+											<text class='cuIcon-likefill '></text>
+										</view>
+										<view class="cu-tag line-red sm">
+											{{item.thumbsUp}}
+										</view>
+									</view>
+									<view class="cu-capsule round margin-lr-xs">
+										<view class='cu-tag bg-orange sm'>
+											<text class='cuIcon-favor '></text>
+										</view>
+										<view class="cu-tag line-orange sm">
+											{{item.comment_count}}
+										</view>
+									</view> -->
 								</view>
 								<view class="flex align-center justify-end" style="height: 100% ;width: 80px;" @click="navTo">
-									<text class="  text-mauve   margin-lr-xs" >详情>></text>
+									<text class="  text-mauve   margin-lr-xs" >看详情>></text>
 								</view>
 							</view>
 						</view>

@@ -281,7 +281,7 @@
 	.content {
 		display: flex;
 		flex: 1;
-		flex-direction: column;
+		/* flex-direction: column; */
 		/* background-color: #efeff4; */
 		/* padding: 20upx; */
 	}
