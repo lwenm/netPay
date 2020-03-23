@@ -2,28 +2,28 @@
 	<scroll-view scroll-x :scroll-left="scrollLeft" scroll-y @scrolltolower="loadMore">
 		<share />
 		<view class="bg-img padding-bottom-xl" style="background-image: url('https://fys.hiwangchong.com/uploads/images/20200228/d36fa65ea0adc00f787216517e774710.png');height: 207upx;">
-	 
+
 		</view>
 		<view class="cu-card">
 			<view class=" shadow">
 				<view class="cu-list grid  radius shadow shadow-lg" :class="['col-' + gridCol,gridBorder?'':'no-border',isCard?'no-card':''  ] ">
-					<view class="cu-item" v-for="(item,index) in cuIconList" :key="index" v-if="index<gridCol*2">
+					<view class="cu-item" v-for="(item,index) in cuIconList" :key="index" v-if="index<gridCol*4">
 						<view :class="['cuIcon-' + item.cuIcon,'text-' + item.color]" style="line-height: 0.8; ">
-							<view class="cu-tag badge" v-if="item.badge!=0">
-
-							</view>
+<!-- 							<view class="cu-tag badge" v-if="item.badge!=0">
+							</view> -->
 						</view>
 						<text style=" font-size: 12px;">{{item.name}}</text>
 					</view>
 				</view>
 			</view>
 		</view>
-		
+
 		<view class="marTop">
 			<uni-notice-bar class="" :show-icon="true" :scrollable="true" class="text-red" text="切勿重复申请，加群后请勿发违法信息、垃圾链接、小程序、微商广告、群二维码等，客服在线智能管理。" />
 		</view>
-		
-		<view class="cu-card  shadow shadow-lg article  " :class="isCard?'no-card':''" v-for="(item,index) in cuIconList " :key="index">
+
+		<view class="cu-card  shadow shadow-lg article  " :class="isCard?'no-card':''" v-for="(item,index) in cuIconList "
+		 :key="index">
 			<view class="cu-item shadow">
 				<view class="title margin-top">
 					<view class="text-cut">无意者 烈火焚身;以正义的烈火拔出黑暗。我有自己的正义，见证至高的烈火吧。</view>
@@ -148,22 +148,22 @@
 					cuIcon: 'hotfill',
 					color: 'orange',
 					badge: 1,
-					name: '最热'
+					name: '福利群'
 				}, {
 					cuIcon: 'shopfill',
 					color: 'yellow',
 					badge: 0,
-					name: '微商发布'
+					name: '微商群'
 				}, {
 					cuIcon: 'commandfill',
 					color: 'olive',
 					badge: 22,
-					name: '营销推广'
+					name: '兼职群'
 				}, {
 					cuIcon: 'sponsorfill',
 					color: 'blue',
 					badge: 0,
-					name: '优惠福利'
+					name: '餐饮美食'
 				}, {
 					cuIcon: 'group_fill',
 					color: 'purple',
@@ -171,108 +171,61 @@
 					name: '兼职招聘'
 				}],
 				cuIconList: [{
-						cuIcon: 'cardboardfill',
-						color: 'red',
-						badge: 120,
-						name: '最新'
-					}, {
-						cuIcon: 'hotfill',
-						color: 'orange',
-						badge: 1,
-						name: '最热'
-					}, {
-						cuIcon: 'shopfill',
-						color: 'yellow',
-						badge: 0,
-						name: '微商发布'
-					}, {
-						cuIcon: 'commandfill',
-						color: 'olive',
-						badge: 22,
-						name: '营销推广'
-					}, {
-						cuIcon: 'sponsorfill',
-						color: 'blue',
-						badge: 0,
-						name: '优惠福利'
-					}, {
-						cuIcon: 'group_fill',
-						color: 'purple',
-						badge: 0,
-						name: '兼职招聘'
-					},
-
-					{
-						cuIcon: 'discoverfill',
-						color: 'purple',
-						badge: 0,
-						name: '交友旅游'
-					}, {
-						cuIcon: 'emojiflashfill',
-						color: 'mauve',
-						badge: 0,
-						name: '美食分享'
-					}, {
-						cuIcon: 'homefill',
-						color: 'purple',
-						badge: 0,
-						name: '房产信息'
-					}, {
-						cuIcon: 'servicefill',
-						color: 'mauve',
-						badge: 0,
-						name: '商业交流'
-					}
-				],
-				tabBars: [{
-						name: '最新',
-						id: 'guanzhu'
-					},
-					{
-						name: '福利群',
-						id: 'tuijian'
-					},
-					{
-						name: '微商群',
-						id: 'tiyu'
-					},
-					{
-						name: '兼职群',
-						id: 'redian'
-					},
-					{
-						name: '美食群',
-						id: 'caijing'
-					},
-					{
-						name: '交友群',
-						id: 'yule'
-					},
-					{
-						name: '互助群',
-						id: 'yule'
-					},
-					{
-						name: '投票群',
-						id: 'yule'
-					},
-					{
-						name: '游戏群',
-						id: 'yule'
-					},
-					{
-						name: '旅游群',
-						id: 'yule'
-					},
-					{
-						name: '红包群',
-						id: 'yule'
-					},
-					{
-						name: '其他',
-						id: 'yule'
-					}
-				]
+					cuIcon: 'cardboardfill',
+					color: 'red',
+					badge: 120,
+					name: '最新群'
+				}, {
+					cuIcon: 'hotfill',
+					color: 'orange',
+					badge: 1,
+					name: '福利优惠'
+				}, {
+					cuIcon: 'shopfill',
+					color: 'yellow',
+					badge: 0,
+					name: '代购微商'
+				}, {
+					cuIcon: 'commandfill',
+					color: 'olive',
+					badge: 22,
+					name: '兼职招聘'
+				}, {
+					cuIcon: 'sponsorfill',
+					color: 'blue',
+					badge: 0,
+					name: '餐饮美食'
+				}, {
+					cuIcon: 'group_fill',
+					color: 'purple',
+					badge: 0,
+					name: '学习交流'
+				}, {
+					cuIcon: 'discoverfill',
+					color: 'purple',
+					badge: 0,
+					name: '兴趣爱好'
+				}, {
+					cuIcon: 'emojiflashfill',
+					color: 'mauve',
+					badge: 0,
+					name: '同城交友'
+				}, {
+					cuIcon: 'homefill',
+					color: 'purple',
+					badge: 0,
+					name: '房产信息'
+				}, {
+					cuIcon: 'servicefill',
+					color: 'mauve',
+					badge: 0,
+					name: '商业交流'
+				}, {
+					cuIcon: 'servicefill',
+					color: 'mauve',
+					badge: 0,
+					name: '其他'
+				}]
 			};
 		},
 		onLoad() {
@@ -396,7 +349,8 @@
 		text-align: center;
 
 	}
-	.marTop{
+
+	.marTop {
 		margin-top: 7px;
 		margin-bottom: -8px;
 	}
