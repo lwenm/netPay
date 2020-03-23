@@ -1,56 +1,66 @@
 <template>
-	<view class="uni-tab-bar">
-		<scroll-view id="tab-bar" class="uni-swiper-tab     " scroll-x :scroll-left="scrollLeft">
-			<text v-for="(tab, index) in tabBars" :key="tab.id" class="swiper-tab-list swiper-tab-list1  " :class="tabIndex == index ? 'active' : ''"
-			 :id="tab.id" :data-current="index" @click="tapTab">
-				<text class="cuIcon-clothesfill text-shadow ">{{ tab.name }} </text>
-			</text>
-		</scroll-view>
+	<scroll-view scroll-x :scroll-left="scrollLeft" scroll-y @scrolltolower="loadMore">
+		<share />
+		<view class="bg-img padding-bottom-xl" style="background-image: url('https://fys.hiwangchong.com/uploads/images/20200228/d36fa65ea0adc00f787216517e774710.png');height: 207upx;">
+	 
+		</view>
+		<view class="cu-card">
+			<view class=" shadow">
+				<view class="cu-list grid  radius shadow shadow-lg" :class="['col-' + gridCol,gridBorder?'':'no-border',isCard?'no-card':''  ] ">
+					<view class="cu-item" v-for="(item,index) in cuIconList" :key="index" v-if="index<gridCol*2">
+						<view :class="['cuIcon-' + item.cuIcon,'text-' + item.color]" style="line-height: 0.8; ">
+							<view class="cu-tag badge" v-if="item.badge!=0">
 
-		<swiper :current="tabIndex" class="swiper-box" :duration="300" @change="changeTab">
-			<swiper-item v-for="(tab, index1) in newsitems" :key="index1">
-				<scroll-view class="list " scroll-y @scrolltolower="loadMore(index1)">
-					<block v-for="(newsitem, index2) in tab.data" :key="index2">
-						<view class="cu-card article" :class="isCard?'no-card':''">
-							<view class="cu-item shadow">
-								<view class="title margin-top">
-									<view class="text-cut">无意者 烈火焚身;以正义的烈火拔出黑暗。我有自己的正义，见证至高的烈火吧。</view>
-								</view>
-								
-								<view class="content">
-									<image src="https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg" mode="aspectFill"></image>
-									<view class="desc">
-										<view class="text-content"> 折磨生出苦难，苦难又会加剧折磨，凡间这无穷的循环，将有我来终结！真正的恩典因不完整而美丽，因情感而真诚，因脆弱而自由！</view>
-										<view>
-											<view class="cu-tag bg-red light sm round">正义天使</view>
-											<view class="cu-tag bg-green light sm round">史诗</view>
-										</view>
-									</view>
-								</view>
-								
-								<view class="   solid-top margin-lr-xs  " style="margin-bottom: -25rpx;">
-									<view class="text-gray radius light flex     justify-between" style="  color: #A3A3A3;height: 35px;">
-										<view class="flex align-center   ">
-											<text class="cuIcon-attentionfill  text-orange text-content   margin-left-sm margin-lr-xs"></text>23
-											<text class="cuIcon-likefill text-red   text-content margin-left-sm margin-lr-xs"></text>32
-											<!-- <text class="cuIcon-favorfill  text-olive text-content margin-lr-xs margin-left-sm"></text>12 -->
-										</view>
-										<view class="flex align-center justify-end" style="height: 100% ; " @click="navTo">
-											<text class="    round   text-sm  text-blue  light   margin-lr-xs">申请加入</text>
-										</view>
-									</view>
-								</view>
 							</view>
 						</view>
-					</block>
-					<view class="uni-tab-bar-loading">{{ tab.loadingText }}</view>
-				</scroll-view>
-			</swiper-item>
-		</swiper>
-	</view>
+						<text style=" font-size: 12px;">{{item.name}}</text>
+					</view>
+				</view>
+			</view>
+		</view>
+		
+		<view class="marTop">
+			<uni-notice-bar class="" :show-icon="true" :scrollable="true" class="text-red" text="切勿重复申请，加群后请勿发违法信息、垃圾链接、小程序、微商广告、群二维码等，客服在线智能管理。" />
+		</view>
+		
+		<view class="cu-card  shadow shadow-lg article  " :class="isCard?'no-card':''" v-for="(item,index) in cuIconList " :key="index">
+			<view class="cu-item shadow">
+				<view class="title margin-top">
+					<view class="text-cut">无意者 烈火焚身;以正义的烈火拔出黑暗。我有自己的正义，见证至高的烈火吧。</view>
+				</view>
+
+				<view class="content">
+					<image src="https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg" mode="aspectFill"></image>
+					<view class="desc">
+						<view class="text-content"> 折磨生出苦难，苦难又会加剧折磨，凡间这无穷的循环，将有我来终结！真正的恩典因不完整而美丽，因情感而真诚，因脆弱而自由！</view>
+						<view>
+							<view class="cu-tag bg-red light sm round">正义天使</view>
+							<view class="cu-tag bg-green light sm round">史诗</view>
+						</view>
+					</view>
+				</view>
+
+				<view class="   solid-top margin-lr-xs  " style="margin-bottom: -25rpx;">
+					<view class="text-gray radius light flex     justify-between" style="  color: #A3A3A3;height: 35px;">
+						<view class="flex align-center   ">
+							<text class="cuIcon-timefill  text-orange text-content   margin-left-sm margin-lr-xs"></text>2020-03-23 发布
+							<text class="cuIcon-attentionfill text-red   text-content margin-right margin-left-sm margin-lr-xs"></text>32 浏览
+							<!-- <text class="cuIcon-favorfill  text-olive text-content margin-lr-xs margin-left-sm"></text>12 -->
+						</view>
+						<view class="flex align-center justify-end" style="height: 100% ; " @click="navTo">
+							<text class="    round   text-sm  text-blue  light   margin-lr-xs">申请加入</text>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="cu-load   " :class="1==1?'loading':'over'"></view>
+	</scroll-view>
 </template>
 <script>
-	import mediaList from '@/components/tab-nvue/mediaList.vue';
+	import share from "@/components/share.vue";
+	import uniNoticeBar from '@/components/uni-notice-bar/uni-notice-bar.vue';
+	import uniSection from '@/components/uni-section/uni-section.vue';
 
 	const tpl = {
 		data0: {
@@ -113,10 +123,15 @@
 
 	export default {
 		components: {
-			mediaList
+			uniNoticeBar,
+			uniSection,
+			share
 		},
+
 		data() {
 			return {
+				gridCol: 5,
+				gridBorder: false,
 				isCard: false,
 				TabCur: 0,
 				scrollLeft: 0,
@@ -124,6 +139,91 @@
 				isClickChange: false,
 				tabIndex: 0,
 				newsitems: [],
+				cuIconList2: [{
+					cuIcon: 'cardboardfill',
+					color: 'red',
+					badge: 120,
+					name: '最新'
+				}, {
+					cuIcon: 'hotfill',
+					color: 'orange',
+					badge: 1,
+					name: '最热'
+				}, {
+					cuIcon: 'shopfill',
+					color: 'yellow',
+					badge: 0,
+					name: '微商发布'
+				}, {
+					cuIcon: 'commandfill',
+					color: 'olive',
+					badge: 22,
+					name: '营销推广'
+				}, {
+					cuIcon: 'sponsorfill',
+					color: 'blue',
+					badge: 0,
+					name: '优惠福利'
+				}, {
+					cuIcon: 'group_fill',
+					color: 'purple',
+					badge: 0,
+					name: '兼职招聘'
+				}],
+				cuIconList: [{
+						cuIcon: 'cardboardfill',
+						color: 'red',
+						badge: 120,
+						name: '最新'
+					}, {
+						cuIcon: 'hotfill',
+						color: 'orange',
+						badge: 1,
+						name: '最热'
+					}, {
+						cuIcon: 'shopfill',
+						color: 'yellow',
+						badge: 0,
+						name: '微商发布'
+					}, {
+						cuIcon: 'commandfill',
+						color: 'olive',
+						badge: 22,
+						name: '营销推广'
+					}, {
+						cuIcon: 'sponsorfill',
+						color: 'blue',
+						badge: 0,
+						name: '优惠福利'
+					}, {
+						cuIcon: 'group_fill',
+						color: 'purple',
+						badge: 0,
+						name: '兼职招聘'
+					},
+
+					{
+						cuIcon: 'discoverfill',
+						color: 'purple',
+						badge: 0,
+						name: '交友旅游'
+					}, {
+						cuIcon: 'emojiflashfill',
+						color: 'mauve',
+						badge: 0,
+						name: '美食分享'
+					}, {
+						cuIcon: 'homefill',
+						color: 'purple',
+						badge: 0,
+						name: '房产信息'
+					}, {
+						cuIcon: 'servicefill',
+						color: 'mauve',
+						badge: 0,
+						name: '商业交流'
+					}
+				],
 				tabBars: [{
 						name: '最新',
 						id: 'guanzhu'
@@ -176,122 +276,28 @@
 			};
 		},
 		onLoad() {
-			this.newsitems = this.randomfn();
+			// this.newsitems = this.randomfn();
 		},
 		methods: {
-			tabSelect(e) {
-				this.TabCur = e.currentTarget.dataset.id;
-				this.scrollLeft = (e.currentTarget.dataset.id - 1) * 60
-			},
-			goDetail(e) {
-				uni.navigateTo({
-					url: '/pages/template/tabbar/detail/detail?title=' + e.title
-				});
-			},
-			close(index1, index2) {
-				uni.showModal({
-					content: '是否删除本条信息？',
-					success: res => {
-						if (res.confirm) {
-							this.newsitems[index1].data.splice(index2, 1);
-						}
-					}
-				});
-			},
-			loadMore(e) {
+
+			loadMore: function() {
+				console.log("-----------22222222222----")
 				setTimeout(() => {
-					this.addData(e);
+					for (var i = 0; i < this.cuIconList2.length; i++) {
+						this.cuIconList.push(this.cuIconList2[i])
+					}
 				}, 1200);
 			},
-			addData(e) {
-				if (this.newsitems[e].data.length > 30) {
-					this.newsitems[e].loadingText = '没有更多了';
-					return;
-				}
-				for (let i = 1; i <= 10; i++) {
-					this.newsitems[e].data.push(tpl['data' + Math.floor(Math.random() * 5)]);
-				}
-			},
-			async changeTab(e) {
-				let index = e.target.current;
-				if (this.newsitems[index].data.length === 0) {
-					this.addData(index);
-				}
-				if (this.isClickChange) {
-					this.tabIndex = index;
-					this.isClickChange = false;
-					return;
-				}
-				let tabBar = await this.getElSize('tab-bar'),
-					tabBarScrollLeft = tabBar.scrollLeft;
-				let width = 0;
-
-				for (let i = 0; i < index; i++) {
-					let result = await this.getElSize(this.tabBars[i].id);
-					width += result.width;
-				}
-				let winWidth = uni.getSystemInfoSync().windowWidth,
-					nowElement = await this.getElSize(this.tabBars[index].id),
-					nowWidth = nowElement.width;
-				if (width + nowWidth - tabBarScrollLeft > winWidth) {
-					this.scrollLeft = width + nowWidth - winWidth;
-				}
-				if (width < tabBarScrollLeft) {
-					this.scrollLeft = width;
-				}
-				this.isClickChange = false;
-				this.tabIndex = index; //一旦访问data就会出问题
-				this.TabCur = index;
-			},
-			getElSize(id) {
-				//得到元素的size
-				return new Promise((res, rej) => {
-					uni.createSelectorQuery()
-						.select('#' + id)
-						.fields({
-								size: true,
-								scrollOffset: true
-							},
-							data => {
-								res(data);
-							}
-						)
-						.exec();
-				});
-			},
-			async tapTab(e) {
-				//点击tab-bar
-				let tabIndex = e.target.dataset.current;
-				if (this.newsitems[tabIndex].data.length === 0) {
-					this.addData(tabIndex);
-				}
-				if (this.tabIndex === tabIndex) {
-					return false;
-				} else {
-					let tabBar = await this.getElSize('tab-bar'),
-						tabBarScrollLeft = tabBar.scrollLeft; //点击的时候记录并设置scrollLeft
-					this.scrollLeft = tabBarScrollLeft;
-					this.isClickChange = true;
-					this.tabIndex = tabIndex;
-				}
-			},
-			randomfn() {
-				let ary = [];
-				for (let i = 0, length = this.tabBars.length; i < length; i++) {
-					let aryItem = {
-						loadingText: '加载更多...',
-						data: []
-					};
-					if (i < 1) {
-						for (let j = 1; j <= 10; j++) {
-							aryItem.data.push(tpl['data' + Math.floor(Math.random() * 5)]);
-						}
+			onReachBottom: function() {
+				console.log("-----------22222222222----")
+				setTimeout(() => {
+					for (var i = 0; i < this.cuIconList2.length; i++) {
+						this.cuIconList.push(this.cuIconList2[i])
 					}
-					ary.push(aryItem);
-				}
-				return ary;
-			}
+				}, 1200);
+			},
 		}
+
 	};
 </script>
 
@@ -389,5 +395,9 @@
 		display: inline-block;
 		text-align: center;
 
+	}
+	.marTop{
+		margin-top: 7px;
+		margin-bottom: -8px;
 	}
 </style>

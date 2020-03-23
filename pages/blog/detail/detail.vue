@@ -30,7 +30,7 @@
 				</view>
 				<view class="grid flex-sub justify-center radius">
 					<view v-for="(item,index) in isCard?1:7" :key="index">
-						<image class="radius" style="width: 360px;" src="http://img5.imgtn.bdimg.com/it/u=2440548410,4261041145&fm=26&gp=0.jpg"
+						<image class="radius" style="width: 360px;" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1584852790595&di=b6013d3b5606f0eff453b14d543e33cd&imgtype=0&src=http%3A%2F%2Fgbres.dfcfw.com%2FFiles%2Fpicture%2F20200322%2Fsize500%2FEB62545D9912A6672961F87011CF1802_w1242h2208.jpg"
 						 mode="widthFix"></image>
 					</view>
 				</view>
@@ -100,18 +100,18 @@
 			<view class="flex justify-between" style="width: 100%; ">
 				<view class="flex justify-between text-center">
 					<view class="  btn-wid myheight flex align-center justify-center noMargin">
-						<text class="cuIcon-forward text-blue " style="font-size: 33rpx;"><text class="" style="font-size: 30rpx; ">分享</text></text>
+						<text class="cuIcon-forward text-olive " style="font-size: 33rpx;"><text class="text-black" style="font-size: 30rpx; ">分享</text></text>
 					</view>
 					<view class="solid-left">
 				
 					</view>
 					<view class="   btn-wid myheight  flex align-center justify-center  noMargin">
-						<text class="cuIcon-favor text-blue  " style="font-size: 33rpx;"><text class="" style="font-size: 30rpx; ">收藏</text></text>
+						<text class="cuIcon-favor text-blue  " style="font-size: 33rpx;"><text class="text-black" style="font-size: 30rpx; ">收藏</text></text>
 					</view>
 					<view class="solid-left padding-tb-sm">
 					</view>
 					<view class="myheight btn-wid   flex align-center justify-center   ">
-						<text class="cuIcon-appreciate text-blue " style="font-size: 33rpx; "><text class="" style="font-size: 30rpx; ">赞</text></text>
+						<text class="cuIcon-appreciate text-red " style="font-size: 33rpx; "><text class="text-black" style="font-size: 30rpx; ">赞</text></text>
 					</view>
 				</view>
 				<view class="solid-left padding-tb-sm">
@@ -195,5 +195,13 @@
 	.noMargin {
 	    margin-left: 0px;
 		margin-right: 0px;
+	}
+	
+	.content {
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+		/* background-color: #efeff4; */
+		/* padding: 20upx; */
 	}
 </style>

@@ -1,5 +1,5 @@
 <template>
-	<scroll-view   scroll-x :scroll-left="scrollLeft" scroll-y @scrolltolower="loadMore">
+	<scroll-view scroll-x >
 		<view>
 			<view class="">
 				<!-- 		<view>
@@ -52,14 +52,12 @@
 										<view class='cu-tag radius  light sm bg-cyan'>大宝剑专区</view>
 									</view>
 								</view>
-							</view>      
+							</view>
 						</view>
 						<view class="text-content text-df text-black">{{item.title}}</view>
 						<view class="grid flex-sub padding-lr" :class="isCard?'col-4 grid-square':'col-20 grid-square'">
-							<view class="bg-img" :class="isCard?'':''"  v-for="(subItem,indexs) in (item.imgs)" :key="indexs">
-								<image  :src="subItem" @click='previewimgs' 
-									  :data-img="subItem"
-								 mode="aspectFill"> </image>
+							<view class="bg-img" :class="isCard?'':''" v-for="(subItem,indexs) in (item.imgs)" :key="indexs">
+								<image :src="subItem" @click='previewimgs' :data-img="subItem" mode="aspectFill"> </image>
 							</view>
 						</view>
 						<view class="text-gray padding-lr  text-sm" style="margin-top: 20rpx; ">
@@ -68,37 +66,12 @@
 						<view class="   solid-top">
 							<view class="text-gray radius light flex     justify-between" style="  color: #A3A3A3;height: 45px;">
 								<view class="flex align-center   ">
-									<text class="cuIcon-attentionfill  text-orange text-content   margin-left-sm margin-lr-xs"></text>{{item.browsingTimes}} 
+									<text class="cuIcon-attentionfill  text-orange text-content   margin-left-sm margin-lr-xs"></text>{{item.browsingTimes}}
 									<text class="cuIcon-likefill text-red   text-content margin-left-sm margin-lr-xs"></text>{{item.thumbsUp}}
 									<text class="cuIcon-favorfill  text-olive text-content margin-lr-xs margin-left-sm"></text>{{item.comment_count}}
-									
-									<!-- <view class="cu-capsule round margin-lr-xs">
-										<view class='cu-tag bg-olive sm'>
-											<text class='cuIcon-attentionfill '></text>
-										</view>
-										<view class="cu-tag line-olive sm">
-											{{item.browsingTimes}} 
-										</view>
-									</view>
-									<view class="cu-capsule round margin-lr-xs">
-										<view class='cu-tag bg-red sm'>
-											<text class='cuIcon-likefill '></text>
-										</view>
-										<view class="cu-tag line-red sm">
-											{{item.thumbsUp}}
-										</view>
-									</view>
-									<view class="cu-capsule round margin-lr-xs">
-										<view class='cu-tag bg-orange sm'>
-											<text class='cuIcon-favor '></text>
-										</view>
-										<view class="cu-tag line-orange sm">
-											{{item.comment_count}}
-										</view>
-									</view> -->
 								</view>
 								<view class="flex align-center justify-end" style="height: 100% ;width: 80px;" @click="navTo">
-									<text class="  text-mauve   margin-lr-xs" >看详情>></text>
+									<text class="text-mauve  text-sm light  margin-lr-xs">详情>></text>
 								</view>
 							</view>
 						</view>
@@ -117,9 +90,7 @@
 		mapState
 	} from 'vuex';
 
-	import uniNoticeBar from "../../components/uni-notice-bar/uni-notice-bar.vue"
-	import uniIcon from "../../components/uni-icon/uni-icon.vue"
-	import uniPopup from "@/components/uni-popup/uni-popup.vue"
+ 
 	import share from "@/components/share.vue"
 	const recorderManager = uni.getRecorderManager();
 	const innerAudioContext = uni.createInnerAudioContext();
@@ -128,9 +99,7 @@
 
 	export default {
 		components: {
-			uniNoticeBar,
-			uniIcon,
-			uniPopup,
+ 
 			share
 		},
 
@@ -189,7 +158,7 @@
 							"https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg",
 							"https://ossweb-img.qq.com/images/lol/web201310/skin/big39000.jpg",
 							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-							
+
 						]
 					},
 					{
@@ -224,7 +193,7 @@
 							"https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg",
 							"https://ossweb-img.qq.com/images/lol/web201310/skin/big39000.jpg",
 							"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
-							
+
 						]
 					}, {
 						datetime: "2019-12-23 11:18",
@@ -241,7 +210,7 @@
 							"https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg",
 							"https://ossweb-img.qq.com/images/lol/web201310/skin/big39000.jpg",
 							"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
-							
+
 						]
 					}, {
 						datetime: "2019-12-23 11:18",
@@ -258,7 +227,7 @@
 							"https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg",
 							"https://ossweb-img.qq.com/images/lol/web201310/skin/big39000.jpg",
 							"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
-							
+
 						]
 					}, {
 						datetime: "2019-12-23 11:18",
@@ -275,7 +244,7 @@
 							"https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg",
 							"https://ossweb-img.qq.com/images/lol/web201310/skin/big39000.jpg",
 							"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
-							
+
 						]
 					}, {
 						datetime: "2019-12-23 11:18",
@@ -332,114 +301,114 @@
 
 				],
 				articList2: [{
-						datetime: "2019-12-23 11:18",
-						article_type: "1",
-						isTop: 1,
-						nickName: "莫甘娜-艾欧尼亚",
-						title: "想做兼职的看过来，宝妈、学生、待业、上班、老板、微商朋友都可以，手机兼职时间自由，多劳多得，日赚30--300💰",
-						headImg: "https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-						comment_count: "639",
-						thumbsUp: "312",
-						browsingTimes: "2345",
-						imgs: [
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
-							
-						]
-					},{
-						datetime: "2019-12-23 11:18",
-						article_type: "1",
-						isTop: 1,
-						nickName: "莫甘娜-艾欧尼亚",
-						title: "想做兼职的看过来，宝妈、学生、待业、上班、老板、微商朋友都可以，手机兼职时间自由，多劳多得，日赚30--300💰",
-						headImg: "https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-						comment_count: "639",
-						thumbsUp: "312",
-						browsingTimes: "2345",
-						imgs: [
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
-							
-						]
-					}, {
-						datetime: "2019-12-23 11:18",
-						article_type: "1",
-						isTop: 1,
-						nickName: "莫甘娜-艾欧尼亚",
-						title: "想做兼职的看过来，宝妈、学生、待业、上班、老板、微商朋友都可以，手机兼职时间自由，多劳多得，日赚30--300💰",
-						headImg: "https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-						comment_count: "639",
-						thumbsUp: "312",
-						browsingTimes: "2345",
-						imgs: [
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-						]
-					}
-				],
+					datetime: "2019-12-23 11:18",
+					article_type: "1",
+					isTop: 1,
+					nickName: "莫甘娜-艾欧尼亚",
+					title: "想做兼职的看过来，宝妈、学生、待业、上班、老板、微商朋友都可以，手机兼职时间自由，多劳多得，日赚30--300💰",
+					headImg: "https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
+					comment_count: "639",
+					thumbsUp: "312",
+					browsingTimes: "2345",
+					imgs: [
+						"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
+						"https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg",
+						"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
+						"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
+
+					]
+				}, {
+					datetime: "2019-12-23 11:18",
+					article_type: "1",
+					isTop: 1,
+					nickName: "莫甘娜-艾欧尼亚",
+					title: "想做兼职的看过来，宝妈、学生、待业、上班、老板、微商朋友都可以，手机兼职时间自由，多劳多得，日赚30--300💰",
+					headImg: "https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
+					comment_count: "639",
+					thumbsUp: "312",
+					browsingTimes: "2345",
+					imgs: [
+						"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
+						"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
+						"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
+						"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
+
+					]
+				}, {
+					datetime: "2019-12-23 11:18",
+					article_type: "1",
+					isTop: 1,
+					nickName: "莫甘娜-艾欧尼亚",
+					title: "想做兼职的看过来，宝妈、学生、待业、上班、老板、微商朋友都可以，手机兼职时间自由，多劳多得，日赚30--300💰",
+					headImg: "https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
+					comment_count: "639",
+					thumbsUp: "312",
+					browsingTimes: "2345",
+					imgs: [
+						"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
+						"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
+						"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
+						"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
+						"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
+					]
+				}],
 				dotStyle: true,
 				towerStart: 0,
 				direction: '',
 				cuIconList: [{
-					cuIcon: 'cardboardfill',
-					color: 'red',
-					badge: 120,
-					name: '最新'
-				}, {
-					cuIcon: 'hotfill',
-					color: 'orange',
-					badge: 1,
-					name: '最热'
-				}, {
-					cuIcon: 'shopfill',
-					color: 'yellow',
-					badge: 0,
-					name: '微商发布'
-				}, {
-					cuIcon: 'commandfill',
-					color: 'olive',
-					badge: 22,
-					name: '营销推广'
-				},  {
-					cuIcon: 'sponsorfill',
-					color: 'blue',
-					badge: 0,
-					name: '优惠福利'
-				}, {
-					cuIcon: 'group_fill',
-					color: 'purple',
-					badge: 0,
-					name: '兼职招聘'
-				},
-				
-				{
-					cuIcon: 'discoverfill',
-					color: 'purple',
-					badge: 0,
-					name: '交友旅游'
-				}, {
-					cuIcon: 'emojiflashfill',
-					color: 'mauve',
-					badge: 0,
-					name: '美食分享'
-				}, {
-					cuIcon: 'homefill',
-					color: 'purple',
-					badge: 0,
-					name: '房产信息'
-				}, {
-					cuIcon: 'servicefill',
-					color: 'mauve',
-					badge: 0,
-					name: '商业交流'
-				}],
+						cuIcon: 'cardboardfill',
+						color: 'red',
+						badge: 120,
+						name: '最新'
+					}, {
+						cuIcon: 'hotfill',
+						color: 'orange',
+						badge: 1,
+						name: '最热'
+					}, {
+						cuIcon: 'shopfill',
+						color: 'yellow',
+						badge: 0,
+						name: '微商发布'
+					}, {
+						cuIcon: 'commandfill',
+						color: 'olive',
+						badge: 22,
+						name: '营销推广'
+					}, {
+						cuIcon: 'sponsorfill',
+						color: 'blue',
+						badge: 0,
+						name: '优惠福利'
+					}, {
+						cuIcon: 'group_fill',
+						color: 'purple',
+						badge: 0,
+						name: '兼职招聘'
+					},
+
+					{
+						cuIcon: 'discoverfill',
+						color: 'purple',
+						badge: 0,
+						name: '交友旅游'
+					}, {
+						cuIcon: 'emojiflashfill',
+						color: 'mauve',
+						badge: 0,
+						name: '美食分享'
+					}, {
+						cuIcon: 'homefill',
+						color: 'purple',
+						badge: 0,
+						name: '房产信息'
+					}, {
+						cuIcon: 'servicefill',
+						color: 'mauve',
+						badge: 0,
+						name: '商业交流'
+					}
+				],
 				modalName: null,
 				gridCol: 5,
 				gridBorder: false,
@@ -461,11 +430,11 @@
 		computed: mapState(['forcedLogin', 'hasLogin', 'userName']),
 
 		methods: {
-			
-			goTop(){
-				     uni.pageScrollTo({
-				        scrollTop: 0
-				      })
+
+			goTop() {
+				uni.pageScrollTo({
+					scrollTop: 0
+				})
 			},
 			DotStyle(e) {
 				this.dotStyle = e.detail.value;
@@ -474,11 +443,7 @@
 			cardSwiper(e) {
 				this.cardCur = e.detail.current;
 			},
-
-
-			IsCard(e) {
-				this.isCard = e.detail.value
-			},
+ 
 			previewimgs: function(e) {
 				var currentImg = e.currentTarget.dataset.img;
 				console.log(currentImg);
@@ -506,19 +471,16 @@
 
 			}
 		},
-		 onReachBottom: function () {
-			 setTimeout(() => {
-				 for (var i = 0; i < this.articList2.length; i++) {
-				 	this.articList.push(this.articList2[i])
-				 }
-			 }, 1200);
-			 
-
-		 
-},
+		onReachBottom: function() {
+			setTimeout(() => {
+				for (var i = 0; i < this.articList2.length; i++) {
+					this.articList.push(this.articList2[i])
+				}
+			}, 1200);
+		},
 		// onPageScroll: function (e) {
 		//     console.log(e)
-		     
+
 		//   }
 		// onLoad() {
 		// 	this.TowerSwiper('swiperList');
@@ -554,44 +516,19 @@
 </script>
 
 <style>
-	.tower-swiper .tower-item {
-		transform: scale(calc(0.5 + var(--index) / 10));
-		margin-left: calc(var(--left) * 100upx - 150upx);
-		z-index: var(--index);
-	}
 
-	.hello {
+	.content {
 		display: flex;
 		flex: 1;
 		flex-direction: column;
+		/* background-color: #efeff4; */
+		/* padding: 20upx; */
 	}
 
-	.fixed {
-		position: fixed;
-		z-index: 99;
-	}
+
 
 	.title {
 		color: #8f8f94;
 		margin-top: 50upx;
 	}
-
-	.ul {
-		font-size: 30upx;
-		color: #8f8f94;
-		margin-top: 50upx;
-	}
-
-	.ul>view {
-		line-height: 50upx;
-	}
-
-	/* 隐藏滚动条 */
-	::-webkit-scrollbar {
-		width: 0;
-		height: 0;
-		color: transparent;
-	}
-	
-	
 </style>
