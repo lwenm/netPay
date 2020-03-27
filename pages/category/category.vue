@@ -161,12 +161,12 @@
 					name: '兼职群'
 				}, {
 					cuIcon: 'sponsorfill',
-					color: 'blue',
+					color: 'green',
 					badge: 0,
 					name: '餐饮美食'
 				}, {
 					cuIcon: 'group_fill',
-					color: 'purple',
+					color: 'cyan',
 					badge: 0,
 					name: '兼职招聘'
 				}],
@@ -181,50 +181,56 @@
 					badge: 1,
 					name: '福利优惠'
 				}, {
-					cuIcon: 'shopfill',
-					color: 'yellow',
+					cuIcon: 'homefill',
+					color: 'pink',
 					badge: 0,
-					name: '代购微商'
+					name: '房产信息'
+					
 				}, {
 					cuIcon: 'commandfill',
 					color: 'olive',
 					badge: 22,
 					name: '兼职招聘'
 				}, {
-					cuIcon: 'sponsorfill',
-					color: 'blue',
+					cuIcon: 'emojiflashfill',
+					color: 'green',
 					badge: 0,
 					name: '餐饮美食'
 				}, {
-					cuIcon: 'group_fill',
-					color: 'purple',
+					cuIcon: 'formfill',
+					color: 'blue',
 					badge: 0,
 					name: '学习交流'
 				}, {
-					cuIcon: 'discoverfill',
-					color: 'purple',
+					cuIcon: 'colorlens',
+					color: 'cyan',
 					badge: 0,
 					name: '兴趣爱好'
 				}, {
-					cuIcon: 'emojiflashfill',
-					color: 'mauve',
+					cuIcon: 'group_fill',
+					color: 'olive',
 					badge: 0,
 					name: '同城交友'
 				}, {
-					cuIcon: 'homefill',
-					color: 'purple',
+					cuIcon: 'shopfill',
+					color: 'yellow',
 					badge: 0,
-					name: '房产信息'
+					name: '代购微商'
 				}, {
-					cuIcon: 'servicefill',
-					color: 'mauve',
+					cuIcon: 'sponsorfill',
+					color: 'grey',
 					badge: 0,
 					name: '商业交流'
 				}, {
-					cuIcon: 'servicefill',
-					color: 'mauve',
+					cuIcon: 'locationfill',
+					color: 'olive',
 					badge: 0,
-					name: '其他'
+					name: '生活服务'
+				}, {
+					cuIcon: 'servicefill',
+					color: 'blue',
+					badge: 0,
+					name: '在线客服'
 				}]
 			};
 		},
@@ -232,7 +238,6 @@
 			// this.newsitems = this.randomfn();
 		},
 		methods: {
-
 			loadMore: function() {
 				console.log("-----------22222222222----")
 				setTimeout(() => {
