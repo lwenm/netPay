@@ -1334,7 +1334,7 @@ button.cuIcon.lg {
 	position: absolute;
 	right: 0;
 	display: flex;
-	width: 260upx;
+	width: 320upx;
 	height: 100%;
 	transform: translateX(100%)
 }
@@ -2743,7 +2743,7 @@ swiper.round-dot .uni-swiper-dot.uni-swiper-dot-active {
 	width: 600upx !important;
 	left: 75upx;
 	box-sizing: border-box;
-	padding: 10upx 0upx 10upx;
+	padding: 10upx 0upx 40upx;
 	overflow: initial;
 }
 

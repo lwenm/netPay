@@ -7,7 +7,7 @@
 		<view class="cu-card">
 			<view class=" shadow">
 				<view class="cu-list grid  radius shadow shadow-lg" :class="['col-' + gridCol,gridBorder?'':'no-border',isCard?'no-card':''  ] ">
-					<view class="cu-item" v-for="(item,index) in cuIconList" :key="index" v-if="index<gridCol*4">
+					<view class="cu-item" v-for="(item,index) in cuIconList" :key="index" v-if="index<gridCol*3">
 						<view :class="['cuIcon-' + item.cuIcon,'text-' + item.color]" style="line-height: 0.8; ">
 <!-- 							<view class="cu-tag badge" v-if="item.badge!=0">
 							</view> -->
@@ -24,7 +24,7 @@
 
 		<view class="cu-card  shadow shadow-lg article  " :class="isCard?'no-card':''" v-for="(item,index) in cuIconList "
 		 :key="index">
-			<view class="cu-item shadow">
+			<view class="cu-item shadow" style="margin-bottom: -8px;">
 				<view class="title margin-top">
 					<view class="text-cut">无意者 烈火焚身;以正义的烈火拔出黑暗。我有自己的正义，见证至高的烈火吧。</view>
 				</view>
@@ -52,6 +52,9 @@
 						</view>
 					</view>
 				</view>
+			</view>
+			<view class="cu-item shadow radius" v-if="index%8==0" style="margin-bottom: -8px;" >
+				<ad unit-id="adunit-07c798ead64c55f4"></ad>
 			</view>
 		</view>
 		<view class="cu-load   " :class="1==1?'loading':'over'"></view>

@@ -1,11 +1,7 @@
 <template>
-	<scroll-view scroll-x >
+	<scroll-view scroll-y>
 		<view>
 			<view class="">
-				<!-- 		<view>
-						<cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/wdh2236.jpg">
-						</cu-custom>
-					</view> -->
 				<share />
 				<view class="cu-bar search bg-white">
 					<view class="search-form round">
@@ -17,9 +13,9 @@
 						<button class="cu-btn bg-green shadow-blur round">搜索</button>
 					</view>
 				</view>
-				<swiper class="card-swiper" :class="dotStyle ? 'square-dot' : 'round-dot'" :indicator-dots="true" :circular="true"
-				 :autoplay="true" interval="6000" duration="500" @change="cardSwiper" indicator-color="#8799a3"
-				 indicator-active-color="#0081ff">
+
+				<swiper class="card-swiper bg-white " :class="dotStyle ? 'square-dot' : 'round-dot'" :circular="true" :autoplay="true"
+				 interval="6000" duration="500" @change="cardSwiper" indicator-color="#8799a3" indicator-active-color="#4adfdf">
 					<swiper-item v-for="(item, index) in swiperList" :key="index" :class="cardCur == index ? 'cur' : ''">
 						<view class="swiper-item">
 							<image :src="item.url" mode="aspectFill" v-if="item.type == 'image'"></image>
@@ -28,7 +24,40 @@
 					</swiper-item>
 				</swiper>
 
-				<view class="cu-list grid radius shadow shadow-lg" :class="['col-' + gridCol,gridBorder?'':'no-border']">
+
+				<view class=" bg-white shadow-blur   padding  solids-top   radius margin-lr-xs " style="margin-top: -6px; margin-bottom: 2.5px;">
+					<view class="   flex justify-start">
+						<view>
+							<text class="cuIcon-calendar margin-right-sm text-olive"> 发帖:</text><text class=" text-sm">3245</text>
+						</view>
+						<view>
+							<text class="cuIcon-attention margin-left-xl margin-right-sm text-orange"> 浏览:</text><text class="text-sm ">43672</text>
+						</view>
+					</view>
+					<view ><text class="cuIcon-album text-olive">每日一句：</text><text class="text-sm">玉辇西归已至今，古原风景自沈沈。御沟流水长芳草，宫树落花空夕阴。蝴蝶翅翻残露滴，子规声尽野烟深。路人不记当年事，台殿寂寥山影侵</text></view>
+				</view>
+				<!-- 				<view class="grid col-2  solids-bottom solids-top">
+					<view class="">
+						<view class="bg-gradual-blue margin-lr-xs padding-sm radius text-center  ">
+							<view class="text-lg">发布</view>
+						</view>
+					</view>
+					<view class="">
+						<view class="bg-gradual-pink margin-lr-xs padding-sm radius text-center  ">
+							<view class="text-lg">入驻</view>
+						</view>
+					</view>
+				</view> -->
+
+				<scroll-view scroll-x class=" bg-white nav text-center solids-bottom radius " scroll-with-animation :scroll-left="scrollLeft"
+				 style="margin-bottom: -15px;">
+					<view class="cu-item" v-for="(item, index) in cuIconList" :key="index" :class="index==TabCur?'text-red text-bold':'text-cyan'"
+					 @tap="tabSelect" :data-id="index">
+						<text :class="['cuIcon-' + item.cuIcon]"></text> {{item.name}}
+					</view>
+				</scroll-view>
+
+				<!--<view class="cu-list grid radius shadow shadow-lg" :class="['col-' + gridCol,gridBorder?'':'no-border']">
 					<view class="cu-item" v-for="(item,index) in cuIconList" :key="index" v-if="index<gridCol*2">
 						<view :class="['cuIcon-' + item.cuIcon,'text-' + item.color]" style="line-height: 0.8; ">
 							<view class="cu-tag badge" v-if="item.badge!=0">
@@ -37,11 +66,11 @@
 						</view>
 						<text style=" font-size: 12px;">{{item.name}}</text>
 					</view>
-				</view>
+				</view> -->
 
-				<view class="cu-card dynamic shadow shadow-lg" v-for="(item,index) in articList " :key="index" @click="getDetail"
+				<view class="cu-card dynamic shadow shadow-lg radius   " v-for="(item,index) in articList " :key="index" @click="getDetail"
 				 :class="isCard?'':''">
-					<view class="cu-item shadow">
+					<view class="cu-item shadow" style="margin-bottom: -8px;">
 						<view class="cu-list menu-avatar">
 							<view class="cu-item">
 								<view class="cu-avatar round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg);"></view>
@@ -55,8 +84,8 @@
 							</view>
 						</view>
 						<view class="text-content text-df text-black">{{item.title}}</view>
-						<view class="grid flex-sub padding-lr" :class="isCard?'col-4 grid-square':'col-20 grid-square'">
-							<view class="bg-img" :class="isCard?'':''" v-for="(subItem,indexs) in (item.imgs)" :key="indexs">
+						<view class="grid flex-sub padding-lr" :class="isCard?'col-4 grid-square':'col-20 grid-square'" >
+							<view class="bg-img" :class="isCard?'':''" v-for="(subItem,indexs) in (item.imgs)" :key="indexs" v-if="indexs<4">
 								<image :src="subItem" @click='previewimgs' :data-img="subItem" mode="aspectFill"> </image>
 							</view>
 						</view>
@@ -76,6 +105,10 @@
 							</view>
 						</view>
 					</view>
+					<view class="cu-item shadow radius" v-if="index%8==0" style="margin-bottom: -8px;" >
+						<ad unit-id="adunit-07c798ead64c55f4"></ad>
+					</view>
+
 				</view>
 				<view class="cu-load   " :class="1==1?'loading':'over'"></view>
 			</view>
@@ -90,7 +123,7 @@
 		mapState
 	} from 'vuex';
 
- 
+
 	import share from "@/components/share.vue"
 	const recorderManager = uni.getRecorderManager();
 	const innerAudioContext = uni.createInnerAudioContext();
@@ -99,14 +132,74 @@
 
 	export default {
 		components: {
- 
+
 			share
 		},
 
 		data() {
 			return {
+				current_cat: 0,
+				current_position: 'mid_99999999',
 				scrollLeft: 0,
 				cardCur: 0,
+				TabCur: 0,
+				swipelistMS: [{
+						"name": "最近发布",
+						"slug": "最近发布",
+						"type": "category",
+						"description": "提供最新网站源码下载，方便大家的学习",
+						"mid": "99999999"
+					},
+					{
+						"name": "资源分享",
+						"slug": "xia",
+						"type": "category",
+						"description": "提供最新网站源码下载，方便大家的学习",
+						"mid": "2"
+					},
+					{
+						"name": "技术交流",
+						"slug": "share",
+						"type": "category",
+						"description": "分享一些自己的学习心得，一些技术之间的交流",
+						"mid": "14"
+					},
+					{
+						"name": "JSP源码",
+						"slug": "jspcode",
+						"type": "category",
+						"description": null,
+						"mid": "33"
+					},
+					{
+						"name": "毕业设计",
+						"slug": "bysj",
+						"type": "category",
+						"description": "分享一些IT的毕业设计源码和论文",
+						"mid": "35"
+					},
+					{
+						"name": "其他源码",
+						"slug": "othercode",
+						"type": "category",
+						"description": null,
+						"mid": "36"
+					},
+					{
+						"name": "精品课程",
+						"slug": "video",
+						"type": "category",
+						"description": "分享一些其他编程之类的视频",
+						"mid": "41"
+					},
+					{
+						"name": "JAVA源码",
+						"slug": "javacode",
+						"type": "category",
+						"description": "分享一些java的源码",
+						"mid": "45"
+					}
+				], //文章分类
 				swiperList: [{
 						id: 0,
 						type: 'image',
@@ -359,12 +452,7 @@
 						cuIcon: 'cardboardfill',
 						color: 'red',
 						badge: 120,
-						name: '最新'
-					}, {
-						cuIcon: 'hotfill',
-						color: 'orange',
-						badge: 1,
-						name: '最热'
+						name: '推荐'
 					}, {
 						cuIcon: 'shopfill',
 						color: 'yellow',
@@ -386,7 +474,6 @@
 						badge: 0,
 						name: '兼职招聘'
 					},
-
 					{
 						cuIcon: 'discoverfill',
 						color: 'purple',
@@ -430,7 +517,10 @@
 		computed: mapState(['forcedLogin', 'hasLogin', 'userName']),
 
 		methods: {
-
+			tabSelect(e) {
+				this.TabCur = e.currentTarget.dataset.id;
+				this.scrollLeft = (e.currentTarget.dataset.id - 1) * 80
+			},
 			goTop() {
 				uni.pageScrollTo({
 					scrollTop: 0
@@ -439,11 +529,11 @@
 			DotStyle(e) {
 				this.dotStyle = e.detail.value;
 			},
-			// cardSwiper
+			// cardSwiper 
 			cardSwiper(e) {
 				this.cardCur = e.detail.current;
 			},
- 
+
 			previewimgs: function(e) {
 				var currentImg = e.currentTarget.dataset.img;
 				console.log(currentImg);
@@ -516,7 +606,6 @@
 </script>
 
 <style>
-
 	.content {
 		display: flex;
 		flex: 1;
@@ -530,5 +619,79 @@
 	.title {
 		color: #8f8f94;
 		margin-top: 50upx;
+	}
+
+
+	.UCenter-bg {
+		background-image: url(https://www.hiai.top/yuan/public/img/162435914.jpg);
+		background-size: cover;
+		height: 400rpx;
+		display: flex;
+		justify-content: center;
+		padding-top: 40rpx;
+		overflow: hidden;
+		position: relative;
+		flex-direction: column;
+		align-items: center;
+		color: #fff;
+		font-weight: 300;
+		text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+	}
+
+	.UCenter-bg text {
+		opacity: 0.8;
+	}
+
+	.UCenter-bg image {
+		width: 200rpx;
+		height: 200rpx;
+	}
+
+	.UCenter-bg .gif-wave {
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+		left: 0;
+		z-index: 99;
+		mix-blend-mode: screen;
+		height: 100rpx;
+	}
+
+	map,
+	.mapBox {
+		left: 0;
+		z-index: 99;
+		mix-blend-mode: screen;
+		height: 100rpx;
+	}
+
+	map,
+	.mapBox {
+		width: 750rpx;
+		height: 300rpx;
+	}
+
+	/*公告CSS*/
+	.Gonggao {
+		border-top: 1rpx solid #ddd;
+	}
+
+	.swiper_container {
+		height: 55rpx;
+		width: 80vw;
+		line-height: 55rpx;
+	}
+
+	.swiper_item {
+		font-size: 25rpx;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		letter-spacing: 2px;
+	}
+
+	/*公告CSS*/
+	.meiDate {
+		margin: 0 0 10px 10px;
 	}
 </style>
