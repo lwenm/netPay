@@ -1,15 +1,17 @@
 <template>
+
 	<scroll-view scroll-x :scroll-left="scrollLeft" scroll-y @scrolltolower="loadMore">
 		<share />
 		<view class="bg-img padding-bottom-xl" style="background-image: url('https://fys.hiwangchong.com/uploads/images/20200228/d36fa65ea0adc00f787216517e774710.png');height: 207upx;">
 
 		</view>
+		
 		<view class="cu-card">
 			<view class=" shadow">
 				<view class="cu-list grid  radius shadow shadow-lg" :class="['col-' + gridCol,gridBorder?'':'no-border',isCard?'no-card':''  ] ">
 					<view class="cu-item" v-for="(item,index) in cuIconList" :key="index" v-if="index<gridCol*3">
 						<view :class="['cuIcon-' + item.cuIcon,'text-' + item.color]" style="line-height: 0.8; ">
-<!-- 							<view class="cu-tag badge" v-if="item.badge!=0">
+							<!-- 							<view class="cu-tag badge" v-if="item.badge!=0">
 							</view> -->
 						</view>
 						<text style=" font-size: 12px;">{{item.name}}</text>
@@ -25,6 +27,7 @@
 		<view class="cu-card  shadow shadow-lg article  " :class="isCard?'no-card':''" v-for="(item,index) in cuIconList "
 		 :key="index">
 			<view class="cu-item shadow" style="margin-bottom: -8px;">
+				
 				<view class="title margin-top">
 					<view class="text-cut">无意者 烈火焚身;以正义的烈火拔出黑暗。我有自己的正义，见证至高的烈火吧。</view>
 				</view>
@@ -52,12 +55,17 @@
 						</view>
 					</view>
 				</view>
+				
 			</view>
-			<view class="cu-item shadow radius" v-if="index%8==0" style="margin-bottom: -8px;" >
+			
+			<view class="cu-item shadow radius" v-if="index%8==0" style="margin-bottom: -8px;">
 				<ad unit-id="adunit-07c798ead64c55f4"></ad>
 			</view>
+			
 		</view>
+		
 		<view class="cu-load   " :class="1==1?'loading':'over'"></view>
+		
 	</scroll-view>
 </template>
 <script>
@@ -125,6 +133,7 @@
 	};
 
 	export default {
+		
 		components: {
 			uniNoticeBar,
 			uniSection,
@@ -137,7 +146,6 @@
 				gridBorder: false,
 				isCard: false,
 				TabCur: 0,
-				scrollLeft: 0,
 				scrollLeft: 0,
 				isClickChange: false,
 				tabIndex: 0,
@@ -188,7 +196,6 @@
 					color: 'pink',
 					badge: 0,
 					name: '房产信息'
-					
 				}, {
 					cuIcon: 'commandfill',
 					color: 'olive',
@@ -237,12 +244,17 @@
 				}]
 			};
 		},
+
 		onLoad() {
-			// this.newsitems = this.randomfn();
+
 		},
 		methods: {
+			goTop() {
+				uni.pageScrollTo({
+					scrollTop: 0
+				})
+			},
 			loadMore: function() {
-				console.log("-----------22222222222----")
 				setTimeout(() => {
 					for (var i = 0; i < this.cuIconList2.length; i++) {
 						this.cuIconList.push(this.cuIconList2[i])
@@ -250,7 +262,6 @@
 				}, 1200);
 			},
 			onReachBottom: function() {
-				console.log("-----------22222222222----")
 				setTimeout(() => {
 					for (var i = 0; i < this.cuIconList2.length; i++) {
 						this.cuIconList.push(this.cuIconList2[i])
@@ -258,7 +269,6 @@
 				}, 1200);
 			},
 		}
-
 	};
 </script>
 
@@ -276,8 +286,6 @@
 		line-height: 1.8;
 	}
 
-
-
 	.image_ca {
 		width: 180rpx;
 		height: 150rpx;
@@ -291,9 +299,6 @@
 		box-shadow: 0 0 6px rgba(30, 20, 20, 0.1);
 	}
 
-
-
-
 	.detail_info {
 		padding: 20rpx;
 		padding-bottom: 5rpx;
@@ -304,7 +309,6 @@
 		border-color: rgb(196, 196, 196);
 	}
 
-
 	.textbox {
 		width: 250px;
 		height: 34px;
@@ -314,13 +318,9 @@
 		-webkit-box-orient: vertical; //一定要写
 	}
 
-
-
 	.index_swiper {
 		height: 340rpx;
 	}
-
-
 
 	.view_catpost {
 		/* width: 750rpx; */
@@ -329,15 +329,11 @@
 		overflow: hidden;
 	}
 
-
-
 	.nav_postlist_item {
 		border-style: none none solid;
 		border-bottom-width: 0px;
 		border-bottom-color: rgba(170, 170, 170, 1);
 	}
-
-
 
 	.list_text_view {
 		color: #959595;
@@ -348,14 +344,11 @@
 		text-align: center;
 	}
 
-
-
 	.swiper-tab-list1 {
 		font-size: 14px;
 		width: 70px;
 		display: inline-block;
 		text-align: center;
-
 	}
 
 	.marTop {

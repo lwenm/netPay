@@ -103,7 +103,6 @@
 		</view>
 	</view>
 
-
 </template>
 
 <script>
@@ -117,7 +116,6 @@
 					value: 'A',
 					checked: true
 				}],
-
 				mainPic: null,
 				wxGroup: null,
 				wxUser: null
@@ -156,13 +154,6 @@
 						if (picId == 'wxUser') {
 							this.wxUser = res.tempFilePaths[0];
 						}
-
-						// console.log(this.{"main"})
-						// if (this.imgList.length != 0) {
-						// 	this.imgList = this.imgList.concat(res.tempFilePaths)
-						// } else {
-						// 	this.imgList = res.tempFilePaths
-						// }
 					}
 				});
 			},

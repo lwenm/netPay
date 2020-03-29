@@ -24,7 +24,6 @@
 					</swiper-item>
 				</swiper>
 
-
 				<view class=" bg-white shadow-blur   padding  solids-top   radius margin-lr-xs " style="margin-top: -6px; margin-bottom: 2.5px;">
 					<view class="   flex justify-start">
 						<view>
@@ -132,7 +131,6 @@
 
 	export default {
 		components: {
-
 			share
 		},
 
