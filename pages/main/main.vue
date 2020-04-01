@@ -6,7 +6,7 @@
 				<view class="cu-bar search bg-white">
 					<view class="search-form round">
 						<text class="cuIcon-search"></text>
-						<input @focus="InputFocus" @blur="InputBlur" :adjust-position="false" type="text" placeholder="搜索图片、文章、视频"
+						<input @focus="InputFocus" @blur="InputBlur" :adjust-position="false" type="text" placeholder="搜索图片、文章..."
 						 confirm-type="search"></input>
 					</view>
 					<view class="action">
@@ -201,7 +201,7 @@
 				swiperList: [{
 						id: 0,
 						type: 'image',
-						url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big84000.jpg'
+						url: 'http://pic1.win4000.com/pic/4/06/d3ec4f7e5c.jpg'
 					},
 					{
 						id: 1,

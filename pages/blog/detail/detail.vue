@@ -100,24 +100,24 @@
 			<view class="flex justify-between" style="width: 100%; ">
 				<view class="flex justify-between text-center">
 					<view class="  btn-wid myheight flex align-center justify-center noMargin">
-						<text class="cuIcon-forward text-olive " style="font-size: 33rpx;"><text class="text-black" style="font-size: 30rpx; ">分享</text></text>
+						<text class="cuIcon-forward text-olive " style="font-size: 40rpx;"><text class="text-white" style="font-size: 30rpx; ">分</text></text>
 					</view>
 					<view class="solid-left">
 				
 					</view>
 					<view class="   btn-wid myheight  flex align-center justify-center  noMargin">
-						<text class="cuIcon-favor text-blue  " style="font-size: 33rpx;"><text class="text-black" style="font-size: 30rpx; ">收藏</text></text>
+						<text class="cuIcon-favor text-blue  " style="font-size: 40rpx"><text class="text-white" style="font-size: 30rpx; ">收</text></text>
 					</view>
 					<view class="solid-left padding-tb-sm">
 					</view>
 					<view class="myheight btn-wid   flex align-center justify-center   ">
-						<text class="cuIcon-appreciate text-red " style="font-size: 33rpx; "><text class="text-black" style="font-size: 30rpx; ">赞</text></text>
+						<text class="cuIcon-appreciate text-red " style="font-size: 40rpx "><text class="text-white" style="font-size: 30rpx; ">赞</text></text>
 					</view>
 				</view>
-				<view class="solid-left padding-tb-sm">
+				<view class="solids-left padding-tb-sm">
 				</view>
-				<view class="myheight   flex align-center  justify-center    text-center  light  " style="width: 180px;   " @click="showModal()">
-					<text class=" cuIcon-message  text-blue    " style="font-size: 33rpx; " ><text class="" style="font-size: 30rpx; ">评论</text></text>
+				<view class="myheight   flex align-center  justify-center    text-center  light  " style="width: 180px; font-size: 40rpx  " @click="showModal()">
+					<text class=" cuIcon-message  text-blue  text-xxl  "  ><text class="text-blue" style="font-size: 32rpx; "></text>  </text>
 				</view>
 			</view>
 			
@@ -185,7 +185,7 @@
 
 	.myheight {
 
-		height: 50px;
+		height: 45px;
 		
 	}
 	.btn-wid{

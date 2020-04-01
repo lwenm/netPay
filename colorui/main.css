@@ -1804,7 +1804,7 @@ button.cuIcon.lg {
 	width: 100%;
 	top: 0;
 	z-index: 1024;
-	box-shadow: 0 1upx 6upx rgba(0, 0, 0, 0.1);
+	box-shadow: 0 1upx 60upx rgba(0, 0, 0, 0.1);
 }
 
 .cu-bar.foot {
