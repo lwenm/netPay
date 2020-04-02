@@ -1,5 +1,5 @@
 <template>
-	<scroll-view >
+	<scroll-view>
 		<view>
 			<view class="">
 				<share />
@@ -33,7 +33,7 @@
 							<text class="cuIcon-attention margin-left-xl margin-right-sm text-orange"> 浏览:</text><text class="text-sm ">43672</text>
 						</view>
 					</view>
-					<view ><text class="cuIcon-album text-olive">每日一句：</text><text class="text-sm">玉辇西归已至今，古原风景自沈沈。御沟流水长芳草，宫树落花空夕阴。蝴蝶翅翻残露滴，子规声尽野烟深。路人不记当年事，台殿寂寥山影侵</text></view>
+					<view><text class="cuIcon-album text-olive">每日一句：</text><text class="text-sm">玉辇西归已至今，古原风景自沈沈。御沟流水长芳草，宫树落花空夕阴。蝴蝶翅翻残露滴，子规声尽野烟深。路人不记当年事，台殿寂寥山影侵</text></view>
 				</view>
 				<!-- 				<view class="grid col-2  solids-bottom solids-top">
 					<view class="">
@@ -52,12 +52,11 @@
 				 style="margin-bottom: -15px;">
 					<view class="cu-item" v-for="(item, index) in cuIconList" :key="index" :class="index==TabCur?'text-red text-bold':'text-cyan'"
 					 @tap="tabSelect" :data-id="index">
-						<text :class="['cuIcon-' + item.cuIcon]"></text> {{item.name}}
+						<text :class="['cuIcon-' + item.typeIco]"></text> {{item.typeName}}
 					</view>
 				</scroll-view>
 
-				<view class="cu-card dynamic shadow shadow-lg radius   " v-for="(item,index) in articList " :key="index"
-				 :class="isCard?'':''">
+				<view class="cu-card dynamic shadow shadow-lg radius   " v-for="(item,index) in articList " :key="index" :class="isCard?'':''">
 					<view class="cu-item shadow" style="margin-bottom: -8px;">
 						<view class="cu-list menu-avatar">
 							<view class="cu-item">
@@ -72,9 +71,9 @@
 							</view>
 						</view>
 						<view class="text-content text-df text-black">{{item.title}}</view>
-						<view class="grid flex-sub padding-lr" :class="isCard?'col-3 grid-square':'col-20 grid-square'" >
+						<view class="grid flex-sub padding-lr" :class="isCard?'col-3 grid-square':'col-20 grid-square'">
 							<view class="bg-img" :class="isCard?'':''" v-for="(subItem,indexs) in (item.imgs)" :key="indexs" v-if="indexs<7">
-								<image :src="subItem" @click='previewimgs' :data-img="subItem"  :data-id="index"  mode="aspectFill"> </image>
+								<image :src="subItem" @click='previewimgs' :data-img="subItem" :data-id="index" mode="aspectFill"> </image>
 							</view>
 						</view>
 						<view class="text-gray padding-lr  text-sm" style="margin-top: 20rpx; ">
@@ -93,7 +92,7 @@
 							</view>
 						</view>
 					</view>
-					<view class="cu-item shadow radius" v-if="index%5==0" style="margin-bottom: -8px;" >
+					<view class="cu-item shadow radius" v-if="index%5==0" style="margin-bottom: -8px;">
 						<ad unit-id="adunit-07c798ead64c55f4"></ad>
 					</view>
 
@@ -130,63 +129,7 @@
 				scrollLeft: 0,
 				cardCur: 0,
 				TabCur: 0,
-				swipelistMS: [{
-						"name": "最近发布",
-						"slug": "最近发布",
-						"type": "category",
-						"description": "提供最新网站源码下载，方便大家的学习",
-						"mid": "99999999"
-					},
-					{
-						"name": "资源分享",
-						"slug": "xia",
-						"type": "category",
-						"description": "提供最新网站源码下载，方便大家的学习",
-						"mid": "2"
-					},
-					{
-						"name": "技术交流",
-						"slug": "share",
-						"type": "category",
-						"description": "分享一些自己的学习心得，一些技术之间的交流",
-						"mid": "14"
-					},
-					{
-						"name": "JSP源码",
-						"slug": "jspcode",
-						"type": "category",
-						"description": null,
-						"mid": "33"
-					},
-					{
-						"name": "毕业设计",
-						"slug": "bysj",
-						"type": "category",
-						"description": "分享一些IT的毕业设计源码和论文",
-						"mid": "35"
-					},
-					{
-						"name": "其他源码",
-						"slug": "othercode",
-						"type": "category",
-						"description": null,
-						"mid": "36"
-					},
-					{
-						"name": "精品课程",
-						"slug": "video",
-						"type": "category",
-						"description": "分享一些其他编程之类的视频",
-						"mid": "41"
-					},
-					{
-						"name": "JAVA源码",
-						"slug": "javacode",
-						"type": "category",
-						"description": "分享一些java的源码",
-						"mid": "45"
-					}
-				], //文章分类
+				
 				swiperList: [{
 						id: 0,
 						type: 'image',
@@ -503,6 +446,29 @@
 		},
 		computed: mapState(['forcedLogin', 'hasLogin', 'userName']),
 
+
+		onLoad() {
+
+			var JSObject = JSObject;
+			let params = {
+				categoryId: 2,
+			}
+			uni.request({
+				method: "POST",
+				dataType: "JSON",
+				data: params,
+				url: this.websiteUrl + "/api/wxapp/blog/category",
+				success: (res) => {
+					console.log(res.data.data);
+					this.cuIconList = JSON.parse(res.data).data
+					  
+					console.log(this.cuIconList);
+					
+				}
+			});
+
+		},
+
 		methods: {
 			tabSelect(e) {
 				this.TabCur = e.currentTarget.dataset.id;
@@ -528,7 +494,7 @@
 				var index = e.currentTarget.dataset.id;
 				wx.previewImage({
 					current: currentImg, // 当前显示图片的http链接 String
-					urls: this.articList[index].imgs   // 需要预览的图片http链接列表 Array
+					urls: this.articList[index].imgs // 需要预览的图片http链接列表 Array
 				})
 			},
 
