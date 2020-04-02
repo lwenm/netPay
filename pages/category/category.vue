@@ -33,7 +33,7 @@
 				</view>
 
 				<view class="content">
-					<image src="https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg" mode="aspectFill"></image>
+					<image src="http://pic1.win4000.com/pic/9/a8/a111d4c0b0_250_350.jpg" mode="aspectFill"></image>
 					<view class="desc">
 						<view class="text-content"> 折磨生出苦难，苦难又会加剧折磨，凡间这无穷的循环，将有我来终结！真正的恩典因不完整而美丽，因情感而真诚，因脆弱而自由！</view>
 						<view>
@@ -247,6 +247,29 @@
 
 		onLoad() {
 
+		},
+		onShow() {
+			
+			
+			// // 在页面中定义插屏广告
+			// let interstitialAd = null
+			
+			// // 在页面onLoad回调事件中创建插屏广告实例
+			// if (wx.createInterstitialAd) {
+			//   interstitialAd = wx.createInterstitialAd({
+			//     adUnitId: 'adunit-1b9075e101fae0dc'
+			//   })
+			//   interstitialAd.onLoad(() => {})
+			//   interstitialAd.onError((err) => {})
+			//   interstitialAd.onClose(() => {})
+			// }
+			
+			// // 在适合的场景显示插屏广告
+			// if (interstitialAd) {
+			//   interstitialAd.show().catch((err) => {
+			//     console.error(err)
+			//   })
+			// }
 		},
 		methods: {
 			goTop() {

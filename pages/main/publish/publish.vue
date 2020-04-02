@@ -5,7 +5,7 @@
 				<text class="text-gray">免责申明：平台发布的所有信息只负责发布，展示，与平台本身无法，平台不负任何责任。</text>
 			</view>
 		</view>
-
+<ad unit-id="adunit-06fdd2f28c6ed0c3"></ad>
 		<view class="flex     justify-center align-center">
 			<view class="solids-top  lenghtSL"> </view> <view class="margin-lr-xl text-shadow text-olive text-bold">微圈发布</view><view class="solids-top lenghtSL"></view>
 		</view>
@@ -106,6 +106,29 @@
 				gridCol: 4,
 				gridBorder: false
 			}
+		},
+		onShow() {
+			
+			
+			// // 在页面中定义插屏广告
+			// let interstitialAd = null
+			
+			// // 在页面onLoad回调事件中创建插屏广告实例
+			// if (wx.createInterstitialAd) {
+			//   interstitialAd = wx.createInterstitialAd({
+			//     adUnitId: 'adunit-1b9075e101fae0dc'
+			//   })
+			//   interstitialAd.onLoad(() => {})
+			//   interstitialAd.onError((err) => {})
+			//   interstitialAd.onClose(() => {})
+			// }
+			
+			// // 在适合的场景显示插屏广告
+			// if (interstitialAd) {
+			//   interstitialAd.show().catch((err) => {
+			//     console.error(err)
+			//   })
+			// }
 		},
 		methods: {
 

@@ -5,12 +5,7 @@
             "style": {
                 "navigationBarTitleText": "boss星球"
             }
-        },{
-            "path": "pages/pwd/pwd",
-            "style": {
-                "navigationBarTitleText": "找回密码"
-            }
-        }, 
+        },
 		{
 		    "path": "pages/category/category",
 		    "style": {

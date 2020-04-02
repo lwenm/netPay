@@ -30,7 +30,7 @@
 				</view>
 				<view class="grid flex-sub justify-center radius">
 					<view v-for="(item,index) in isCard?1:7" :key="index">
-						<image class="radius" style="width: 360px;" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1584852790595&di=b6013d3b5606f0eff453b14d543e33cd&imgtype=0&src=http%3A%2F%2Fgbres.dfcfw.com%2FFiles%2Fpicture%2F20200322%2Fsize500%2FEB62545D9912A6672961F87011CF1802_w1242h2208.jpg"
+						<image class="radius" style="width: 360px;" src="http://pic1.win4000.com/pic/1/fe/dd93776d03.jpg"
 						 mode="widthFix"></image>
 					</view>
 				</view>
@@ -154,6 +154,29 @@
 				modalName: null,
 				InputBottom: 0
 			};
+		},
+		onShow() {
+			
+			
+			// // 在页面中定义插屏广告
+			// let interstitialAd = null
+			
+			// // 在页面onLoad回调事件中创建插屏广告实例
+			// if (wx.createInterstitialAd) {
+			//   interstitialAd = wx.createInterstitialAd({
+			//     adUnitId: 'adunit-1b9075e101fae0dc'
+			//   })
+			//   interstitialAd.onLoad(() => {})
+			//   interstitialAd.onError((err) => {})
+			//   interstitialAd.onClose(() => {})
+			// }
+			
+			// // 在适合的场景显示插屏广告
+			// if (interstitialAd) {
+			//   interstitialAd.show().catch((err) => {
+			//     console.error(err)
+			//   })
+			// }
 		},
 		methods: {
 			showModal(e) {

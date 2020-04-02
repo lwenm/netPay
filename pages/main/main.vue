@@ -1,5 +1,5 @@
 <template>
-	<scroll-view scroll-y>
+	<scroll-view >
 		<view>
 			<view class="">
 				<share />
@@ -56,23 +56,12 @@
 					</view>
 				</scroll-view>
 
-				<!--<view class="cu-list grid radius shadow shadow-lg" :class="['col-' + gridCol,gridBorder?'':'no-border']">
-					<view class="cu-item" v-for="(item,index) in cuIconList" :key="index" v-if="index<gridCol*2">
-						<view :class="['cuIcon-' + item.cuIcon,'text-' + item.color]" style="line-height: 0.8; ">
-							<view class="cu-tag badge" v-if="item.badge!=0">
-
-							</view>
-						</view>
-						<text style=" font-size: 12px;">{{item.name}}</text>
-					</view>
-				</view> -->
-
-				<view class="cu-card dynamic shadow shadow-lg radius   " v-for="(item,index) in articList " :key="index" @click="getDetail"
+				<view class="cu-card dynamic shadow shadow-lg radius   " v-for="(item,index) in articList " :key="index"
 				 :class="isCard?'':''">
 					<view class="cu-item shadow" style="margin-bottom: -8px;">
 						<view class="cu-list menu-avatar">
 							<view class="cu-item">
-								<view class="cu-avatar round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg);"></view>
+								<view class="cu-avatar round lg" style="background-image:url(http://pic1.win4000.com/pic/a/69/725b62ef7a.jpg);"></view>
 								<view class="content flex-sub">
 									<view class="text-shadow  text-mauve">{{item.nickName}}</view>
 									<view class="text-white   text-sm   ">
@@ -83,9 +72,9 @@
 							</view>
 						</view>
 						<view class="text-content text-df text-black">{{item.title}}</view>
-						<view class="grid flex-sub padding-lr" :class="isCard?'col-4 grid-square':'col-20 grid-square'" >
-							<view class="bg-img" :class="isCard?'':''" v-for="(subItem,indexs) in (item.imgs)" :key="indexs" v-if="indexs<4">
-								<image :src="subItem" @click='previewimgs' :data-img="subItem" mode="aspectFill"> </image>
+						<view class="grid flex-sub padding-lr" :class="isCard?'col-3 grid-square':'col-20 grid-square'" >
+							<view class="bg-img" :class="isCard?'':''" v-for="(subItem,indexs) in (item.imgs)" :key="indexs" v-if="indexs<7">
+								<image :src="subItem" @click='previewimgs' :data-img="subItem"  :data-id="index"  mode="aspectFill"> </image>
 							</view>
 						</view>
 						<view class="text-gray padding-lr  text-sm" style="margin-top: 20rpx; ">
@@ -104,7 +93,7 @@
 							</view>
 						</view>
 					</view>
-					<view class="cu-item shadow radius" v-if="index%8==0" style="margin-bottom: -8px;" >
+					<view class="cu-item shadow radius" v-if="index%5==0" style="margin-bottom: -8px;" >
 						<ad unit-id="adunit-07c798ead64c55f4"></ad>
 					</view>
 
@@ -201,37 +190,37 @@
 				swiperList: [{
 						id: 0,
 						type: 'image',
-						url: 'http://pic1.win4000.com/pic/4/06/d3ec4f7e5c.jpg'
+						url: 'http://pic1.win4000.com/pic/f/c0/182ffcbe87.jpg'
 					},
 					{
 						id: 1,
 						type: 'image',
-						url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg'
+						url: 'http://pic1.win4000.com/pic/9/a8/7b4dfe56a5.jpg'
 					},
 					{
 						id: 2,
 						type: 'image',
-						url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big39000.jpg'
+						url: 'http://pic1.win4000.com/pic/1/6b/b76c0c3709.jpg'
 					},
 					{
 						id: 3,
 						type: 'image',
-						url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg'
+						url: 'http://pic1.win4000.com/pic/9/a8/d686880398.jpg'
 					},
 					{
 						id: 4,
 						type: 'image',
-						url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big25011.jpg'
+						url: 'http://pic1.win4000.com/pic/e/38/fe5d4b90f9.jpg'
 					},
 					{
 						id: 5,
 						type: 'image',
-						url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big21016.jpg'
+						url: 'http://pic1.win4000.com/pic/1/fe/6c7f7dd6f5.jpg'
 					},
 					{
 						id: 6,
 						type: 'image',
-						url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg'
+						url: 'http://pic1.win4000.com/pic/a/69/725b62ef7a.jpg'
 					}
 				],
 				articList: [{
@@ -239,16 +228,16 @@
 						article_type: "1",
 						isTop: 1,
 						nickName: "凯尔-艾欧尼亚",
-						title: "想做兼职的看过来，宝妈、学生、待业、上班、老板、微商朋友都可以，手机兼职时间自由，多劳多得，日赚30--300💰",
-						headImg: "https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
+						title: "我的目光追随着飞去的鸿雁，直到他的身影消失在远方。思绪有如不尽的江水，随着茫茫的江涛漂荡。秋的红兰，江的碧波，一定会让他怀念深情的潇湘。",
+						headImg: "http://pic1.win4000.com/pic/a/69/725b62ef7a.jpg",
 						comment_count: "639",
 						thumbsUp: "312",
 						browsingTimes: "2345",
 						imgs: [
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big39000.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
+							"http://pic1.win4000.com/pic/1/fe/dd93776d03.jpg",
+							"http://pic1.win4000.com/pic/e/b7/97a03e0d59.jpg",
+							"http://pic1.win4000.com/pic/e/38/54133bb0a4.jpg",
+							"http://pic1.win4000.com/pic/a/69/725b62ef7a.jpg",
 
 						]
 					},
@@ -257,33 +246,33 @@
 						article_type: "1",
 						isTop: 1,
 						nickName: "凯尔-艾欧尼亚",
-						title: "想做兼职的看过来，宝妈、学生、待业、上班、老板、微商朋友都可以，手机兼职时间自由，多劳多得，日赚30--300💰",
-						headImg: "https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
+						title: "我的目光追随着飞去的鸿雁，直到他的身影消失在远方。思绪有如不尽的江水，随着茫茫的江涛漂荡。秋的红兰，江的碧波，一定会让他怀念深情的潇湘。",
+						headImg: "http://pic1.win4000.com/pic/a/69/725b62ef7a.jpg",
 						comment_count: "639",
 						thumbsUp: "312",
 						browsingTimes: "2345",
 						imgs: [
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big39000.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
+							"http://pic1.win4000.com/pic/1/fe/dd93776d03.jpg",
+							"http://pic1.win4000.com/pic/e/b7/97a03e0d59.jpg",
+							"http://pic1.win4000.com/pic/e/38/54133bb0a4.jpg",
+							"http://pic1.win4000.com/pic/a/69/725b62ef7a.jpg",
+							"http://pic1.win4000.com/pic/a/69/725b62ef7a.jpg",
 						]
 					}, {
 						datetime: "2019-12-23 11:18",
 						article_type: "1",
 						isTop: 1,
 						nickName: "凯尔-艾欧尼亚",
-						title: "想做兼职的看过来，宝妈、学生、待业、上班、老板、微商朋友都可以，手机兼职时间自由，多劳多得，日赚30--300💰",
-						headImg: "https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
+						title: "我的目光追随着飞去的鸿雁，直到他的身影消失在远方。思绪有如不尽的江水，随着茫茫的江涛漂荡。秋的红兰，江的碧波，一定会让他怀念深情的潇湘。",
+						headImg: "http://pic1.win4000.com/pic/a/69/725b62ef7a.jpg",
 						comment_count: "639",
 						thumbsUp: "312",
 						browsingTimes: "2345",
 						imgs: [
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big39000.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
+							"http://pic1.win4000.com/pic/1/fe/dd93776d03.jpg",
+							"http://pic1.win4000.com/pic/e/b7/97a03e0d59.jpg",
+							"http://pic1.win4000.com/pic/e/38/54133bb0a4.jpg",
+							"http://pic1.win4000.com/pic/1/fe/dd93776d03.jpg",
 
 						]
 					}, {
@@ -291,16 +280,16 @@
 						article_type: "1",
 						isTop: 1,
 						nickName: "凯尔-艾欧尼亚",
-						title: "想做兼职的看过来，宝妈、学生、待业、上班、老板、微商朋友都可以，手机兼职时间自由，多劳多得，日赚30--300💰",
-						headImg: "https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
+						title: "我的目光追随着飞去的鸿雁，直到他的身影消失在远方。思绪有如不尽的江水，随着茫茫的江涛漂荡。秋的红兰，江的碧波，一定会让他怀念深情的潇湘。",
+						headImg: "http://pic1.win4000.com/pic/a/69/725b62ef7a.jpg",
 						comment_count: "639",
 						thumbsUp: "312",
 						browsingTimes: "2345",
 						imgs: [
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big39000.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
+							"http://pic1.win4000.com/pic/1/fe/dd93776d03.jpg",
+							"http://pic1.win4000.com/pic/e/b7/97a03e0d59.jpg",
+							"http://pic1.win4000.com/pic/e/38/54133bb0a4.jpg",
+							"http://pic1.win4000.com/pic/1/fe/dd93776d03.jpg",
 
 						]
 					}, {
@@ -308,16 +297,16 @@
 						article_type: "1",
 						isTop: 1,
 						nickName: "凯尔-艾欧尼亚",
-						title: "想做兼职的看过来，宝妈、学生、待业、上班、老板、微商朋友都可以，手机兼职时间自由，多劳多得，日赚30--300💰",
-						headImg: "https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
+						title: "我的目光追随着飞去的鸿雁，直到他的身影消失在远方。思绪有如不尽的江水，随着茫茫的江涛漂荡。秋的红兰，江的碧波，一定会让他怀念深情的潇湘。",
+						headImg: "http://pic1.win4000.com/pic/a/69/725b62ef7a.jpg",
 						comment_count: "639",
 						thumbsUp: "312",
 						browsingTimes: "2345",
 						imgs: [
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big39000.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
+							"http://pic1.win4000.com/pic/1/fe/dd93776d03.jpg",
+							"http://pic1.win4000.com/pic/e/b7/97a03e0d59.jpg",
+							"http://pic1.win4000.com/pic/e/38/54133bb0a4.jpg",
+							"http://pic1.win4000.com/pic/1/fe/dd93776d03.jpg",
 
 						]
 					}, {
@@ -325,16 +314,16 @@
 						article_type: "1",
 						isTop: 1,
 						nickName: "凯尔-艾欧尼亚",
-						title: "想做兼职的看过来，宝妈、学生、待业、上班、老板、微商朋友都可以，手机兼职时间自由，多劳多得，日赚30--300💰",
-						headImg: "https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
+						title: "我的目光追随着飞去的鸿雁，直到他的身影消失在远方。思绪有如不尽的江水，随着茫茫的江涛漂荡。秋的红兰，江的碧波，一定会让他怀念深情的潇湘。",
+						headImg: "http://pic1.win4000.com/pic/a/69/725b62ef7a.jpg",
 						comment_count: "639",
 						thumbsUp: "312",
 						browsingTimes: "2345",
 						imgs: [
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big39000.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
+							"http://pic1.win4000.com/pic/1/fe/dd93776d03.jpg",
+							"http://pic1.win4000.com/pic/e/b7/97a03e0d59.jpg",
+							"http://pic1.win4000.com/pic/e/38/54133bb0a4.jpg",
+							"http://pic1.win4000.com/pic/1/fe/dd93776d03.jpg",
 
 						]
 					}, {
@@ -342,51 +331,51 @@
 						article_type: "1",
 						isTop: 1,
 						nickName: "凯尔-艾欧尼亚",
-						title: "想做兼职的看过来，宝妈、学生、待业、上班、老板、微商朋友都可以，手机兼职时间自由，多劳多得，日赚30--300💰",
-						headImg: "https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
+						title: "我的目光追随着飞去的鸿雁，直到他的身影消失在远方。思绪有如不尽的江水，随着茫茫的江涛漂荡。秋的红兰，江的碧波，一定会让他怀念深情的潇湘。",
+						headImg: "http://pic1.win4000.com/pic/a/69/725b62ef7a.jpg",
 						comment_count: "639",
 						thumbsUp: "312",
 						browsingTimes: "2345",
 						imgs: [
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big39000.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
+							"http://pic1.win4000.com/pic/1/fe/dd93776d03.jpg",
+							"http://pic1.win4000.com/pic/e/b7/97a03e0d59.jpg",
+							"http://pic1.win4000.com/pic/e/38/54133bb0a4.jpg",
+							"http://pic1.win4000.com/pic/1/fe/dd93776d03.jpg",
+							"http://pic1.win4000.com/pic/a/69/725b62ef7a.jpg",
 						]
 					}, {
 						datetime: "2019-12-23 11:18",
 						article_type: "1",
 						isTop: 1,
 						nickName: "凯尔-艾欧尼亚",
-						title: "想做兼职的看过来，宝妈、学生、待业、上班、老板、微商朋友都可以，手机兼职时间自由，多劳多得，日赚30--300💰",
-						headImg: "https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
+						title: "我的目光追随着飞去的鸿雁，直到他的身影消失在远方。思绪有如不尽的江水，随着茫茫的江涛漂荡。秋的红兰，江的碧波，一定会让他怀念深情的潇湘。",
+						headImg: "http://pic1.win4000.com/pic/a/69/725b62ef7a.jpg",
 						comment_count: "639",
 						thumbsUp: "312",
 						browsingTimes: "2345",
 						imgs: [
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big39000.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
+							"http://pic1.win4000.com/pic/1/fe/dd93776d03.jpg",
+							"http://pic1.win4000.com/pic/e/b7/97a03e0d59.jpg",
+							"http://pic1.win4000.com/pic/e/38/54133bb0a4.jpg",
+							"http://pic1.win4000.com/pic/1/fe/dd93776d03.jpg",
+							"http://pic1.win4000.com/pic/a/69/725b62ef7a.jpg",
 						]
 					}, {
 						datetime: "2019-12-23 11:18",
 						article_type: "1",
 						isTop: 1,
 						nickName: "凯尔-艾欧尼亚",
-						title: "想做兼职的看过来，宝妈、学生、待业、上班、老板、微商朋友都可以，手机兼职时间自由，多劳多得，日赚30--300💰",
-						headImg: "https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
+						title: "我的目光追随着飞去的鸿雁，直到他的身影消失在远方。思绪有如不尽的江水，随着茫茫的江涛漂荡。秋的红兰，江的碧波，一定会让他怀念深情的潇湘。",
+						headImg: "http://pic1.win4000.com/pic/a/69/725b62ef7a.jpg",
 						comment_count: "639",
 						thumbsUp: "312",
 						browsingTimes: "2345",
 						imgs: [
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big39000.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
-							"https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg",
+							"http://pic1.win4000.com/pic/1/fe/dd93776d03.jpg",
+							"http://pic1.win4000.com/pic/e/b7/97a03e0d59.jpg",
+							"http://pic1.win4000.com/pic/e/38/54133bb0a4.jpg",
+							"http://pic1.win4000.com/pic/1/fe/dd93776d03.jpg",
+							"http://pic1.win4000.com/pic/e/b7/97a03e0d59.jpg",
 						]
 					},
 
@@ -396,16 +385,16 @@
 					article_type: "1",
 					isTop: 1,
 					nickName: "莫甘娜-艾欧尼亚",
-					title: "想做兼职的看过来，宝妈、学生、待业、上班、老板、微商朋友都可以，手机兼职时间自由，多劳多得，日赚30--300💰",
-					headImg: "https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
+					title: "我的目光追随着飞去的鸿雁，直到他的身影消失在远方。思绪有如不尽的江水，随着茫茫的江涛漂荡。秋的红兰，江的碧波，一定会让他怀念深情的潇湘。",
+					headImg: "http://pic1.win4000.com/pic/a/69/725b62ef7a.jpg",
 					comment_count: "639",
 					thumbsUp: "312",
 					browsingTimes: "2345",
 					imgs: [
-						"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
-						"https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg",
-						"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-						"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
+						"http://pic1.win4000.com/pic/1/fe/dd93776d03.jpg",
+						"http://pic1.win4000.com/pic/e/b7/97a03e0d59.jpg",
+						"http://pic1.win4000.com/pic/a/69/725b62ef7a.jpg",
+						"http://pic1.win4000.com/pic/1/fe/dd93776d03.jpg",
 
 					]
 				}, {
@@ -413,16 +402,16 @@
 					article_type: "1",
 					isTop: 1,
 					nickName: "莫甘娜-艾欧尼亚",
-					title: "想做兼职的看过来，宝妈、学生、待业、上班、老板、微商朋友都可以，手机兼职时间自由，多劳多得，日赚30--300💰",
-					headImg: "https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
+					title: "我的目光追随着飞去的鸿雁，直到他的身影消失在远方。思绪有如不尽的江水，随着茫茫的江涛漂荡。秋的红兰，江的碧波，一定会让他怀念深情的潇湘。",
+					headImg: "http://pic1.win4000.com/pic/a/69/725b62ef7a.jpg",
 					comment_count: "639",
 					thumbsUp: "312",
 					browsingTimes: "2345",
 					imgs: [
-						"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
-						"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-						"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-						"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
+						"http://pic1.win4000.com/pic/1/fe/dd93776d03.jpg",
+						"http://pic1.win4000.com/pic/a/69/725b62ef7a.jpg",
+						"http://pic1.win4000.com/pic/a/69/725b62ef7a.jpg",
+						"http://pic1.win4000.com/pic/1/fe/dd93776d03.jpg",
 
 					]
 				}, {
@@ -430,17 +419,17 @@
 					article_type: "1",
 					isTop: 1,
 					nickName: "莫甘娜-艾欧尼亚",
-					title: "想做兼职的看过来，宝妈、学生、待业、上班、老板、微商朋友都可以，手机兼职时间自由，多劳多得，日赚30--300💰",
-					headImg: "https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
+					title: "我的目光追随着飞去的鸿雁，直到他的身影消失在远方。思绪有如不尽的江水，随着茫茫的江涛漂荡。秋的红兰，江的碧波，一定会让他怀念深情的潇湘。",
+					headImg: "http://pic1.win4000.com/pic/a/69/725b62ef7a.jpg",
 					comment_count: "639",
 					thumbsUp: "312",
 					browsingTimes: "2345",
 					imgs: [
-						"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
-						"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-						"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
-						"https://ossweb-img.qq.com/images/lol/web201310/skin/big37006.jpg",
-						"https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
+						"http://pic1.win4000.com/pic/1/fe/dd93776d03.jpg",
+						"http://pic1.win4000.com/pic/a/69/725b62ef7a.jpg",
+						"http://pic1.win4000.com/pic/a/69/725b62ef7a.jpg",
+						"http://pic1.win4000.com/pic/1/fe/dd93776d03.jpg",
+						"http://pic1.win4000.com/pic/a/69/725b62ef7a.jpg",
 					]
 				}],
 				dotStyle: true,
@@ -535,9 +524,11 @@
 			previewimgs: function(e) {
 				var currentImg = e.currentTarget.dataset.img;
 				console.log(currentImg);
+				console.log(e.currentTarget.dataset);
+				var index = e.currentTarget.dataset.id;
 				wx.previewImage({
 					current: currentImg, // 当前显示图片的http链接 String
-					urls: this.arrImg // 需要预览的图片http链接列表 Array
+					urls: this.articList[index].imgs   // 需要预览的图片http链接列表 Array
 				})
 			},
 
