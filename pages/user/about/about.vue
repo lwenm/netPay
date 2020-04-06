@@ -216,10 +216,11 @@
 </script>
 
 <style>
-/* 隐藏滚动条 */
-::-webkit-scrollbar{
-width: 0;
-height: 0;
-color: transparent;
-}
+.content {
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+		/* background-color: #efeff4; */
+		/* padding: 20upx; */
+	}
 </style>

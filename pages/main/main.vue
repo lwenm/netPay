@@ -129,7 +129,7 @@
 				scrollLeft: 0,
 				cardCur: 0,
 				TabCur: 0,
-				
+
 				swiperList: [{
 						id: 0,
 						type: 'image',
@@ -459,11 +459,8 @@
 				data: params,
 				url: this.websiteUrl + "/api/wxapp/blog/category",
 				success: (res) => {
-					console.log(res.data.data);
 					this.cuIconList = JSON.parse(res.data).data
-					  
 					console.log(this.cuIconList);
-					
 				}
 			});
 

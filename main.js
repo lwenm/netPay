@@ -4,7 +4,8 @@ import App from './App'
 import store from './store'
 import cuCustom from 'colorui/components/cu-custom.vue'
 
-Vue.prototype.websiteUrl = 'http://127.0.0.1:9527';  
+Vue.prototype.websiteUrl = 'http://192.168.2.103:9527';  
+Vue.prototype.appId = 'wxafcdbac72791edac';
 Vue.prototype.now = Date.now || function () {  
     return new Date().getTime();  
 };  
