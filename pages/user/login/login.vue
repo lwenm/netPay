@@ -19,27 +19,37 @@
 </template>
 
 <script>
+	import {
+		mapState,
+		mapMutations
+	} from 'vuex'
 	export default {
+		
+		...mapMutations(['login','setUserHead','setSex']),...mapMutations(['login','setUserHead','setSex']),
 		data() {
 			return {
 
 			}
 		},
 		methods: {
+			...mapMutations(['login','setUserHead','setSex']),
 			getUserInfo: function(e) {
 				var userData;
 				uni.showLoading();
 			
 				wx.login({
+					
 					success: (loginCode) => {
 						let param = {
 							code : loginCode.code
 						}
 						uni.getUserInfo({
+							
 							provider: 'weixin',
 							success: (resInfo) => {
 								userData = JSON.parse(resInfo.rawData);
 								console.log(resInfo);
+								var that = this ;
 								uni.request({
 									method: "POST",
 									dataType: "JSON",
@@ -49,10 +59,11 @@
 										console.log(res) //获取openid
 										wx.setStorageSync('nickName', userData.nickName);
 										wx.setStorageSync('userHead', userData.avatarUrl);
-										this.userHead = userData.avatarUrl;
-										this.nickName = userData.nickName;
-										console.log(userData.nickName)
-										this.hasLogin = true;
+										wx.setStorageSync('sex', userData.gender);
+										this.setSex(userData.gender);
+										this.login(userData.nickName);
+										this.setUserHead(userData.avatarUrl);
+										wx.navigateBack();
 									}
 								});
 							}
@@ -73,7 +84,6 @@
 		display: flex;
 		flex: 1;
 		flex-direction: column;
-		/* background-color: #efeff4; */
-		/* padding: 20upx; */
+
 	}
 </style>

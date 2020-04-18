@@ -5,14 +5,15 @@
 			<view class="cu-item  ">
 				<view class="padding menu-avatar flex justify-between align-center ">
 					<view class=" flex justify-start align-center ">
-						<view class="cu-avatar round xl " style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big81005.jpg);">
-							<view class="cu-tag badge" :class="1==1?'cuIcon-female bg-pink':'cuIcon-male bg-blue'"></view>
+						<view class="cu-avatar round xl "   :style="{backgroundImage:'url(' + userHead + ')'}">
+							<view class="cu-tag badge" :class="userSex==0?'cuIcon-female bg-pink':'cuIcon-male bg-blue'"></view>
 						</view>
 						<view class="content flex-sub margin-lr-xs ">
-							<view class="  text-mauve">凯尔-艾欧尼亚</view>
+							<view class="  text-mauve">{{userName}}</view>
 							<view class="text-white   text-sm   ">
 								<!-- <view class='m-icon-person cu-tag radius light bg-orange'>未认证</view> -->
-								<view class='cu-tag radius   light bg-cyan' @click="toLogin" >未认证</view>
+								<view v-if="hasLogin" class='cu-tag radius   light bg-cyan' @click="toLogin" >已授权</view>
+								<view  v-if="!hasLogin" class='cu-tag radius   light bg-cyan' @click="toLogin" >去授权</view>
 							</view>
 						</view>
 					</view>
@@ -105,9 +106,20 @@
 </template>
 
 <script>
+	import {
+		mapState,
+		mapMutations
+	} from 'vuex'
 	export default {
+		computed: mapState(['forcedLogin', 'hasLogin', 'userName',"userHead",'userSex']),
+		onLoad() {
+			 
+			 
+		},
 		data() {
 			return {
+				isLogin: false,
+				// userHead:"../../../static/img/user.jpg",
 				isCard: true,
 				arrImg: [
 					'https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1574944734&di=968165d2137e21d5fd73145689cef219&src=http://desk-fd.zol-img.com.cn/t_s960x600c5/g4/M04/04/03/Cg-4WVQSY5GIXCJfAAgcMfHEIBEAARXwQHY7j8ACBxJ524.jpg',
@@ -171,6 +183,7 @@
 			// }
 		},
 		methods: {
+			...mapMutations(['login','setUserHead']),
 			IsCard(e) {
 				this.isCard = e.detail.value
 			},

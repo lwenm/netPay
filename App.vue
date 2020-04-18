@@ -1,8 +1,27 @@
 <script>
-	import Vue from 'vue'
+	import Vue from 'vue';
+	import {
+		mapState,
+		mapMutations
+	} from 'vuex'
 	export default {
-		
+		...mapMutations(['login','setUserHead','setSex']),
+		methods:{
+			...mapMutations(['login','setUserHead','setSex'])
+		},
 	onLaunch: function() {
+		
+		var nickName =  wx.getStorageSync('nickName');
+		if(nickName!=''){
+			this.login(nickName);
+			this.setSex(wx.getStorageSync('sex'));
+			this.setUserHead(wx.getStorageSync('userHead'));
+		}
+		
+		
+
+
+		
 		Vue.prototype.ColorList = [ 
 			{
 				title: '不选择分类',
